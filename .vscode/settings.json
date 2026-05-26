@@ -1,0 +1,15 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    },
+    "php-docblocker.paramDescription": true,
+    "php-docblocker.returnDescription": true,
+    "php-docblocker.alignParams": true,
+    "php-docblocker.author": {
+        "name": "Gerard KESSE",
+        "email": "team@readydev.com",
+        "url": "https://www.readydev.ovh",
+        "copyright": "(c) $CURRENT_YEAR"
+    }
+}

@@ -1,0 +1,511 @@
+/* commons */
+
+* {
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    border: none;
+    outline: none;
+}
+
+* {
+    scrollbar-color: #aaaaff #111111;
+    scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background: #aaaaff;
+    border-left: 2px solid #111111;
+    border-right: 2px solid #111111;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    background: #aaaaff;
+    border-top: 2px solid #111111;
+    border-bottom: 2px solid #111111;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #aaaaff;
+}
+
+::-webkit-scrollbar-button:horizontal {
+    background: #aaaaff;
+    width: 5px;
+}
+
+::-webkit-scrollbar-button:vertical {
+    background: #aaaaff;
+    height: 5px;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    overflow: auto;
+    scrollbar-color: #5f6681 #051039;
+    scrollbar-width: auto;
+}
+
+body {
+    background-color: #051039;
+    font-family: arial;
+    font-size: 16px;
+    text-align: center;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: 5px 10px 5px 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+button:disabled,
+button:disabled:hover {
+    border: 1px solid #aaaaaa;
+    background-color: transparent;
+    cursor: not-allowed;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 5px 10px 5px 10px;
+    font-size: 16px;
+    color: white;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0 30px #051039 inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input[readonly] {
+    cursor: pointer;
+}
+
+select {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+textarea {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 5px 10px 5px 10px;
+    font-family: arial;
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    resize: none;
+    cursor: auto;
+}
+
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+a {
+    text-decoration: none;
+}
+
+b {
+    color: cyan;
+    word-break: break-word;
+}
+
+span {
+    word-break: break-all;
+}
+
+table,
+th,
+td {
+    border: 2px solid #2f3959;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 5px 10px;
+}
+
+tr {
+    cursor: pointer;
+}
+
+tr:hover {
+    background-color: #512731;
+}
+
+thead tr:first-child {
+    background-color: #2f3959;
+}
+
+/* customs */
+
+.Bars1 {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    font-size: 25px;
+    font-family: Akronim;
+    color: white;
+    padding: 0 10px 0 10px;
+    display: none;
+    vertical-align: middle;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.Background1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    min-height: 300px;
+    z-index: -1;
+
+    background-image:
+        url("/public/data/img/top-paris-2024.gif"),
+        url("/public/data/img/fond.jpg");
+    background-position:
+        center top,
+        left top;
+    background-repeat: no-repeat, no-repeat;
+    background-size:
+        auto 85%,
+        100% 100%;
+
+    border: 10px solid transparent;
+    border-image: url("/public/data/img/border.png") 30 round;
+    -webkit-border-image: url("/public/data/img/border.png") 30 round;
+    -moz-border-image: url("/public/data/img/border.png") 30 round;
+    -o-border-image: url("/public/data/img/border.png") 30 round;
+}
+
+.Background2 {
+    position: absolute;
+    top: 300px;
+    bottom: 300px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+
+    background-image: url("/public/data/img/middle.gif");
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+.Background3 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    min-height: 300px;
+    z-index: -1;
+
+    background-image: url("/public/data/img/footer.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    border: 10px solid transparent;
+    border-image: url("/public/data/img/border.png") 30 round;
+    -webkit-border-image: url("/public/data/img/border.png") 30 round;
+    -moz-border-image: url("/public/data/img/border.png") 30 round;
+    -o-border-image: url("/public/data/img/border.png") 30 round;
+}
+
+.Footer1 {
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    bottom: 35px;
+    left: 0px;
+    right: 0px;
+}
+
+.Footer2 {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 5px 5px 20px 5px;
+}
+
+.Html1 {
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.Html2 {
+    background-color: #051039;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 250px;
+    margin-bottom: 250px;
+    min-height: 150px;
+
+    border: 10px solid transparent;
+    border-image: url("/public/data/img/border.png") 30 round;
+    -webkit-border-image: url("/public/data/img/border.png") 30 round;
+    -moz-border-image: url("/public/data/img/border.png") 30 round;
+    -o-border-image: url("/public/data/img/border.png") 30 round;
+}
+
+.Menu1 {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: left;
+    font-size: 0px;
+    position: relative;
+    line-height: 45px;
+}
+
+.Menu2 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    font-family: arial;
+    position: relative;
+}
+
+.Menu3 {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0px 10px;
+}
+
+.Menu4 {
+    background-color: cyan;
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 3px;
+    margin-right: 5px;
+}
+
+.Menu5 {
+    display: inline-block;
+    vertical-align: middle;
+    color: cyan;
+    font-size: 25px;
+    font-family: Akronim;
+    color: cyan;
+}
+
+.Menu6 {
+    display: inline-block;
+    position: relative;
+}
+
+.Menu7 {
+    border: 1px solid #4f5979;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: #051039;
+    z-index: 1;
+    width: 300px;
+    max-height: 300px;
+    overflow: auto;
+}
+
+.Menu6:hover .Menu7 {
+    display: block;
+}
+
+.Menu8 {
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    padding: 0px 10px;
+    vertical-align: middle;
+    font-size: 16px;
+    font-family: arial;
+}
+
+.Menu10:hover .Menu8 {
+    border-bottom: 5px solid #89a830;
+}
+
+.Menu8.Active,
+.Menu10:hover .Menu8.Active {
+    border-bottom: 5px solid #aaaafa;
+}
+
+.Menu9 {
+    position: relative;
+}
+
+.Menu10 {
+    display: block;
+    border-bottom: 1px solid #2f3959;
+    line-height: 25px;
+}
+
+.Menu10:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.Menu11 {
+    display: none;
+}
+
+.Menu11.Show {
+    display: block;
+    background-color: #051039;
+    margin-left: 20px;
+}
+
+.Menu12 {
+    border-bottom: 1px solid #2f3959;
+    position: relative;
+    cursor: pointer;
+    line-height: 25px;
+}
+
+.Menu12:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.Menu6:hover .Menu12.Active {
+    background-color: #2f5959;
+}
+
+.Menu13 {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+}
+
+.Menu14 {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    display: inline-block;
+    padding: 0px 10px;
+    line-height: 35px;
+    vertical-align: middle;
+}
+
+.Menu2:hover .Menu14 {
+    border-bottom: 5px solid #89a830;
+}
+
+.Menu2.Active .Menu14 {
+    border-bottom: 5px solid #f67b20;
+}
+
+.Menu15 {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -50%);
+    z-index: 1;
+}
+
+.Menu16 {
+    display: none;
+    border-bottom: 1px solid #2f3959;
+    line-height: 25px;
+}
+
+.Menu16:hover .Menu8 {
+    border-bottom: 5px solid #89a830;
+}
+
+.View1 {
+    text-align: center;
+    background-color: rgba(35, 47, 87, 0.9);
+    margin: 10px 10px 0px 10px;
+}
+
+.View2 {
+    background-color: #2f3959;
+    /* L2  5f6681*/
+    color: #bf8e3a;
+    padding: 20px 10px;
+}
+
+.View3 {
+    padding: 5px;
+    font-size: 0px;
+}
+
+.View4 {
+    display: inline-block;
+    margin: 5px;
+    font-size: 0px;
+}
+
+.View5 {
+    display: inline-block;
+    margin: 5px;
+    font-size: 20px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.View5.Facebook {
+    background-color: #3b5998;
+}
+
+.View5.Linkedin {
+    background-color: #0e76a8;
+}
+
+.View6 {
+    background-color: #2f3959;
+    display: inline-block;
+    font-size: 14px;
+    padding: 0px 10px;
+    line-height: 25px;
+}
+
+.View7 {
+    background-color: #3f4969;
+    display: inline-block;
+    font-size: 14px;
+    padding: 0px 10px;
+    line-height: 25px;
+}
