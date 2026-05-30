@@ -1,599 +1,974 @@
 Search.appendIndex(
     [
                 {
-            "fqsen": "\\app\\controller\\Main",
+            "fqsen": "\\app\\php\\controller\\Debug",
+            "name": "Debug",
+            "summary": "Cree\u0020le\u0020controleur\u0020de\u0020debogage.",
+            "url": "classes/app-php-controller-Debug.html"
+        },                {
+            "fqsen": "\\app\\php\\controller\\Debug\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Construit\u0020le\u0020controleur\u0020de\u0020debogage.",
+            "url": "classes/app-php-controller-Debug.html#method___construct"
+        },                {
+            "fqsen": "\\app\\php\\controller\\Debug\u003A\u003AisDebug\u0028\u0029",
+            "name": "isDebug",
+            "summary": "Verifie\u0020si\u0020le\u0020mode\u0020debug\u0020est\u0020activ\u00E9.",
+            "url": "classes/app-php-controller-Debug.html#method_isDebug"
+        },                {
+            "fqsen": "\\app\\php\\controller\\Debug\u003A\u003APARAM_APP_ENV",
+            "name": "PARAM_APP_ENV",
+            "summary": "Stocke\u0020le\u0020nom\u0020de\u0020l\u0027environnement",
+            "url": "classes/app-php-controller-Debug.html#constant_PARAM_APP_ENV"
+        },                {
+            "fqsen": "\\app\\php\\controller\\Debug\u003A\u003APARAM_APP_ENV_DEV",
+            "name": "PARAM_APP_ENV_DEV",
+            "summary": "Stocke\u0020la\u0020valeur\u0020de\u0020l\u0027environnement\u0020de\u0020dev",
+            "url": "classes/app-php-controller-Debug.html#constant_PARAM_APP_ENV_DEV"
+        },                {
+            "fqsen": "\\app\\php\\controller\\Debug\u003A\u003APARAM_APP_DEBUG",
+            "name": "PARAM_APP_DEBUG",
+            "summary": "Stocke\u0020le\u0020nom\u0020de\u0020la\u0020variable\u0020d\u0027environnement\u0020pour\u0020le\u0020mode\u0020debug",
+            "url": "classes/app-php-controller-Debug.html#constant_PARAM_APP_DEBUG"
+        },                {
+            "fqsen": "\\app\\php\\controller\\Debug\u003A\u003APARAM_APP_DEBUG_ON",
+            "name": "PARAM_APP_DEBUG_ON",
+            "summary": "Stocke\u0020la\u0020valeur\u0020de\u0020la\u0020variable\u0020d\u0027environnement\u0020pour\u0020le\u0020mode\u0020debug\u0020activ\u00E9",
+            "url": "classes/app-php-controller-Debug.html#constant_PARAM_APP_DEBUG_ON"
+        },                {
+            "fqsen": "\\app\\php\\controller\\Main",
             "name": "Main",
             "summary": "Cree\u0020le\u0020controleur\u0020de\u0020la\u0020vue\u0020principale\u0020du\u0020site.",
-            "url": "classes/app-controller-Main.html"
+            "url": "classes/app-php-controller-Main.html"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "Construit\u0020le\u0020controleur\u0020de\u0020la\u0020vue\u0020principale\u0020de\u0020l\u0027application.",
-            "url": "classes/app-controller-Main.html#method___construct"
+            "url": "classes/app-php-controller-Main.html#method___construct"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetSiteName\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetSiteName\u0028\u0029",
             "name": "getSiteName",
             "summary": "Recupere\u0020le\u0020nom\u0020du\u0020site.",
-            "url": "classes/app-controller-Main.html#method_getSiteName"
+            "url": "classes/app-php-controller-Main.html#method_getSiteName"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetSiteStartYear\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetSiteStartYear\u0028\u0029",
             "name": "getSiteStartYear",
             "summary": "Recupere\u0020la\u0020date\u0020de\u0020debut\u0020du\u0020site.",
-            "url": "classes/app-controller-Main.html#method_getSiteStartYear"
+            "url": "classes/app-php-controller-Main.html#method_getSiteStartYear"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetCurrentYear\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetCurrentYear\u0028\u0029",
             "name": "getCurrentYear",
             "summary": "Recupere\u0020l\u0027annee\u0020courante.",
-            "url": "classes/app-controller-Main.html#method_getCurrentYear"
+            "url": "classes/app-php-controller-Main.html#method_getCurrentYear"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetSiteVision\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetSiteVision\u0028\u0029",
             "name": "getSiteVision",
             "summary": "Recupere\u0020la\u0020vision\u0020du\u0020site.",
-            "url": "classes/app-controller-Main.html#method_getSiteVision"
+            "url": "classes/app-php-controller-Main.html#method_getSiteVision"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetPageTitle\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetPageTitle\u0028\u0029",
             "name": "getPageTitle",
             "summary": "Recupere\u0020le\u0020titre\u0020de\u0020la\u0020page.",
-            "url": "classes/app-controller-Main.html#method_getPageTitle"
+            "url": "classes/app-php-controller-Main.html#method_getPageTitle"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetPageLanguage\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetPageLanguage\u0028\u0029",
             "name": "getPageLanguage",
             "summary": "Recupere\u0020la\u0020langue\u0020de\u0020la\u0020page.",
-            "url": "classes/app-controller-Main.html#method_getPageLanguage"
+            "url": "classes/app-php-controller-Main.html#method_getPageLanguage"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetPageEncoding\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetPageEncoding\u0028\u0029",
             "name": "getPageEncoding",
             "summary": "Recupere\u0020l\u0027encodage\u0020de\u0020la\u0020page.",
-            "url": "classes/app-controller-Main.html#method_getPageEncoding"
+            "url": "classes/app-php-controller-Main.html#method_getPageEncoding"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetPageLogoMimeType\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetPageLogoMimeType\u0028\u0029",
             "name": "getPageLogoMimeType",
             "summary": "Recupere\u0020le\u0020type\u0020MIME\u0020du\u0020logo\u0020de\u0020la\u0020page.",
-            "url": "classes/app-controller-Main.html#method_getPageLogoMimeType"
+            "url": "classes/app-php-controller-Main.html#method_getPageLogoMimeType"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetPageLogo\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetPageLogo\u0028\u0029",
             "name": "getPageLogo",
             "summary": "Recupere\u0020le\u0020logo\u0020de\u0020la\u0020page.",
-            "url": "classes/app-controller-Main.html#method_getPageLogo"
+            "url": "classes/app-php-controller-Main.html#method_getPageLogo"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetPageDescription\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetPageDescription\u0028\u0029",
             "name": "getPageDescription",
             "summary": "Recupere\u0020la\u0020description\u0020de\u0020la\u0020page.",
-            "url": "classes/app-controller-Main.html#method_getPageDescription"
+            "url": "classes/app-php-controller-Main.html#method_getPageDescription"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetPageUrl\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetPageUrl\u0028\u0029",
             "name": "getPageUrl",
             "summary": "Recupere\u0020l\u0027URL\u0020de\u0020la\u0020page.",
-            "url": "classes/app-controller-Main.html#method_getPageUrl"
+            "url": "classes/app-php-controller-Main.html#method_getPageUrl"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetHomePage\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetHomePage\u0028\u0029",
             "name": "getHomePage",
             "summary": "Recupere\u0020l\u0027URL\u0020de\u0020la\u0020page\u0020d\u0027accueil.",
-            "url": "classes/app-controller-Main.html#method_getHomePage"
+            "url": "classes/app-php-controller-Main.html#method_getHomePage"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetOpenGraphType\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetOpenGraphType\u0028\u0029",
             "name": "getOpenGraphType",
             "summary": "Recupere\u0020le\u0020type\u0020Open\u0020Graph\u0020de\u0020la\u0020page.",
-            "url": "classes/app-controller-Main.html#method_getOpenGraphType"
+            "url": "classes/app-php-controller-Main.html#method_getOpenGraphType"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetOpenGraphImage\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetOpenGraphImage\u0028\u0029",
             "name": "getOpenGraphImage",
             "summary": "Recupere\u0020l\u0027URL\u0020de\u0020l\u0027image\u0020Open\u0020Graph\u0020de\u0020la\u0020page.",
-            "url": "classes/app-controller-Main.html#method_getOpenGraphImage"
+            "url": "classes/app-php-controller-Main.html#method_getOpenGraphImage"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetOpenGraphImageMimeType\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetOpenGraphImageMimeType\u0028\u0029",
             "name": "getOpenGraphImageMimeType",
             "summary": "Recupere\u0020le\u0020type\u0020MIME\u0020de\u0020l\u0027image\u0020Open\u0020Graph\u0020de\u0020la\u0020page.",
-            "url": "classes/app-controller-Main.html#method_getOpenGraphImageMimeType"
+            "url": "classes/app-php-controller-Main.html#method_getOpenGraphImageMimeType"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetOpenGraphImageWidth\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetOpenGraphImageWidth\u0028\u0029",
             "name": "getOpenGraphImageWidth",
             "summary": "Recupere\u0020la\u0020largeur\u0020de\u0020l\u0027image\u0020Open\u0020Graph\u0020de\u0020la\u0020page.",
-            "url": "classes/app-controller-Main.html#method_getOpenGraphImageWidth"
+            "url": "classes/app-php-controller-Main.html#method_getOpenGraphImageWidth"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetOpenGraphImageHeight\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetOpenGraphImageHeight\u0028\u0029",
             "name": "getOpenGraphImageHeight",
             "summary": "Recupere\u0020la\u0020hauteur\u0020de\u0020l\u0027image\u0020Open\u0020Graph\u0020de\u0020la\u0020page.",
-            "url": "classes/app-controller-Main.html#method_getOpenGraphImageHeight"
+            "url": "classes/app-php-controller-Main.html#method_getOpenGraphImageHeight"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetOpenGraphLocale\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetOpenGraphLocale\u0028\u0029",
             "name": "getOpenGraphLocale",
             "summary": "Recupere\u0020la\u0020langue\u0020Open\u0020Graph\u0020de\u0020la\u0020page.",
-            "url": "classes/app-controller-Main.html#method_getOpenGraphLocale"
+            "url": "classes/app-php-controller-Main.html#method_getOpenGraphLocale"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetPageId\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetPageId\u0028\u0029",
             "name": "getPageId",
             "summary": "Recupere\u0020l\u0027ID\u0020de\u0020la\u0020page.",
-            "url": "classes/app-controller-Main.html#method_getPageId"
+            "url": "classes/app-php-controller-Main.html#method_getPageId"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetPageView\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetPageView\u0028\u0029",
             "name": "getPageView",
             "summary": "Recupere\u0020le\u0020nombre\u0020de\u0020vues\u0020de\u0020la\u0020page.",
-            "url": "classes/app-controller-Main.html#method_getPageView"
+            "url": "classes/app-php-controller-Main.html#method_getPageView"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetFacebookShareUrl\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetFacebookShareUrl\u0028\u0029",
             "name": "getFacebookShareUrl",
             "summary": "Recupere\u0020l\u0027URL\u0020de\u0020partage\u0020de\u0020la\u0020page\u0020sur\u0020Facebook.",
-            "url": "classes/app-controller-Main.html#method_getFacebookShareUrl"
+            "url": "classes/app-php-controller-Main.html#method_getFacebookShareUrl"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AgetLinkedInShareUrl\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetLinkedInShareUrl\u0028\u0029",
             "name": "getLinkedInShareUrl",
             "summary": "Recupere\u0020l\u0027URL\u0020de\u0020partage\u0020de\u0020la\u0020page\u0020sur\u0020Twitter.",
-            "url": "classes/app-controller-Main.html#method_getLinkedInShareUrl"
+            "url": "classes/app-php-controller-Main.html#method_getLinkedInShareUrl"
         },                {
-            "fqsen": "\\app\\controller\\Main\u003A\u003AloadHeaderMenuList\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AloadHeaderMenuList\u0028\u0029",
             "name": "loadHeaderMenuList",
             "summary": "Charge\u0020la\u0020liste\u0020des\u0020menus\u0020de\u0020l\u0027en\u002Dt\u00EAte.",
-            "url": "classes/app-controller-Main.html#method_loadHeaderMenuList"
+            "url": "classes/app-php-controller-Main.html#method_loadHeaderMenuList"
         },                {
-            "fqsen": "\\app\\controller\\Page",
+            "fqsen": "\\app\\php\\controller\\Page",
             "name": "Page",
             "summary": "Cree\u0020le\u0020controleur\u0020des\u0020pages\u0020du\u0020site.",
-            "url": "classes/app-controller-Page.html"
+            "url": "classes/app-php-controller-Page.html"
         },                {
-            "fqsen": "\\app\\controller\\Page\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Page\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "Construit\u0020le\u0020controleur\u0020des\u0020pages\u0020du\u0020site.",
-            "url": "classes/app-controller-Page.html#method___construct"
+            "url": "classes/app-php-controller-Page.html#method___construct"
         },                {
-            "fqsen": "\\app\\controller\\Page\u003A\u003AgetPageId\u0028\u0029",
+            "fqsen": "\\app\\php\\controller\\Page\u003A\u003AgetPageId\u0028\u0029",
             "name": "getPageId",
             "summary": "Recupere\u0020l\u0027identifiant\u0020de\u0020la\u0020page\u0020du\u0020site.",
-            "url": "classes/app-controller-Page.html#method_getPageId"
+            "url": "classes/app-php-controller-Page.html#method_getPageId"
         },                {
-            "fqsen": "\\app\\controller\\Page\u003A\u003APARAM_DEFAULT_PAGE_ID",
+            "fqsen": "\\app\\php\\controller\\Page\u003A\u003APARAM_DEFAULT_PAGE_ID",
             "name": "PARAM_DEFAULT_PAGE_ID",
             "summary": "Stocke\u0020l\u0027identifiant\u0020de\u0020la\u0020page\u0020par\u0020defaut.",
-            "url": "classes/app-controller-Page.html#constant_PARAM_DEFAULT_PAGE_ID"
+            "url": "classes/app-php-controller-Page.html#constant_PARAM_DEFAULT_PAGE_ID"
         },                {
-            "fqsen": "\\app\\controller\\Page\u003A\u003APARAM_PAGE_ID_KEY",
+            "fqsen": "\\app\\php\\controller\\Page\u003A\u003APARAM_PAGE_ID_KEY",
             "name": "PARAM_PAGE_ID_KEY",
             "summary": "Stocke\u0020la\u0020cl\u00E9\u0020de\u0020l\u0027identifiant\u0020de\u0020la\u0020page\u0020dans\u0020les\u0020param\u00E8tres\u0020de\u0020la\u0020requete.",
-            "url": "classes/app-controller-Page.html#constant_PARAM_PAGE_ID_KEY"
+            "url": "classes/app-php-controller-Page.html#constant_PARAM_PAGE_ID_KEY"
         },                {
-            "fqsen": "\\app\\factory\\Page",
+            "fqsen": "\\app\\php\\factory\\Page",
             "name": "Page",
             "summary": "Cree\u0020la\u0020factory\u0020de\u0020pages\u0020du\u0020site.",
-            "url": "classes/app-factory-Page.html"
+            "url": "classes/app-php-factory-Page.html"
         },                {
-            "fqsen": "\\app\\factory\\Page\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\app\\php\\factory\\Page\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "Construit\u0020la\u0020factory\u0020du\u0020contenu\u0020de\u0020la\u0020page\u0020du\u0020site.",
-            "url": "classes/app-factory-Page.html#method___construct"
+            "url": "classes/app-php-factory-Page.html#method___construct"
         },                {
-            "fqsen": "\\app\\factory\\Page\u003A\u003AInstance\u0028\u0029",
+            "fqsen": "\\app\\php\\factory\\Page\u003A\u003AInstance\u0028\u0029",
             "name": "Instance",
             "summary": "Recupere\u0020l\u0027instance\u0020de\u0020la\u0020factory\u0020du\u0020contenu\u0020de\u0020la\u0020page\u0020du\u0020site.",
-            "url": "classes/app-factory-Page.html#method_Instance"
+            "url": "classes/app-php-factory-Page.html#method_Instance"
         },                {
-            "fqsen": "\\app\\factory\\Page\u003A\u003AgetPage\u0028\u0029",
+            "fqsen": "\\app\\php\\factory\\Page\u003A\u003AgetPage\u0028\u0029",
             "name": "getPage",
             "summary": "Recupere\u0020la\u0020page\u0020du\u0020site.",
-            "url": "classes/app-factory-Page.html#method_getPage"
+            "url": "classes/app-php-factory-Page.html#method_getPage"
         },                {
-            "fqsen": "\\app\\factory\\Page\u003A\u003A\u0024s_instance",
+            "fqsen": "\\app\\php\\factory\\Page\u003A\u003A\u0024s_instance",
             "name": "s_instance",
             "summary": "Stocke\u0020l\u0027instance\u0020de\u0020la\u0020factory\u0020du\u0020contenu\u0020de\u0020la\u0020page\u0020du\u0020site.",
-            "url": "classes/app-factory-Page.html#property_s_instance"
+            "url": "classes/app-php-factory-Page.html#property_s_instance"
         },                {
-            "fqsen": "\\app\\factory\\Page\u003A\u003A\u0024pageList",
+            "fqsen": "\\app\\php\\factory\\Page\u003A\u003A\u0024pageList",
             "name": "pageList",
             "summary": "Stocke\u0020la\u0020liste\u0020des\u0020pages\u0020du\u0020site.",
-            "url": "classes/app-factory-Page.html#property_pageList"
+            "url": "classes/app-php-factory-Page.html#property_pageList"
         },                {
-            "fqsen": "\\app\\model\\Menu",
-            "name": "Menu",
-            "summary": "Cree\u0020le\u0020modele\u0020du\u0020menu\u0020du\u0020site.",
-            "url": "classes/app-model-Menu.html"
-        },                {
-            "fqsen": "\\app\\model\\Menu\u003A\u003AisEqual\u0028\u0029",
-            "name": "isEqual",
-            "summary": "V\u00E9rifie\u0020si\u0020le\u0020menu\u0020du\u0020site\u0020est\u0020\u00E9gal\u0020\u00E0\u0020un\u0020autre\u0020menu\u0020du\u0020site.",
-            "url": "classes/app-model-Menu.html#method_isEqual"
-        },                {
-            "fqsen": "\\app\\model\\Menu\u003A\u003AisEmpty\u0028\u0029",
-            "name": "isEmpty",
-            "summary": "V\u00E9rifie\u0020si\u0020le\u0020menu\u0020du\u0020site\u0020est\u0020vide.",
-            "url": "classes/app-model-Menu.html#method_isEmpty"
-        },                {
-            "fqsen": "\\app\\model\\Menu\u003A\u003A\u0024index",
-            "name": "index",
-            "summary": "Stocke\u0020l\u0027index\u0020du\u0020menu\u0020du\u0020site.",
-            "url": "classes/app-model-Menu.html#property_index"
-        },                {
-            "fqsen": "\\app\\model\\Menu\u003A\u003A\u0024parentIndex",
-            "name": "parentIndex",
-            "summary": "Stocke\u0020l\u0027index\u0020du\u0020menu\u0020parent\u0020du\u0020site.",
-            "url": "classes/app-model-Menu.html#property_parentIndex"
-        },                {
-            "fqsen": "\\app\\model\\Menu\u003A\u003A\u0024name",
-            "name": "name",
-            "summary": "Stocke\u0020le\u0020nom\u0020du\u0020menu\u0020du\u0020site.",
-            "url": "classes/app-model-Menu.html#property_name"
-        },                {
-            "fqsen": "\\app\\model\\Menu\u003A\u003A\u0024label",
-            "name": "label",
-            "summary": "Stocke\u0020le\u0020libelle\u0020du\u0020menu\u0020du\u0020site.",
-            "url": "classes/app-model-Menu.html#property_label"
-        },                {
-            "fqsen": "\\app\\model\\Menu\u003A\u003A\u0024title",
-            "name": "title",
-            "summary": "Stocke\u0020le\u0020titre\u0020du\u0020menu\u0020du\u0020site.",
-            "url": "classes/app-model-Menu.html#property_title"
-        },                {
-            "fqsen": "\\app\\model\\Menu\u003A\u003A\u0024link",
-            "name": "link",
-            "summary": "Stocke\u0020le\u0020lien\u0020du\u0020menu\u0020du\u0020site.",
-            "url": "classes/app-model-Menu.html#property_link"
-        },                {
-            "fqsen": "\\app\\model\\Menu\u003A\u003A\u0024isActive",
-            "name": "isActive",
-            "summary": "Stocke\u0020l\u0027etat\u0020du\u0020menu\u0020du\u0020site.",
-            "url": "classes/app-model-Menu.html#property_isActive"
-        },                {
-            "fqsen": "\\app\\model\\MenuList",
-            "name": "MenuList",
-            "summary": "Cree\u0020le\u0020modele\u0020de\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site.",
-            "url": "classes/app-model-MenuList.html"
-        },                {
-            "fqsen": "\\app\\model\\MenuList\u003A\u003AaddMenuByItem\u0028\u0029",
-            "name": "addMenuByItem",
-            "summary": "Ajoute\u0020un\u0020menu\u0020\u00E0\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site.",
-            "url": "classes/app-model-MenuList.html#method_addMenuByItem"
-        },                {
-            "fqsen": "\\app\\model\\MenuList\u003A\u003AaddMenuByParams\u0028\u0029",
-            "name": "addMenuByParams",
-            "summary": "Ajoute\u0020un\u0020menu\u0020\u00E0\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020par\u0020ses\u0020param\u00E8tres.",
-            "url": "classes/app-model-MenuList.html#method_addMenuByParams"
-        },                {
-            "fqsen": "\\app\\model\\MenuList\u003A\u003AaddMenuByRoot\u0028\u0029",
-            "name": "addMenuByRoot",
-            "summary": "Ajoute\u0020un\u0020menu\u0020\u00E0\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020par\u0020ses\u0020param\u00E8tres\u0020et\u0020en\u0020tant\u0020que\u0020menu\u0020racine.",
-            "url": "classes/app-model-MenuList.html#method_addMenuByRoot"
-        },                {
-            "fqsen": "\\app\\model\\MenuList\u003A\u003AaddMenuByParentMenu\u0028\u0029",
-            "name": "addMenuByParentMenu",
-            "summary": "Ajoute\u0020un\u0020menu\u0020\u00E0\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020par\u0020ses\u0020param\u00E8tres\u0020et\u0020en\u0020tant\u0020que\u0020menu\u0020enfant\u0020d\u0027un\u0020menu\u0020parent.",
-            "url": "classes/app-model-MenuList.html#method_addMenuByParentMenu"
-        },                {
-            "fqsen": "\\app\\model\\MenuList\u003A\u003AgetMenuListByParentIndex\u0028\u0029",
-            "name": "getMenuListByParentIndex",
-            "summary": "Recupere\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020par\u0020l\u0027index\u0020de\u0020leur\u0020menu\u0020parent.",
-            "url": "classes/app-model-MenuList.html#method_getMenuListByParentIndex"
-        },                {
-            "fqsen": "\\app\\model\\MenuList\u003A\u003AgetMenuByLink\u0028\u0029",
-            "name": "getMenuByLink",
-            "summary": "Recupere\u0020un\u0020menu\u0020de\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020par\u0020son\u0020lien.",
-            "url": "classes/app-model-MenuList.html#method_getMenuByLink"
-        },                {
-            "fqsen": "\\app\\model\\MenuList\u003A\u003AgetMenuByPosition\u0028\u0029",
-            "name": "getMenuByPosition",
-            "summary": "Recupere\u0020un\u0020menu\u0020de\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020par\u0020sa\u0020position\u0020dans\u0020la\u0020liste.",
-            "url": "classes/app-model-MenuList.html#method_getMenuByPosition"
-        },                {
-            "fqsen": "\\app\\model\\MenuList\u003A\u003AisEmpty\u0028\u0029",
-            "name": "isEmpty",
-            "summary": "V\u00E9rifie\u0020si\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020est\u0020vide.",
-            "url": "classes/app-model-MenuList.html#method_isEmpty"
-        },                {
-            "fqsen": "\\app\\model\\MenuList\u003A\u003Asize\u0028\u0029",
-            "name": "size",
-            "summary": "Recupere\u0020la\u0020taille\u0020de\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site.",
-            "url": "classes/app-model-MenuList.html#method_size"
-        },                {
-            "fqsen": "\\app\\model\\MenuList\u003A\u003A\u0024menuList",
-            "name": "menuList",
-            "summary": "Stocke\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site.",
-            "url": "classes/app-model-MenuList.html#property_menuList"
-        },                {
-            "fqsen": "\\app\\page\\Admin",
-            "name": "Admin",
-            "summary": "Cree\u0020le\u0020contenu\u0020de\u0020la\u0020page\u0020d\u0027administration.",
-            "url": "classes/app-page-Admin.html"
-        },                {
-            "fqsen": "\\app\\page\\Admin\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "Construit\u0020le\u0020contenu\u0020de\u0020la\u0020page\u0020d\u0027administration.",
-            "url": "classes/app-page-Admin.html#method___construct"
-        },                {
-            "fqsen": "\\app\\page\\Admin\u003A\u003Arun\u0028\u0029",
-            "name": "run",
-            "summary": "Affiche\u0020le\u0020contenu\u0020de\u0020la\u0020page\u0020d\u0027administration.",
-            "url": "classes/app-page-Admin.html#method_run"
-        },                {
-            "fqsen": "\\app\\page\\Connexion",
-            "name": "Connexion",
-            "summary": "Cree\u0020le\u0020contenu\u0020de\u0020la\u0020page\u0020de\u0020connexion.",
-            "url": "classes/app-page-Connexion.html"
-        },                {
-            "fqsen": "\\app\\page\\Connexion\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "Construit\u0020le\u0020contenu\u0020de\u0020la\u0020page\u0020de\u0020connexion.",
-            "url": "classes/app-page-Connexion.html#method___construct"
-        },                {
-            "fqsen": "\\app\\page\\Connexion\u003A\u003Arun\u0028\u0029",
-            "name": "run",
-            "summary": "Affiche\u0020le\u0020contenu\u0020de\u0020la\u0020page\u0020de\u0020connexion.",
-            "url": "classes/app-page-Connexion.html#method_run"
-        },                {
-            "fqsen": "\\app\\page\\Page",
-            "name": "Page",
-            "summary": "Cree\u0020le\u0020contenu\u0020de\u0020la\u0020page\u0020du\u0020site.",
-            "url": "classes/app-page-Page.html"
-        },                {
-            "fqsen": "\\app\\page\\Page\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "Construit\u0020le\u0020contenu\u0020de\u0020la\u0020page\u0020du\u0020site.",
-            "url": "classes/app-page-Page.html#method___construct"
-        },                {
-            "fqsen": "\\app\\page\\Page\u003A\u003Arun\u0028\u0029",
-            "name": "run",
-            "summary": "Affiche\u0020le\u0020contenu\u0020de\u0020la\u0020page\u0020du\u0020site.",
-            "url": "classes/app-page-Page.html#method_run"
-        },                {
-            "fqsen": "\\app\\view\\Main",
+            "fqsen": "\\app\\php\\model\\Main",
             "name": "Main",
-            "summary": "Cree\u0020la\u0020page\u0020principale\u0020du\u0020site.",
-            "url": "classes/app-view-Main.html"
+            "summary": "Cree\u0020le\u0020modele\u0020de\u0020la\u0020vue\u0020principale\u0020du\u0020site.",
+            "url": "classes/app-php-model-Main.html"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "Construit\u0020la\u0020page\u0020principale\u0020du\u0020site.",
-            "url": "classes/app-view-Main.html#method___construct"
-        },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003Arun\u0028\u0029",
-            "name": "run",
-            "summary": "Affiche\u0020la\u0020page\u0020principale\u0020du\u0020site.",
-            "url": "classes/app-view-Main.html#method_run"
-        },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003ArunSiteInfos\u0028\u0029",
-            "name": "runSiteInfos",
-            "summary": "Affiche\u0020les\u0020informations\u0020du\u0020site.",
-            "url": "classes/app-view-Main.html#method_runSiteInfos"
-        },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003ArunOpenGraph\u0028\u0029",
-            "name": "runOpenGraph",
-            "summary": "Affiche\u0020les\u0020informations\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-view-Main.html#method_runOpenGraph"
-        },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003ArunStyleCss\u0028\u0029",
-            "name": "runStyleCss",
-            "summary": "Affiche\u0020les\u0020styles\u0020CSS.",
-            "url": "classes/app-view-Main.html#method_runStyleCss"
-        },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003ArunBackground\u0028\u0029",
-            "name": "runBackground",
-            "summary": "Affiche\u0020les\u0020fonds\u0020d\u0027\u00E9cran.",
-            "url": "classes/app-view-Main.html#method_runBackground"
-        },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003ArunBody\u0028\u0029",
-            "name": "runBody",
-            "summary": "Cree\u0020le\u0020corps\u0020de\u0020la\u0020page.",
-            "url": "classes/app-view-Main.html#method_runBody"
-        },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003ArunHeader\u0028\u0029",
-            "name": "runHeader",
-            "summary": "Cree\u0020l\u0027entete\u0020de\u0020la\u0020page.",
-            "url": "classes/app-view-Main.html#method_runHeader"
-        },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003ArunHeaderMenu\u0028\u0029",
-            "name": "runHeaderMenu",
-            "summary": "Affiche\u0020le\u0020menu\u0020de\u0020l\u0027entete.",
-            "url": "classes/app-view-Main.html#method_runHeaderMenu"
-        },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003ArunHeaderSubMenu\u0028\u0029",
-            "name": "runHeaderSubMenu",
-            "summary": "Affiche\u0020le\u0020sous\u002Dmenu\u0020de\u0020l\u0027entete.",
-            "url": "classes/app-view-Main.html#method_runHeaderSubMenu"
-        },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003ArunView\u0028\u0029",
-            "name": "runView",
-            "summary": "Affiche\u0020la\u0020vue\u0020principale.",
-            "url": "classes/app-view-Main.html#method_runView"
-        },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003ArunPage\u0028\u0029",
-            "name": "runPage",
-            "summary": "Affiche\u0020la\u0020page\u0020principale.",
-            "url": "classes/app-view-Main.html#method_runPage"
-        },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003ArunFooter\u0028\u0029",
-            "name": "runFooter",
-            "summary": "Affiche\u0020le\u0020pied\u0020de\u0020page.",
-            "url": "classes/app-view-Main.html#method_runFooter"
-        },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003ArunFooterTitle\u0028\u0029",
-            "name": "runFooterTitle",
-            "summary": "Affiche\u0020le\u0020titre\u0020du\u0020pied\u0020de\u0020page.",
-            "url": "classes/app-view-Main.html#method_runFooterTitle"
-        },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003ArunFooterSocialNetwork\u0028\u0029",
-            "name": "runFooterSocialNetwork",
-            "summary": "Affiche\u0020les\u0020r\u00E9seaux\u0020sociaux\u0020du\u0020pied\u0020de\u0020page.",
-            "url": "classes/app-view-Main.html#method_runFooterSocialNetwork"
-        },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003ArunFooterCopyright\u0028\u0029",
-            "name": "runFooterCopyright",
-            "summary": "Affiche\u0020le\u0020copyright\u0020du\u0020pied\u0020de\u0020page.",
-            "url": "classes/app-view-Main.html#method_runFooterCopyright"
-        },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003ArunScriptJs\u0028\u0029",
-            "name": "runScriptJs",
-            "summary": "Affiche\u0020les\u0020scripts\u0020JavaScript.",
-            "url": "classes/app-view-Main.html#method_runScriptJs"
-        },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024siteName",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024siteName",
             "name": "siteName",
             "summary": "Stocke\u0020le\u0020nom\u0020du\u0020site.",
-            "url": "classes/app-view-Main.html#property_siteName"
+            "url": "classes/app-php-model-Main.html#property_siteName"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024siteStartYear",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024siteStartYear",
             "name": "siteStartYear",
             "summary": "Stocke\u0020l\u0027ann\u00E9e\u0020de\u0020d\u00E9but\u0020du\u0020site.",
-            "url": "classes/app-view-Main.html#property_siteStartYear"
+            "url": "classes/app-php-model-Main.html#property_siteStartYear"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024currentYear",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024currentYear",
             "name": "currentYear",
             "summary": "Stocke\u0020l\u0027ann\u00E9e\u0020courante.",
-            "url": "classes/app-view-Main.html#property_currentYear"
+            "url": "classes/app-php-model-Main.html#property_currentYear"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024siteVision",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024siteVision",
             "name": "siteVision",
             "summary": "Stocke\u0020la\u0020vision\u0020du\u0020site.",
-            "url": "classes/app-view-Main.html#property_siteVision"
+            "url": "classes/app-php-model-Main.html#property_siteVision"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024pageTitle",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024pageTitle",
             "name": "pageTitle",
             "summary": "Stocke\u0020le\u0020titre\u0020de\u0020la\u0020page.",
-            "url": "classes/app-view-Main.html#property_pageTitle"
+            "url": "classes/app-php-model-Main.html#property_pageTitle"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024pageLanguage",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024pageLanguage",
             "name": "pageLanguage",
             "summary": "Stocke\u0020la\u0020langue\u0020de\u0020la\u0020page.",
-            "url": "classes/app-view-Main.html#property_pageLanguage"
+            "url": "classes/app-php-model-Main.html#property_pageLanguage"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024pageEncoding",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024pageEncoding",
             "name": "pageEncoding",
             "summary": "Stocke\u0020l\u0027encodage\u0020de\u0020la\u0020page.",
-            "url": "classes/app-view-Main.html#property_pageEncoding"
+            "url": "classes/app-php-model-Main.html#property_pageEncoding"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024pageLogo",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024pageLogo",
             "name": "pageLogo",
             "summary": "Stocke\u0020le\u0020logo\u0020de\u0020la\u0020page.",
-            "url": "classes/app-view-Main.html#property_pageLogo"
+            "url": "classes/app-php-model-Main.html#property_pageLogo"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024pageLogoMimeType",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024pageLogoMimeType",
             "name": "pageLogoMimeType",
             "summary": "Stocke\u0020le\u0020type\u0020MIME\u0020du\u0020logo\u0020de\u0020la\u0020page.",
-            "url": "classes/app-view-Main.html#property_pageLogoMimeType"
+            "url": "classes/app-php-model-Main.html#property_pageLogoMimeType"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024pageDescription",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024pageDescription",
             "name": "pageDescription",
             "summary": "Stocke\u0020la\u0020description\u0020de\u0020la\u0020page.",
-            "url": "classes/app-view-Main.html#property_pageDescription"
+            "url": "classes/app-php-model-Main.html#property_pageDescription"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024openGraphType",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphType",
             "name": "openGraphType",
             "summary": "Stocke\u0020le\u0020type\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-view-Main.html#property_openGraphType"
+            "url": "classes/app-php-model-Main.html#property_openGraphType"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024openGraphImage",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphImage",
             "name": "openGraphImage",
             "summary": "Stocke\u0020l\u0027image\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-view-Main.html#property_openGraphImage"
+            "url": "classes/app-php-model-Main.html#property_openGraphImage"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024openGraphImageMimeType",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphImageMimeType",
             "name": "openGraphImageMimeType",
             "summary": "Stocke\u0020le\u0020type\u0020MIME\u0020de\u0020l\u0027image\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-view-Main.html#property_openGraphImageMimeType"
+            "url": "classes/app-php-model-Main.html#property_openGraphImageMimeType"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024openGraphImageWidth",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphImageWidth",
             "name": "openGraphImageWidth",
             "summary": "Stocke\u0020la\u0020largeur\u0020de\u0020l\u0027image\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-view-Main.html#property_openGraphImageWidth"
+            "url": "classes/app-php-model-Main.html#property_openGraphImageWidth"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024openGraphImageHeight",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphImageHeight",
             "name": "openGraphImageHeight",
             "summary": "Stocke\u0020la\u0020hauteur\u0020de\u0020l\u0027image\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-view-Main.html#property_openGraphImageHeight"
+            "url": "classes/app-php-model-Main.html#property_openGraphImageHeight"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024openGraphLocale",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphLocale",
             "name": "openGraphLocale",
             "summary": "Stocke\u0020la\u0020langue\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-view-Main.html#property_openGraphLocale"
+            "url": "classes/app-php-model-Main.html#property_openGraphLocale"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024openGraphUrl",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphUrl",
             "name": "openGraphUrl",
             "summary": "Stocke\u0020l\u0027URL\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-view-Main.html#property_openGraphUrl"
+            "url": "classes/app-php-model-Main.html#property_openGraphUrl"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024openGraphTitle",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphTitle",
             "name": "openGraphTitle",
             "summary": "Stocke\u0020le\u0020titre\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-view-Main.html#property_openGraphTitle"
+            "url": "classes/app-php-model-Main.html#property_openGraphTitle"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024openGraphSiteName",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphSiteName",
             "name": "openGraphSiteName",
             "summary": "Stocke\u0020le\u0020nom\u0020du\u0020site\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-view-Main.html#property_openGraphSiteName"
+            "url": "classes/app-php-model-Main.html#property_openGraphSiteName"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024openGraphDescription",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphDescription",
             "name": "openGraphDescription",
             "summary": "Stocke\u0020la\u0020description\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-view-Main.html#property_openGraphDescription"
+            "url": "classes/app-php-model-Main.html#property_openGraphDescription"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024homePage",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024homePage",
             "name": "homePage",
             "summary": "Stocke\u0020la\u0020page\u0020d\u0027accueil.",
-            "url": "classes/app-view-Main.html#property_homePage"
+            "url": "classes/app-php-model-Main.html#property_homePage"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024pageId",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024pageId",
             "name": "pageId",
             "summary": "Stocke\u0020l\u0027ID\u0020de\u0020la\u0020page.",
-            "url": "classes/app-view-Main.html#property_pageId"
+            "url": "classes/app-php-model-Main.html#property_pageId"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024viewTitle",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024viewTitle",
             "name": "viewTitle",
             "summary": "Stocke\u0020le\u0020titre\u0020de\u0020la\u0020vue.",
-            "url": "classes/app-view-Main.html#property_viewTitle"
+            "url": "classes/app-php-model-Main.html#property_viewTitle"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024pageView",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024pageView",
             "name": "pageView",
             "summary": "Stocke\u0020la\u0020vue\u0020de\u0020la\u0020page.",
-            "url": "classes/app-view-Main.html#property_pageView"
+            "url": "classes/app-php-model-Main.html#property_pageView"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024facebookShareUrl",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024facebookShareUrl",
             "name": "facebookShareUrl",
             "summary": "Stocke\u0020l\u0027URL\u0020de\u0020partage\u0020sur\u0020Facebook.",
-            "url": "classes/app-view-Main.html#property_facebookShareUrl"
+            "url": "classes/app-php-model-Main.html#property_facebookShareUrl"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024linkedInShareUrl",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024linkedInShareUrl",
             "name": "linkedInShareUrl",
             "summary": "Stocke\u0020l\u0027URL\u0020de\u0020partage\u0020sur\u0020LinkedIn.",
-            "url": "classes/app-view-Main.html#property_linkedInShareUrl"
+            "url": "classes/app-php-model-Main.html#property_linkedInShareUrl"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024headerMenuList",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024headerMenuList",
             "name": "headerMenuList",
             "summary": "Stocke\u0020la\u0020liste\u0020des\u0020menus.",
-            "url": "classes/app-view-Main.html#property_headerMenuList"
+            "url": "classes/app-php-model-Main.html#property_headerMenuList"
         },                {
-            "fqsen": "\\app\\view\\Main\u003A\u003A\u0024headerMenuCurrent",
+            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024headerMenuCurrent",
             "name": "headerMenuCurrent",
             "summary": "Stocke\u0020le\u0020menu\u0020courant.",
-            "url": "classes/app-view-Main.html#property_headerMenuCurrent"
+            "url": "classes/app-php-model-Main.html#property_headerMenuCurrent"
+        },                {
+            "fqsen": "\\app\\php\\model\\Menu",
+            "name": "Menu",
+            "summary": "Cree\u0020le\u0020modele\u0020du\u0020menu\u0020du\u0020site.",
+            "url": "classes/app-php-model-Menu.html"
+        },                {
+            "fqsen": "\\app\\php\\model\\Menu\u003A\u003AisEqual\u0028\u0029",
+            "name": "isEqual",
+            "summary": "V\u00E9rifie\u0020si\u0020le\u0020menu\u0020du\u0020site\u0020est\u0020\u00E9gal\u0020\u00E0\u0020un\u0020autre\u0020menu\u0020du\u0020site.",
+            "url": "classes/app-php-model-Menu.html#method_isEqual"
+        },                {
+            "fqsen": "\\app\\php\\model\\Menu\u003A\u003AisEmpty\u0028\u0029",
+            "name": "isEmpty",
+            "summary": "V\u00E9rifie\u0020si\u0020le\u0020menu\u0020du\u0020site\u0020est\u0020vide.",
+            "url": "classes/app-php-model-Menu.html#method_isEmpty"
+        },                {
+            "fqsen": "\\app\\php\\model\\Menu\u003A\u003A\u0024index",
+            "name": "index",
+            "summary": "Stocke\u0020l\u0027index\u0020du\u0020menu\u0020du\u0020site.",
+            "url": "classes/app-php-model-Menu.html#property_index"
+        },                {
+            "fqsen": "\\app\\php\\model\\Menu\u003A\u003A\u0024parentIndex",
+            "name": "parentIndex",
+            "summary": "Stocke\u0020l\u0027index\u0020du\u0020menu\u0020parent\u0020du\u0020site.",
+            "url": "classes/app-php-model-Menu.html#property_parentIndex"
+        },                {
+            "fqsen": "\\app\\php\\model\\Menu\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "Stocke\u0020le\u0020nom\u0020du\u0020menu\u0020du\u0020site.",
+            "url": "classes/app-php-model-Menu.html#property_name"
+        },                {
+            "fqsen": "\\app\\php\\model\\Menu\u003A\u003A\u0024label",
+            "name": "label",
+            "summary": "Stocke\u0020le\u0020libelle\u0020du\u0020menu\u0020du\u0020site.",
+            "url": "classes/app-php-model-Menu.html#property_label"
+        },                {
+            "fqsen": "\\app\\php\\model\\Menu\u003A\u003A\u0024title",
+            "name": "title",
+            "summary": "Stocke\u0020le\u0020titre\u0020du\u0020menu\u0020du\u0020site.",
+            "url": "classes/app-php-model-Menu.html#property_title"
+        },                {
+            "fqsen": "\\app\\php\\model\\Menu\u003A\u003A\u0024link",
+            "name": "link",
+            "summary": "Stocke\u0020le\u0020lien\u0020du\u0020menu\u0020du\u0020site.",
+            "url": "classes/app-php-model-Menu.html#property_link"
+        },                {
+            "fqsen": "\\app\\php\\model\\Menu\u003A\u003A\u0024isActive",
+            "name": "isActive",
+            "summary": "Stocke\u0020l\u0027etat\u0020du\u0020menu\u0020du\u0020site.",
+            "url": "classes/app-php-model-Menu.html#property_isActive"
+        },                {
+            "fqsen": "\\app\\php\\model\\MenuList",
+            "name": "MenuList",
+            "summary": "Cree\u0020le\u0020modele\u0020de\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site.",
+            "url": "classes/app-php-model-MenuList.html"
+        },                {
+            "fqsen": "\\app\\php\\model\\MenuList\u003A\u003AaddMenuByItem\u0028\u0029",
+            "name": "addMenuByItem",
+            "summary": "Ajoute\u0020un\u0020menu\u0020\u00E0\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site.",
+            "url": "classes/app-php-model-MenuList.html#method_addMenuByItem"
+        },                {
+            "fqsen": "\\app\\php\\model\\MenuList\u003A\u003AaddMenuByParams\u0028\u0029",
+            "name": "addMenuByParams",
+            "summary": "Ajoute\u0020un\u0020menu\u0020\u00E0\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020par\u0020ses\u0020param\u00E8tres.",
+            "url": "classes/app-php-model-MenuList.html#method_addMenuByParams"
+        },                {
+            "fqsen": "\\app\\php\\model\\MenuList\u003A\u003AaddMenuByRoot\u0028\u0029",
+            "name": "addMenuByRoot",
+            "summary": "Ajoute\u0020un\u0020menu\u0020\u00E0\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020par\u0020ses\u0020param\u00E8tres\u0020et\u0020en\u0020tant\u0020que\u0020menu\u0020racine.",
+            "url": "classes/app-php-model-MenuList.html#method_addMenuByRoot"
+        },                {
+            "fqsen": "\\app\\php\\model\\MenuList\u003A\u003AaddMenuByParentMenu\u0028\u0029",
+            "name": "addMenuByParentMenu",
+            "summary": "Ajoute\u0020un\u0020menu\u0020\u00E0\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020par\u0020ses\u0020param\u00E8tres\u0020et\u0020en\u0020tant\u0020que\u0020menu\u0020enfant\u0020d\u0027un\u0020menu\u0020parent.",
+            "url": "classes/app-php-model-MenuList.html#method_addMenuByParentMenu"
+        },                {
+            "fqsen": "\\app\\php\\model\\MenuList\u003A\u003AgetMenuListByParentIndex\u0028\u0029",
+            "name": "getMenuListByParentIndex",
+            "summary": "Recupere\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020par\u0020l\u0027index\u0020de\u0020leur\u0020menu\u0020parent.",
+            "url": "classes/app-php-model-MenuList.html#method_getMenuListByParentIndex"
+        },                {
+            "fqsen": "\\app\\php\\model\\MenuList\u003A\u003AgetMenuByLink\u0028\u0029",
+            "name": "getMenuByLink",
+            "summary": "Recupere\u0020un\u0020menu\u0020de\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020par\u0020son\u0020lien.",
+            "url": "classes/app-php-model-MenuList.html#method_getMenuByLink"
+        },                {
+            "fqsen": "\\app\\php\\model\\MenuList\u003A\u003AgetMenuByPosition\u0028\u0029",
+            "name": "getMenuByPosition",
+            "summary": "Recupere\u0020un\u0020menu\u0020de\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020par\u0020sa\u0020position\u0020dans\u0020la\u0020liste.",
+            "url": "classes/app-php-model-MenuList.html#method_getMenuByPosition"
+        },                {
+            "fqsen": "\\app\\php\\model\\MenuList\u003A\u003AgetMenuList\u0028\u0029",
+            "name": "getMenuList",
+            "summary": "Recupere\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site.",
+            "url": "classes/app-php-model-MenuList.html#method_getMenuList"
+        },                {
+            "fqsen": "\\app\\php\\model\\MenuList\u003A\u003AisEmpty\u0028\u0029",
+            "name": "isEmpty",
+            "summary": "V\u00E9rifie\u0020si\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020est\u0020vide.",
+            "url": "classes/app-php-model-MenuList.html#method_isEmpty"
+        },                {
+            "fqsen": "\\app\\php\\model\\MenuList\u003A\u003Asize\u0028\u0029",
+            "name": "size",
+            "summary": "Recupere\u0020la\u0020taille\u0020de\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site.",
+            "url": "classes/app-php-model-MenuList.html#method_size"
+        },                {
+            "fqsen": "\\app\\php\\model\\MenuList\u003A\u003A\u0024menuList",
+            "name": "menuList",
+            "summary": "Stocke\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site.",
+            "url": "classes/app-php-model-MenuList.html#property_menuList"
+        },                {
+            "fqsen": "\\app\\php\\page\\Admin",
+            "name": "Admin",
+            "summary": "Cree\u0020le\u0020contenu\u0020de\u0020la\u0020page\u0020d\u0027administration.",
+            "url": "classes/app-php-page-Admin.html"
+        },                {
+            "fqsen": "\\app\\php\\page\\Admin\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Construit\u0020le\u0020contenu\u0020de\u0020la\u0020page\u0020d\u0027administration.",
+            "url": "classes/app-php-page-Admin.html#method___construct"
+        },                {
+            "fqsen": "\\app\\php\\page\\Admin\u003A\u003Arun\u0028\u0029",
+            "name": "run",
+            "summary": "Affiche\u0020le\u0020contenu\u0020de\u0020la\u0020page\u0020d\u0027administration.",
+            "url": "classes/app-php-page-Admin.html#method_run"
+        },                {
+            "fqsen": "\\app\\php\\page\\Connexion",
+            "name": "Connexion",
+            "summary": "Cree\u0020le\u0020contenu\u0020de\u0020la\u0020page\u0020de\u0020connexion.",
+            "url": "classes/app-php-page-Connexion.html"
+        },                {
+            "fqsen": "\\app\\php\\page\\Connexion\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Construit\u0020le\u0020contenu\u0020de\u0020la\u0020page\u0020de\u0020connexion.",
+            "url": "classes/app-php-page-Connexion.html#method___construct"
+        },                {
+            "fqsen": "\\app\\php\\page\\Connexion\u003A\u003Arun\u0028\u0029",
+            "name": "run",
+            "summary": "Affiche\u0020le\u0020contenu\u0020de\u0020la\u0020page\u0020de\u0020connexion.",
+            "url": "classes/app-php-page-Connexion.html#method_run"
+        },                {
+            "fqsen": "\\app\\php\\page\\Page",
+            "name": "Page",
+            "summary": "Cree\u0020le\u0020contenu\u0020de\u0020la\u0020page\u0020du\u0020site.",
+            "url": "classes/app-php-page-Page.html"
+        },                {
+            "fqsen": "\\app\\php\\page\\Page\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Construit\u0020le\u0020contenu\u0020de\u0020la\u0020page\u0020du\u0020site.",
+            "url": "classes/app-php-page-Page.html#method___construct"
+        },                {
+            "fqsen": "\\app\\php\\page\\Page\u003A\u003Arun\u0028\u0029",
+            "name": "run",
+            "summary": "Affiche\u0020le\u0020contenu\u0020de\u0020la\u0020page\u0020du\u0020site.",
+            "url": "classes/app-php-page-Page.html#method_run"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main",
+            "name": "Main",
+            "summary": "Cree\u0020la\u0020page\u0020principale\u0020du\u0020site.",
+            "url": "classes/app-php-view-Main.html"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Construit\u0020la\u0020page\u0020principale\u0020du\u0020site.",
+            "url": "classes/app-php-view-Main.html#method___construct"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003Arun\u0028\u0029",
+            "name": "run",
+            "summary": "Affiche\u0020la\u0020page\u0020principale\u0020du\u0020site.",
+            "url": "classes/app-php-view-Main.html#method_run"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003ArunSiteInfos\u0028\u0029",
+            "name": "runSiteInfos",
+            "summary": "Affiche\u0020les\u0020informations\u0020du\u0020site.",
+            "url": "classes/app-php-view-Main.html#method_runSiteInfos"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003ArunOpenGraph\u0028\u0029",
+            "name": "runOpenGraph",
+            "summary": "Affiche\u0020les\u0020informations\u0020d\u0027Open\u0020Graph.",
+            "url": "classes/app-php-view-Main.html#method_runOpenGraph"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003ArunStyleCss\u0028\u0029",
+            "name": "runStyleCss",
+            "summary": "Affiche\u0020les\u0020styles\u0020CSS.",
+            "url": "classes/app-php-view-Main.html#method_runStyleCss"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003ArunBackground\u0028\u0029",
+            "name": "runBackground",
+            "summary": "Affiche\u0020les\u0020fonds\u0020d\u0027\u00E9cran.",
+            "url": "classes/app-php-view-Main.html#method_runBackground"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003ArunBody\u0028\u0029",
+            "name": "runBody",
+            "summary": "Cree\u0020le\u0020corps\u0020de\u0020la\u0020page.",
+            "url": "classes/app-php-view-Main.html#method_runBody"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003ArunHeader\u0028\u0029",
+            "name": "runHeader",
+            "summary": "Cree\u0020l\u0027entete\u0020de\u0020la\u0020page.",
+            "url": "classes/app-php-view-Main.html#method_runHeader"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003ArunHeaderMenu\u0028\u0029",
+            "name": "runHeaderMenu",
+            "summary": "Affiche\u0020le\u0020menu\u0020de\u0020l\u0027entete.",
+            "url": "classes/app-php-view-Main.html#method_runHeaderMenu"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003ArunHeaderSubMenu\u0028\u0029",
+            "name": "runHeaderSubMenu",
+            "summary": "Affiche\u0020le\u0020sous\u002Dmenu\u0020de\u0020l\u0027entete.",
+            "url": "classes/app-php-view-Main.html#method_runHeaderSubMenu"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003ArunView\u0028\u0029",
+            "name": "runView",
+            "summary": "Affiche\u0020la\u0020vue\u0020principale.",
+            "url": "classes/app-php-view-Main.html#method_runView"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003ArunPage\u0028\u0029",
+            "name": "runPage",
+            "summary": "Affiche\u0020la\u0020page\u0020principale.",
+            "url": "classes/app-php-view-Main.html#method_runPage"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003ArunFooter\u0028\u0029",
+            "name": "runFooter",
+            "summary": "Affiche\u0020le\u0020pied\u0020de\u0020page.",
+            "url": "classes/app-php-view-Main.html#method_runFooter"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003ArunFooterTitle\u0028\u0029",
+            "name": "runFooterTitle",
+            "summary": "Affiche\u0020le\u0020titre\u0020du\u0020pied\u0020de\u0020page.",
+            "url": "classes/app-php-view-Main.html#method_runFooterTitle"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003ArunFooterSocialNetwork\u0028\u0029",
+            "name": "runFooterSocialNetwork",
+            "summary": "Affiche\u0020les\u0020r\u00E9seaux\u0020sociaux\u0020du\u0020pied\u0020de\u0020page.",
+            "url": "classes/app-php-view-Main.html#method_runFooterSocialNetwork"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003ArunFooterCopyright\u0028\u0029",
+            "name": "runFooterCopyright",
+            "summary": "Affiche\u0020le\u0020copyright\u0020du\u0020pied\u0020de\u0020page.",
+            "url": "classes/app-php-view-Main.html#method_runFooterCopyright"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003ArunScriptJs\u0028\u0029",
+            "name": "runScriptJs",
+            "summary": "Affiche\u0020les\u0020scripts\u0020JavaScript.",
+            "url": "classes/app-php-view-Main.html#method_runScriptJs"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024siteName",
+            "name": "siteName",
+            "summary": "Stocke\u0020le\u0020nom\u0020du\u0020site.",
+            "url": "classes/app-php-view-Main.html#property_siteName"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024siteStartYear",
+            "name": "siteStartYear",
+            "summary": "Stocke\u0020l\u0027ann\u00E9e\u0020de\u0020d\u00E9but\u0020du\u0020site.",
+            "url": "classes/app-php-view-Main.html#property_siteStartYear"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024currentYear",
+            "name": "currentYear",
+            "summary": "Stocke\u0020l\u0027ann\u00E9e\u0020courante.",
+            "url": "classes/app-php-view-Main.html#property_currentYear"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024siteVision",
+            "name": "siteVision",
+            "summary": "Stocke\u0020la\u0020vision\u0020du\u0020site.",
+            "url": "classes/app-php-view-Main.html#property_siteVision"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024pageTitle",
+            "name": "pageTitle",
+            "summary": "Stocke\u0020le\u0020titre\u0020de\u0020la\u0020page.",
+            "url": "classes/app-php-view-Main.html#property_pageTitle"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024pageLanguage",
+            "name": "pageLanguage",
+            "summary": "Stocke\u0020la\u0020langue\u0020de\u0020la\u0020page.",
+            "url": "classes/app-php-view-Main.html#property_pageLanguage"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024pageEncoding",
+            "name": "pageEncoding",
+            "summary": "Stocke\u0020l\u0027encodage\u0020de\u0020la\u0020page.",
+            "url": "classes/app-php-view-Main.html#property_pageEncoding"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024pageLogo",
+            "name": "pageLogo",
+            "summary": "Stocke\u0020le\u0020logo\u0020de\u0020la\u0020page.",
+            "url": "classes/app-php-view-Main.html#property_pageLogo"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024pageLogoMimeType",
+            "name": "pageLogoMimeType",
+            "summary": "Stocke\u0020le\u0020type\u0020MIME\u0020du\u0020logo\u0020de\u0020la\u0020page.",
+            "url": "classes/app-php-view-Main.html#property_pageLogoMimeType"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024pageDescription",
+            "name": "pageDescription",
+            "summary": "Stocke\u0020la\u0020description\u0020de\u0020la\u0020page.",
+            "url": "classes/app-php-view-Main.html#property_pageDescription"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024openGraphType",
+            "name": "openGraphType",
+            "summary": "Stocke\u0020le\u0020type\u0020d\u0027Open\u0020Graph.",
+            "url": "classes/app-php-view-Main.html#property_openGraphType"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024openGraphImage",
+            "name": "openGraphImage",
+            "summary": "Stocke\u0020l\u0027image\u0020d\u0027Open\u0020Graph.",
+            "url": "classes/app-php-view-Main.html#property_openGraphImage"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024openGraphImageMimeType",
+            "name": "openGraphImageMimeType",
+            "summary": "Stocke\u0020le\u0020type\u0020MIME\u0020de\u0020l\u0027image\u0020d\u0027Open\u0020Graph.",
+            "url": "classes/app-php-view-Main.html#property_openGraphImageMimeType"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024openGraphImageWidth",
+            "name": "openGraphImageWidth",
+            "summary": "Stocke\u0020la\u0020largeur\u0020de\u0020l\u0027image\u0020d\u0027Open\u0020Graph.",
+            "url": "classes/app-php-view-Main.html#property_openGraphImageWidth"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024openGraphImageHeight",
+            "name": "openGraphImageHeight",
+            "summary": "Stocke\u0020la\u0020hauteur\u0020de\u0020l\u0027image\u0020d\u0027Open\u0020Graph.",
+            "url": "classes/app-php-view-Main.html#property_openGraphImageHeight"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024openGraphLocale",
+            "name": "openGraphLocale",
+            "summary": "Stocke\u0020la\u0020langue\u0020d\u0027Open\u0020Graph.",
+            "url": "classes/app-php-view-Main.html#property_openGraphLocale"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024openGraphUrl",
+            "name": "openGraphUrl",
+            "summary": "Stocke\u0020l\u0027URL\u0020d\u0027Open\u0020Graph.",
+            "url": "classes/app-php-view-Main.html#property_openGraphUrl"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024openGraphTitle",
+            "name": "openGraphTitle",
+            "summary": "Stocke\u0020le\u0020titre\u0020d\u0027Open\u0020Graph.",
+            "url": "classes/app-php-view-Main.html#property_openGraphTitle"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024openGraphSiteName",
+            "name": "openGraphSiteName",
+            "summary": "Stocke\u0020le\u0020nom\u0020du\u0020site\u0020d\u0027Open\u0020Graph.",
+            "url": "classes/app-php-view-Main.html#property_openGraphSiteName"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024openGraphDescription",
+            "name": "openGraphDescription",
+            "summary": "Stocke\u0020la\u0020description\u0020d\u0027Open\u0020Graph.",
+            "url": "classes/app-php-view-Main.html#property_openGraphDescription"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024homePage",
+            "name": "homePage",
+            "summary": "Stocke\u0020la\u0020page\u0020d\u0027accueil.",
+            "url": "classes/app-php-view-Main.html#property_homePage"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024pageId",
+            "name": "pageId",
+            "summary": "Stocke\u0020l\u0027ID\u0020de\u0020la\u0020page.",
+            "url": "classes/app-php-view-Main.html#property_pageId"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024viewTitle",
+            "name": "viewTitle",
+            "summary": "Stocke\u0020le\u0020titre\u0020de\u0020la\u0020vue.",
+            "url": "classes/app-php-view-Main.html#property_viewTitle"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024pageView",
+            "name": "pageView",
+            "summary": "Stocke\u0020la\u0020vue\u0020de\u0020la\u0020page.",
+            "url": "classes/app-php-view-Main.html#property_pageView"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024facebookShareUrl",
+            "name": "facebookShareUrl",
+            "summary": "Stocke\u0020l\u0027URL\u0020de\u0020partage\u0020sur\u0020Facebook.",
+            "url": "classes/app-php-view-Main.html#property_facebookShareUrl"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024linkedInShareUrl",
+            "name": "linkedInShareUrl",
+            "summary": "Stocke\u0020l\u0027URL\u0020de\u0020partage\u0020sur\u0020LinkedIn.",
+            "url": "classes/app-php-view-Main.html#property_linkedInShareUrl"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024headerMenuList",
+            "name": "headerMenuList",
+            "summary": "Stocke\u0020la\u0020liste\u0020des\u0020menus.",
+            "url": "classes/app-php-view-Main.html#property_headerMenuList"
+        },                {
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024headerMenuCurrent",
+            "name": "headerMenuCurrent",
+            "summary": "Stocke\u0020le\u0020menu\u0020courant.",
+            "url": "classes/app-php-view-Main.html#property_headerMenuCurrent"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main",
+            "name": "Main",
+            "summary": "Cree\u0020le\u0020controleur\u0020de\u0020la\u0020vue\u0020principale\u0020du\u0020site.",
+            "url": "classes/app-twig-controller-Main.html"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/app-twig-controller-Main.html#method___construct"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetTemplateDir\u0028\u0029",
+            "name": "getTemplateDir",
+            "summary": "",
+            "url": "classes/app-twig-controller-Main.html#method_getTemplateDir"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetTemplateFile\u0028\u0029",
+            "name": "getTemplateFile",
+            "summary": "",
+            "url": "classes/app-twig-controller-Main.html#method_getTemplateFile"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetTemplateController\u0028\u0029",
+            "name": "getTemplateController",
+            "summary": "",
+            "url": "classes/app-twig-controller-Main.html#method_getTemplateController"
+        },                {
+            "fqsen": "\\app\\twig\\template\\controller\\Main",
+            "name": "Main",
+            "summary": "Cree\u0020le\u0020controleur\u0020de\u0020la\u0020vue\u0020principale\u0020du\u0020site.",
+            "url": "classes/app-twig-template-controller-Main.html"
+        },                {
+            "fqsen": "\\app\\twig\\template\\controller\\Main\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Construit\u0020le\u0020controleur\u0020de\u0020la\u0020vue\u0020principale\u0020du\u0020site.",
+            "url": "classes/app-twig-template-controller-Main.html#method___construct"
+        },                {
+            "fqsen": "\\app\\twig\\template\\controller\\Main\u003A\u003AgetTemplateData\u0028\u0029",
+            "name": "getTemplateData",
+            "summary": "Retourne\u0020les\u0020donnees\u0020de\u0020template\u0020twig.",
+            "url": "classes/app-twig-template-controller-Main.html#method_getTemplateData"
+        },                {
+            "fqsen": "\\app\\twig\\template\\controller\\Main\u003A\u003A\u0024model",
+            "name": "model",
+            "summary": "Stocke\u0020le\u0020modele\u0020de\u0020la\u0020vue\u0020principale\u0020du\u0020site.",
+            "url": "classes/app-twig-template-controller-Main.html#property_model"
+        },                {
+            "fqsen": "\\app\\twig\\view\\Main",
+            "name": "Main",
+            "summary": "Cree\u0020la\u0020page\u0020de\u0020la\u0020vue\u0020principale\u0020du\u0020site.",
+            "url": "classes/app-twig-view-Main.html"
+        },                {
+            "fqsen": "\\app\\twig\\view\\Main\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Construit\u0020la\u0020page\u0020de\u0020la\u0020vue\u0020principale\u0020du\u0020site.",
+            "url": "classes/app-twig-view-Main.html#method___construct"
+        },                {
+            "fqsen": "\\app\\twig\\view\\Main\u003A\u003Arun\u0028\u0029",
+            "name": "run",
+            "summary": "Affiche\u0020la\u0020page\u0020de\u0020la\u0020vue\u0020principale\u0020du\u0020site.",
+            "url": "classes/app-twig-view-Main.html#method_run"
+        },                {
+            "fqsen": "\\app\\twig\\view\\Main\u003A\u003A\u0024templateModule",
+            "name": "templateModule",
+            "summary": "Stocke\u0020le\u0020module\u0020de\u0020template\u0020twig.",
+            "url": "classes/app-twig-view-Main.html#property_templateModule"
+        },                {
+            "fqsen": "\\app\\twig\\view\\Main\u003A\u003A\u0024templateFile",
+            "name": "templateFile",
+            "summary": "Stocke\u0020le\u0020fichier\u0020de\u0020template\u0020twig.",
+            "url": "classes/app-twig-view-Main.html#property_templateFile"
+        },                {
+            "fqsen": "\\twig\\controller\\Template",
+            "name": "Template",
+            "summary": "Cree\u0020le\u0020controleur\u0020de\u0020template\u0020twig.",
+            "url": "classes/twig-controller-Template.html"
+        },                {
+            "fqsen": "\\twig\\controller\\Template\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Construit\u0020le\u0020controleur\u0020de\u0020template\u0020twig.",
+            "url": "classes/twig-controller-Template.html#method___construct"
+        },                {
+            "fqsen": "\\twig\\controller\\Template\u003A\u003AgetTemplateDir\u0028\u0029",
+            "name": "getTemplateDir",
+            "summary": "Retourne\u0020le\u0020repertoire\u0020des\u0020templates\u0020twig.",
+            "url": "classes/twig-controller-Template.html#method_getTemplateDir"
+        },                {
+            "fqsen": "\\twig\\controller\\Template\u003A\u003AgetTemplateData\u0028\u0029",
+            "name": "getTemplateData",
+            "summary": "Retourne\u0020les\u0020donnees\u0020de\u0020template\u0020twig.",
+            "url": "classes/twig-controller-Template.html#method_getTemplateData"
+        },                {
+            "fqsen": "\\twig\\controller\\Template\u003A\u003AaddExtension\u0028\u0029",
+            "name": "addExtension",
+            "summary": "",
+            "url": "classes/twig-controller-Template.html#method_addExtension"
+        },                {
+            "fqsen": "\\twig\\controller\\Template\u003A\u003A\u0024templateDir",
+            "name": "templateDir",
+            "summary": "Stocke\u0020le\u0020repertoire\u0020des\u0020templates\u0020twig.",
+            "url": "classes/twig-controller-Template.html#property_templateDir"
+        },                {
+            "fqsen": "\\twig\\extension\\Hello",
+            "name": "Hello",
+            "summary": "Cree\u0020l\u0027extension\u0020Hello\u0020pour\u0020Twig.",
+            "url": "classes/twig-extension-Hello.html"
+        },                {
+            "fqsen": "\\twig\\extension\\Hello\u003A\u003AgetFunctions\u0028\u0029",
+            "name": "getFunctions",
+            "summary": "Retourne\u0020les\u0020fonctions\u0020disponibles\u0020dans\u0020l\u0027extension\u0020Hello.",
+            "url": "classes/twig-extension-Hello.html#method_getFunctions"
+        },                {
+            "fqsen": "\\twig\\extension\\Hello\u003A\u003Ahello\u0028\u0029",
+            "name": "hello",
+            "summary": "Retourne\u0020un\u0020message\u0020de\u0020bienvenue\u0020pour\u0020le\u0020nom\u0020donne.",
+            "url": "classes/twig-extension-Hello.html#method_hello"
+        },                {
+            "fqsen": "\\twig\\module\\Template",
+            "name": "Template",
+            "summary": "Cree\u0020le\u0020module\u0020de\u0020template\u0020twig.",
+            "url": "classes/twig-module-Template.html"
+        },                {
+            "fqsen": "\\twig\\module\\Template\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/twig-module-Template.html#method___construct"
+        },                {
+            "fqsen": "\\twig\\module\\Template\u003A\u003Arender\u0028\u0029",
+            "name": "render",
+            "summary": "",
+            "url": "classes/twig-module-Template.html#method_render"
+        },                {
+            "fqsen": "\\twig\\module\\Template\u003A\u003A\u0024twig",
+            "name": "twig",
+            "summary": "",
+            "url": "classes/twig-module-Template.html#property_twig"
+        },                {
+            "fqsen": "\\twig\\module\\Template\u003A\u003A\u0024controller",
+            "name": "controller",
+            "summary": "",
+            "url": "classes/twig-module-Template.html#property_controller"
         },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
             "url": "namespaces/default.html"
         },                {
-            "fqsen": "\\app\\controller",
+            "fqsen": "\\app\\php\\controller",
             "name": "controller",
             "summary": "",
-            "url": "namespaces/app-controller.html"
+            "url": "namespaces/app-php-controller.html"
+        },                {
+            "fqsen": "\\app\\php",
+            "name": "php",
+            "summary": "",
+            "url": "namespaces/app-php.html"
         },                {
             "fqsen": "\\app",
             "name": "app",
             "summary": "",
             "url": "namespaces/app.html"
         },                {
-            "fqsen": "\\app\\factory",
+            "fqsen": "\\app\\php\\factory",
             "name": "factory",
             "summary": "",
-            "url": "namespaces/app-factory.html"
+            "url": "namespaces/app-php-factory.html"
         },                {
-            "fqsen": "\\app\\model",
+            "fqsen": "\\app\\php\\model",
             "name": "model",
             "summary": "",
-            "url": "namespaces/app-model.html"
+            "url": "namespaces/app-php-model.html"
         },                {
-            "fqsen": "\\app\\page",
+            "fqsen": "\\app\\php\\page",
             "name": "page",
             "summary": "",
-            "url": "namespaces/app-page.html"
+            "url": "namespaces/app-php-page.html"
         },                {
-            "fqsen": "\\app\\view",
+            "fqsen": "\\app\\php\\view",
             "name": "view",
             "summary": "",
-            "url": "namespaces/app-view.html"
+            "url": "namespaces/app-php-view.html"
+        },                {
+            "fqsen": "\\app\\twig\\controller",
+            "name": "controller",
+            "summary": "",
+            "url": "namespaces/app-twig-controller.html"
+        },                {
+            "fqsen": "\\app\\twig",
+            "name": "twig",
+            "summary": "",
+            "url": "namespaces/app-twig.html"
+        },                {
+            "fqsen": "\\app\\twig\\template\\controller",
+            "name": "controller",
+            "summary": "",
+            "url": "namespaces/app-twig-template-controller.html"
+        },                {
+            "fqsen": "\\app\\twig\\template",
+            "name": "template",
+            "summary": "",
+            "url": "namespaces/app-twig-template.html"
+        },                {
+            "fqsen": "\\app\\twig\\view",
+            "name": "view",
+            "summary": "",
+            "url": "namespaces/app-twig-view.html"
+        },                {
+            "fqsen": "\\twig\\controller",
+            "name": "controller",
+            "summary": "",
+            "url": "namespaces/twig-controller.html"
+        },                {
+            "fqsen": "\\twig",
+            "name": "twig",
+            "summary": "",
+            "url": "namespaces/twig.html"
+        },                {
+            "fqsen": "\\twig\\extension",
+            "name": "extension",
+            "summary": "",
+            "url": "namespaces/twig-extension.html"
+        },                {
+            "fqsen": "\\twig\\module",
+            "name": "module",
+            "summary": "",
+            "url": "namespaces/twig-module.html"
         }            ]
 );

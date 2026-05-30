@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-const SRC_DIR = "src/";
+const SRC_DIR = "src";
 
 function autoload_register(string $p_in_className)
 {
-    $filename = __DIR__ . DIRECTORY_SEPARATOR . SRC_DIR . $p_in_className . ".php";
+    $filename = __DIR__ . DIRECTORY_SEPARATOR . SRC_DIR . DIRECTORY_SEPARATOR . $p_in_className . ".php";
     $filename = str_replace("\\", "/", $filename);
 
     if (is_readable($filename)) {

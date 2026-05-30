@@ -12,6 +12,7 @@
         "phpdocumentor/phpdocumentor": "^3.10"
     },
     "require": {
-        "php": ">=8.3.28"
+        "php": ">=8.3.28",
+        "twig/twig": "^3.27"
     }
 }

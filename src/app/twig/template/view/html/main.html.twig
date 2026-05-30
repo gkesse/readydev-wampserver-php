@@ -1,0 +1,39 @@
+{% import 'macro/main.macro.twig' as macros %}
+
+{% set pageId = main.getPageId() %}
+{% set menuList = main.loadHeaderMenuList() %}
+{% set currentMenu = menuList.getMenuByLink(pageId) %}
+
+<!DOCTYPE html>
+<html lang="{{ model.pageLanguage }}">
+    <head>
+        {{ macros.runSiteInfo(main) }}
+        {{ macros.runOpenGraph(main) }}
+        {{ macros.runGoogleFonts() }}
+        {{ macros.runFontAwesome() }}
+        {{ macros.runStyleCss() }}
+    </head>
+    <body>
+        <div class="Html1">
+            {{ macros.runBackground() }}
+            <div class="Html2 HtmlPage">
+                {{ macros.runHeader(main, menuList, currentMenu) }}
+                {{ macros.runView(main, currentMenu) }}
+                {{ macros.runPage(page) }}
+            </div>
+            <footer class="Footer1">
+                {{ macros.runFooterTitle() }}
+                <div>
+                    {{ macros.runFooterFacebook() }}
+                    {{ macros.runFooterSkype() }}
+                    {{ macros.runFooterLinkedIn() }}
+                    {{ macros.runFooterGithub() }}
+                </div>
+                <div>
+                    {{ macros.runFooterCopyright(main) }}
+                </div>
+            </footer>
+        </div>
+        {{ macros.runScriptJs() }}
+    </body>
+</html>
