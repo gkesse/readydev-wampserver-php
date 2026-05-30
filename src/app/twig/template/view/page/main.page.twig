@@ -1,0 +1,86 @@
+{% import 'macro/main.macro.twig' as main %}
+
+<!DOCTYPE html>
+<html lang="{{ model.pageLanguage }}">
+    <head>
+        {{ main.runSiteInfo(model) }}
+        {{ main.runOpenGraph(model) }}
+        {{ main.runGoogleFonts(model) }}
+        {{ main.runFontAwesome(model) }}
+        {{ main.runStyleCss(model) }}
+    </head>
+    <body>
+        <div class="Html1">
+            {{ main.runBackground(model) }}
+            <div class="Html2 HtmlPage">
+                <header class="Menu1" id="HeaderMenu">
+                    <a class="Menu3" href="{{ model.homePage }}">
+                        <img class="Menu4" src="{{ model.pageLogo }}" alt="logo.png"/>
+                        <span class="Menu5">ReadyDEV</span>
+                    </a>
+                    {{ main.runHeaderMenu(model, 0) }}
+                    <div class="Bars1" onclick="call_server('app', 'open_menu_bars', this)">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                </header>
+                <div class="View1">
+                    <h1 class="View2">Tutoriels</h1>
+                    <div class="View3">
+                        <div>
+                            <div class="View4">
+                                <div class="View6">
+                                    <i class="fa fa-eye"></i> Vues
+                                </div>
+                                <div class="View7">100</div>
+                            </div>
+                        </div>
+                        <div>
+                            <a
+                            href="http://www.facebook.com/sharer.php?u=https://localhost:9900/home/tutoriels"
+                            target="_blank"
+                            ><i class="View5 Facebook fa fa-facebook"></i
+                            ></a>
+                            <a
+                            href="https://www.linkedin.com/shareArticle?mini=true&url=https://localhost:9900/home/tutoriels&title=ReadyDEV&summary=Avec+ReadyDEV%2C+apprenez+en+pratiquant+gr%C3%A2ce+%C3%A0+des+cours%0Aet+tutoriels+adapt%C3%A9s+aux+sciences+de+l%27Ing%C3%A9nieur.%0AReadyDEV+est+une+Plateforme+de+D%C3%A9veloppement+en+Continu.%0AProduit+par+G%C3%A9rard+KESSE."
+                            target="_blank"
+                            ><i class="View5 Linkedin fa fa-linkedin"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+                <h1>Bonjour tout le monde!</h1>
+            </div>
+            <footer class="Footer1">
+                <div>Réseaux Sociaux - Réjoignez-nous</div>
+                <div>
+                    <a href="#">
+                        <i class="Footer2 fa fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="Footer2 fa fa-skype"></i>
+                    </a>
+                    <a
+                    href="https://www.linkedin.com/in/tia-gerard-kesse/"
+                    target="_blank"
+                    >
+                    <i class="Footer2 fa fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/gkesse/" target="_blank">
+                    <i class="Footer2 fa fa-github"></i>
+                </a>
+            </div>
+            <div>
+                <i class="fa fa-copyright"></i>
+                <span>2017 - 2026 | ReadyDEV</span>
+                <div>
+                    Plateforme de Développement Continu<br />
+                    Produit par <b>Gérard KESSE</b><br />
+                    Polytech'Montpellier<br />
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/public/js/app/view/Main.js"></script>
+    <script src="/public/js/scripts.js"></script>
+</body>
+</html>

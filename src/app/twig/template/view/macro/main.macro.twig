@@ -1,0 +1,120 @@
+{% macro runSiteInfo(model) %}
+    <title>{{ model.pageTitle }}</title>
+    <meta charset="{{ model.pageEncoding }}" />
+    <link rel="shortcut icon" type="{{ model.pageLogoMimeType }}" href="{{ model.pageLogo }}"/>
+    <meta name="description" content="{{ model.pageDescription }}" />
+{% endmacro %}
+
+{% macro runOpenGraph(model) %}
+    <meta property="og:type" content="{{ model.openGraphType }}" />
+    <meta property="og:image" content="{{ model.openGraphImage }}" />
+    <meta property="og:image:secure_url" content="{{ model.openGraphImageSecureUrl }}"/>
+    <meta property="og:image:type" content="{{ model.openGraphImageType }}"/>
+    <meta property="og:image:width" content="{{ model.openGraphImageWidth }}"/>
+    <meta property="og:image:height" content="{{ model.openGraphImageHeight }}"/>
+    <meta property="og:locale" content="{{ model.openGraphLocale }}" />
+    <meta property="og:url" content="{{ model.openGraphUrl }}" />
+    <meta property="og:title" content="{{ model.openGraphTitle }}" />
+    <meta property="og:site_name" content="{{ model.openGraphSiteName }}" />
+    <meta property="og:description" content="{{ model.openGraphDescription }}"/>
+{% endmacro %}
+
+{% macro runGoogleFonts(model) %}
+    <link rel="stylesheet" href="/libs/google-fonts/Aclonica/css.css" />
+    <link rel="stylesheet" href="/libs/google-fonts/Akronim/css.css" />
+    <link rel="stylesheet" href="/libs/google-fonts/Allan/css.css" />
+    <link rel="stylesheet" href="/libs/google-fonts/Archivo_Narrow/css.css"/>
+    <link rel="stylesheet" href="/libs/google-fonts/Anton/css.css" />
+    <link rel="stylesheet" href="/libs/google-fonts/Aclonica/css.css" />
+{% endmacro %}
+
+{% macro runFontAwesome(model) %}
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+{% endmacro %}
+
+{% macro runStyleCss(model) %}
+    <link rel="stylesheet" href="/public/css/styles.css" />
+{% endmacro %}
+
+{% macro runBackground(model) %}
+    <div class="Background1"></div>
+    <div class="Background2"></div>
+    <div class="Background3"></div>
+{% endmacro %}
+
+{% macro runHeaderSubMenu(model, parentIndex) %}
+    {% set menuListI = model.headerMenuList.getMenuListByParentIndex(parentIndex) %}
+    {% for menuI in menuListI.getMenuList() %}
+        {% if menuI.isActive %}
+            {% set menuListJ = model.headerMenuList.getMenuListByParentIndex(menuI.index) %}
+            {% set activeClass = '' %}
+            {% set isActive = false %}
+            {% set isActive = (isActive or menuI.isEqual(model.headerMenuCurrent)) %}
+            {% set isActive = (isActive or ((menuI.name == model.headerMenuCurrent.name) and (menuI.parentIndex ==0))) %}
+            {% if isActive %}
+                {% set activeClass = ' Active' %}
+            {% endif %}
+
+            {% if menuListJ.isEmpty() %}
+                {% if menuI.parentIndex == 0 %}
+                    <a class='Menu2{{ activeClass }}' href='{{ menuI.link }}'><div class='Menu14'>{{ menuI.label }}</div></a>
+                {% else %}
+                    <a class='Menu10' href='{{ menuI.link }}'><div class='Menu8{{ activeClass }}'>{{ menuI.label }}</div></a>
+                {% endif %}
+            {% else %}
+                {% if menuI.parentIndex == 0 %}
+                    <div class='Menu6'><a class='Menu2{{ activeClass }}' href='{{ menuI.link }}' onclick='return call_server("app", "open_menu_group", this)'><div class='Menu14'>{{ menuI.label }}</div><i class='Menu13 fa fa-caret-down'></i></a>
+                {% else %}
+                    <div class='Menu9'><div class='Menu12'><div class='Menu8'>{{ menuI.label }} <i class='Menu15 fa fa-caret-down'></i></div></div>
+                {% endif %}
+
+                {% if menuI.parentIndex == 0 %}
+                    <div class='Menu7'><a class='Menu16' href='{{ menuI.link }}'><div class='Menu8'>{{ menuI.label }}</div></a>
+                {% else %}
+                    <div class='Menu11'>
+                    {% endif %}
+                    {{ _self.runHeaderSubMenu(model, menuI.index) }}
+                </div>
+                </div>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{% macro runHeaderMenu(model, parentIndex) %}
+    {% set menuListI = model.headerMenuList.getMenuListByParentIndex(parentIndex) %}
+    {% for menuI in menuListI.getMenuList() %}
+        {% if menuI.isActive %}
+            {% set menuListJ = model.headerMenuList.getMenuListByParentIndex(menuI.index) %}
+            {% set activeClass = '' %}
+            {% set isActive = false %}
+            {% set isActive = (isActive or model.isMenuActive(menuI)) %}
+            {% set isActive = (isActive or ((menuI.name == model.headerMenuCurrent.name) and (menuI.parentIndex ==0))) %}
+            {% if isActive %}
+                {% set activeClass = ' Active' %}
+            {% endif %}
+            {% if menuListJ.isEmpty() %}
+                {% if menuI.parentIndex == 0 %}
+                    <a class='Menu2{{ activeClass }}' href='{{ menuI.link }}'><div class='Menu14'>{{ menuI.label }}</div></a>
+                {% else %}
+                    <a class='Menu10' href='{{ menuI.link }}'><div class='Menu8{{ activeClass }}'>{{ menuI.label }}</div></a>
+                {% endif %}
+            {% else %}
+                {% if menuI.parentIndex == 0 %}
+                    <div class='Menu6'><a class='Menu2{{ activeClass }}' href='{{ menuI.link }}' onclick='return call_server("app", "open_menu_group", this)'><div class='Menu14'>{{ menuI.label }}</div><i class='Menu13 fa fa-caret-down'></i></a>
+                {% else %}
+                    <div class='Menu9'><div class='Menu12'><div class='Menu8'>{{ menuI.label }} <i class='Menu15 fa fa-caret-down'></i></div></div>
+                {% endif %}
+
+                {% if menuI.parentIndex == 0 %}
+                    <div class='Menu7'><a class='Menu16' href='{{ menuI.link }}'><div class='Menu8'>{{ menuI.label }}</div></a>
+                {% else %}
+                    <div class='Menu11'>
+                    {% endif %}
+                    {{ _self.runHeaderMenu(model, menuI.index) }}
+                </div>
+                </div>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endmacro %}

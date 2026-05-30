@@ -55,7 +55,8 @@ class Main
         $this->runScriptJs($p_out_text);
     }
 
-    private function runScriptJs(string &$p_out_text): void {
+    private function runScriptJs(string &$p_out_text): void
+    {
         $p_out_text .= \sprintf("<script src='/public/tests/js/app/view/TestMain.js'></script>\n");
     }
 }

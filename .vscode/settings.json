@@ -11,5 +11,8 @@
         "email": "team@readydev.com",
         "url": "https://www.readydev.ovh",
         "copyright": "(c) $CURRENT_YEAR"
+    },
+    "[twig]": {
+        "editor.defaultFormatter": "TGOSystems.ultimate-twig"
     }
 }
