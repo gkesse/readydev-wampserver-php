@@ -1,1 +1,16 @@
-<h1>Page d'administration du site</h1>
+{% import 'macro/admin.macro.twig' as macros %}
+
+<div class='Block15'>
+    <div class='Block1'>
+        <div class='Block2'>
+            {{ macros.runEditorTitle(page) }}
+            <div class='Block5'>
+                <input type='hidden' id='EditorDefaultTab' value='2'/>
+                {{ macros.runEditorTab(page) }}
+                {{ macros.runEditorHome(page) }}
+                {{ macros.runEditorPage(page) }}
+                {{ macros.runEditorCode(page) }}
+            </div>
+        </div>
+    </div>
+</div>

@@ -322,7 +322,7 @@ class Main
         $p_out_text .= \sprintf("<span class='Menu5'>%s</span>\n", $this->siteName);
         $p_out_text .= \sprintf("</a>\n");
         $this->runHeaderMenu(0, $this->headerMenuCurrent, $p_out_text);
-        $p_out_text .= \sprintf("<div class='Bars1' onclick='call_server(\"app\", \"open_menu_bars\", this)'><i class='fa fa-bars'></i></div>\n");
+        $p_out_text .= \sprintf("<div class='Bars1' onclick='callBackend(\"app\", \"open_menu_bars\", this)'><i class='fa fa-bars'></i></div>\n");
         $p_out_text .= \sprintf("</header>\n");
     }
 
@@ -362,7 +362,7 @@ class Main
                 } else {
                     if (!$menuI->parentIndex) {
                         $p_out_text .= \sprintf("<div class='Menu6'>\n");
-                        $p_out_text .= \sprintf("<a class='Menu2%s' href='%s' onclick='return call_server(\"app\", \"open_menu_group\", this)'><div class='Menu14'>%s</div><i class='Menu13 fa fa-caret-down'></i></a>\n", $activeClass, $menuI->link, $menuI->label);
+                        $p_out_text .= \sprintf("<a class='Menu2%s' href='%s' onclick='return callBackend(\"app\", \"open_menu_group\", this)'><div class='Menu14'>%s</div><i class='Menu13 fa fa-caret-down'></i></a>\n", $activeClass, $menuI->link, $menuI->label);
                         $menuK = $menuI;
                     } else {
                         $p_out_text .= \sprintf("<div class='Menu9'>\n");
@@ -420,7 +420,7 @@ class Main
                 } else {
                     if (!$menuI->parentIndex) {
                         $p_out_text .= \sprintf("<div class='Menu6'>\n");
-                        $p_out_text .= \sprintf("<a class='Menu2%s' href='%s' onclick='return call_server(\"app\", \"open_menu_group\", this)'><div class='Menu14'>%s</div><i class='Menu13 fa fa-caret-down'></i></a>\n", $activeClass, $menuI->link, $menuI->label);
+                        $p_out_text .= \sprintf("<a class='Menu2%s' href='%s' onclick='return callBackend(\"app\", \"open_menu_group\", this)'><div class='Menu14'>%s</div><i class='Menu13 fa fa-caret-down'></i></a>\n", $activeClass, $menuI->link, $menuI->label);
                         $menuK = $menuI;
                     } else {
                         $p_out_text .= \sprintf("<div class='Menu9'>\n");

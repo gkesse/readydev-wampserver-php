@@ -1,4 +1,4 @@
-/* commons */
+/* Commons */
 
 * {
     color: white;
@@ -173,7 +173,7 @@ thead tr:first-child {
     background-color: #2f3959;
 }
 
-/* customs */
+/* Bars */
 
 .Bars1 {
     border-top: 5px solid transparent;
@@ -189,6 +189,8 @@ thead tr:first-child {
     right: 0px;
     cursor: pointer;
 }
+
+/* Background */
 
 .Background1 {
     position: absolute;
@@ -250,6 +252,258 @@ thead tr:first-child {
     -o-border-image: url("/public/data/img/border.png") 30 round;
 }
 
+/* Block */
+
+.Block1 {
+    padding: 10px;
+}
+
+.Block2 {
+    background-color: rgba(35, 47, 87, 0.9);
+}
+
+.Block3 {
+    background-color: #2f3959;
+    color: #bf8e3a;
+    padding: 20px 10px;
+}
+
+.Block4 {
+    color: #89a830;
+    word-break: break-word;
+}
+
+.Block5 {
+    padding: 5px;
+}
+
+.Block6 {
+    text-align: left;
+    font-size: 0px;
+}
+
+.Block7 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.Block8 {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+}
+
+.Block8:hover {
+    text-decoration: underline;
+}
+
+.Block8.Active {
+    background-color: #051039;
+}
+
+.Block9 {
+    padding: 5px;
+    text-align: left;
+}
+
+.Block10 {
+    border-bottom: 5px solid #051039;
+    color: #f67b20;
+    padding-bottom: 5px;
+}
+
+.Block11 {
+    padding: 10px 0px;
+    overflow: auto;
+    scrollbar-color: #5f6681 #051039;
+    scrollbar-width: auto;
+}
+
+.Block12 {
+    height: 400px;
+}
+
+.Block13 {
+    background-color: #051039;
+    padding: 10px;
+}
+
+.Block14 {
+    border: 2px solid #2f3959;
+    height: 400px;
+}
+
+.Block15 {
+    max-width: 800px;
+    margin: auto;
+}
+
+.Block16 {
+    position: relative;
+}
+
+.Block17 {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+
+.Block18 {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.Block18:hover {
+    text-decoration: underline;
+}
+
+.Block19 {
+    display: none;
+}
+
+.Block19.Show {
+    display: block;
+    border: 1px solid #4f5979;
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    width: 300px;
+    max-height: 400px;
+    background-color: #051039;
+    overflow: auto;
+    z-index: 1;
+}
+
+.Block20 {
+    color: #eeeeee;
+    padding: 5px 10px;
+    display: block;
+    border-bottom: 1px solid #2f3959;
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+}
+
+.Block20:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.Block20.Active,
+.Block20.Active:hover {
+    background-color: #2f5959;
+}
+
+.Block21 {
+}
+
+.Block22 {
+    display: none;
+}
+
+.Block22.Show {
+    display: block;
+    padding-left: 20px;
+}
+
+.Block23 {
+    height: 395px;
+    padding: 10px;
+    overflow: auto;
+}
+
+.Block24 {
+}
+
+.Block25 {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -50%);
+}
+
+.Block26 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    padding: 5px;
+    position: relative;
+}
+
+.Block27 {
+    display: none;
+}
+
+.Block27.Show {
+    display: block;
+    border: 1px solid #4f5979;
+    position: absolute;
+    width: 300px;
+    max-height: 400px;
+    background-color: #051039;
+    overflow: auto;
+    z-index: 1;
+}
+
+.Block28 {
+    color: #eeeeee;
+    padding: 5px 10px;
+    display: block;
+    border-bottom: 1px solid #2f3959;
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+    font-size: 16px;
+}
+
+.Block28:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.Block28.Active,
+.Block28.Active:hover {
+    background-color: #2f5959;
+}
+
+.Block29 {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+}
+
+.Block29:hover {
+    text-decoration: underline;
+}
+
+.Block29.Active {
+    background-color: #051039;
+}
+
+.Block30 {
+    display: none;
+}
+
+.Block30.Show {
+    display: block;
+    padding-left: 20px;
+}
+
+.Block31 {
+}
+
+.Block32 {
+    color: #eeeeee;
+    padding: 5px 10px;
+    display: block;
+    border-bottom: 1px solid #2f3959;
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+    font-size: 16px;
+}
+
+/* Footer */
+
 .Footer1 {
     background-color: rgba(255, 255, 255, 0);
     position: absolute;
@@ -267,6 +521,8 @@ thead tr:first-child {
     text-align: center;
     margin: 5px 5px 20px 5px;
 }
+
+/* Html */
 
 .Html1 {
     border: 1px solid transparent;
@@ -287,6 +543,8 @@ thead tr:first-child {
     -moz-border-image: url("/public/data/img/border.png") 30 round;
     -o-border-image: url("/public/data/img/border.png") 30 round;
 }
+
+/* Menu */
 
 .Menu1 {
     background-color: rgba(255, 255, 255, 0.2);
@@ -453,6 +711,8 @@ thead tr:first-child {
     border-bottom: 5px solid #89a830;
 }
 
+/* View */
+
 .View1 {
     text-align: center;
     background-color: rgba(35, 47, 87, 0.9);
@@ -461,7 +721,6 @@ thead tr:first-child {
 
 .View2 {
     background-color: #2f3959;
-    /* L2  5f6681*/
     color: #bf8e3a;
     padding: 20px 10px;
 }
@@ -508,4 +767,85 @@ thead tr:first-child {
     font-size: 14px;
     padding: 0px 10px;
     line-height: 25px;
+}
+
+/* Mobile */
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 960px) {
+    .Bars1 {
+        display: inline-block;
+    }
+
+    .Menu2 {
+        display: none;
+    }
+
+    .RWD .Menu2 {
+        display: block;
+    }
+
+    .Menu6 {
+        display: none;
+    }
+
+    .RWD .Menu6 {
+        display: block;
+    }
+
+    .RWD .Menu7 {
+        position: relative;
+        width: 100%;
+        max-height: 100%;
+    }
+
+    .RWD .Menu7.Show {
+        display: block;
+    }
+
+    .RWD .Menu6:hover .Menu7 {
+        display: none;
+    }
+
+    .RWD .Menu6:hover .Menu7.Show {
+        display: block;
+    }
+
+    .RWD .Menu10 {
+        display: block;
+    }
+
+    .RWD .Menu10:hover {
+        background-color: #051039;
+    }
+
+    .RWD .Menu12:hover {
+        background-color: #051039;
+    }
+
+    .RWD .Menu6:hover .Menu12.Active {
+        background-color: #051039;
+    }
+
+    .RWD .Menu13 {
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translate(-20px, -50%);
+        z-index: 1;
+    }
+
+    .RWD .Menu15 {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translate(0, -50%);
+        z-index: 1;
+    }
+
+    .RWD .Menu16 {
+        display: block;
+    }
 }

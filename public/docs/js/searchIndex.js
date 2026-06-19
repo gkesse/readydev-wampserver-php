@@ -141,10 +141,10 @@ Search.appendIndex(
             "summary": "Recupere\u0020l\u0027ID\u0020de\u0020la\u0020page.",
             "url": "classes/app-php-controller-Main.html#method_getPageId"
         },                {
-            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetPageView\u0028\u0029",
-            "name": "getPageView",
+            "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetViewCount\u0028\u0029",
+            "name": "getViewCount",
             "summary": "Recupere\u0020le\u0020nombre\u0020de\u0020vues\u0020de\u0020la\u0020page.",
-            "url": "classes/app-php-controller-Main.html#method_getPageView"
+            "url": "classes/app-php-controller-Main.html#method_getViewCount"
         },                {
             "fqsen": "\\app\\php\\controller\\Main\u003A\u003AgetFacebookShareUrl\u0028\u0029",
             "name": "getFacebookShareUrl",
@@ -215,151 +215,6 @@ Search.appendIndex(
             "name": "pageList",
             "summary": "Stocke\u0020la\u0020liste\u0020des\u0020pages\u0020du\u0020site.",
             "url": "classes/app-php-factory-Page.html#property_pageList"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main",
-            "name": "Main",
-            "summary": "Cree\u0020le\u0020modele\u0020de\u0020la\u0020vue\u0020principale\u0020du\u0020site.",
-            "url": "classes/app-php-model-Main.html"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024siteName",
-            "name": "siteName",
-            "summary": "Stocke\u0020le\u0020nom\u0020du\u0020site.",
-            "url": "classes/app-php-model-Main.html#property_siteName"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024siteStartYear",
-            "name": "siteStartYear",
-            "summary": "Stocke\u0020l\u0027ann\u00E9e\u0020de\u0020d\u00E9but\u0020du\u0020site.",
-            "url": "classes/app-php-model-Main.html#property_siteStartYear"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024currentYear",
-            "name": "currentYear",
-            "summary": "Stocke\u0020l\u0027ann\u00E9e\u0020courante.",
-            "url": "classes/app-php-model-Main.html#property_currentYear"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024siteVision",
-            "name": "siteVision",
-            "summary": "Stocke\u0020la\u0020vision\u0020du\u0020site.",
-            "url": "classes/app-php-model-Main.html#property_siteVision"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024pageTitle",
-            "name": "pageTitle",
-            "summary": "Stocke\u0020le\u0020titre\u0020de\u0020la\u0020page.",
-            "url": "classes/app-php-model-Main.html#property_pageTitle"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024pageLanguage",
-            "name": "pageLanguage",
-            "summary": "Stocke\u0020la\u0020langue\u0020de\u0020la\u0020page.",
-            "url": "classes/app-php-model-Main.html#property_pageLanguage"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024pageEncoding",
-            "name": "pageEncoding",
-            "summary": "Stocke\u0020l\u0027encodage\u0020de\u0020la\u0020page.",
-            "url": "classes/app-php-model-Main.html#property_pageEncoding"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024pageLogo",
-            "name": "pageLogo",
-            "summary": "Stocke\u0020le\u0020logo\u0020de\u0020la\u0020page.",
-            "url": "classes/app-php-model-Main.html#property_pageLogo"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024pageLogoMimeType",
-            "name": "pageLogoMimeType",
-            "summary": "Stocke\u0020le\u0020type\u0020MIME\u0020du\u0020logo\u0020de\u0020la\u0020page.",
-            "url": "classes/app-php-model-Main.html#property_pageLogoMimeType"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024pageDescription",
-            "name": "pageDescription",
-            "summary": "Stocke\u0020la\u0020description\u0020de\u0020la\u0020page.",
-            "url": "classes/app-php-model-Main.html#property_pageDescription"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphType",
-            "name": "openGraphType",
-            "summary": "Stocke\u0020le\u0020type\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-php-model-Main.html#property_openGraphType"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphImage",
-            "name": "openGraphImage",
-            "summary": "Stocke\u0020l\u0027image\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-php-model-Main.html#property_openGraphImage"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphImageMimeType",
-            "name": "openGraphImageMimeType",
-            "summary": "Stocke\u0020le\u0020type\u0020MIME\u0020de\u0020l\u0027image\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-php-model-Main.html#property_openGraphImageMimeType"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphImageWidth",
-            "name": "openGraphImageWidth",
-            "summary": "Stocke\u0020la\u0020largeur\u0020de\u0020l\u0027image\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-php-model-Main.html#property_openGraphImageWidth"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphImageHeight",
-            "name": "openGraphImageHeight",
-            "summary": "Stocke\u0020la\u0020hauteur\u0020de\u0020l\u0027image\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-php-model-Main.html#property_openGraphImageHeight"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphLocale",
-            "name": "openGraphLocale",
-            "summary": "Stocke\u0020la\u0020langue\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-php-model-Main.html#property_openGraphLocale"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphUrl",
-            "name": "openGraphUrl",
-            "summary": "Stocke\u0020l\u0027URL\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-php-model-Main.html#property_openGraphUrl"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphTitle",
-            "name": "openGraphTitle",
-            "summary": "Stocke\u0020le\u0020titre\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-php-model-Main.html#property_openGraphTitle"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphSiteName",
-            "name": "openGraphSiteName",
-            "summary": "Stocke\u0020le\u0020nom\u0020du\u0020site\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-php-model-Main.html#property_openGraphSiteName"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024openGraphDescription",
-            "name": "openGraphDescription",
-            "summary": "Stocke\u0020la\u0020description\u0020d\u0027Open\u0020Graph.",
-            "url": "classes/app-php-model-Main.html#property_openGraphDescription"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024homePage",
-            "name": "homePage",
-            "summary": "Stocke\u0020la\u0020page\u0020d\u0027accueil.",
-            "url": "classes/app-php-model-Main.html#property_homePage"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024pageId",
-            "name": "pageId",
-            "summary": "Stocke\u0020l\u0027ID\u0020de\u0020la\u0020page.",
-            "url": "classes/app-php-model-Main.html#property_pageId"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024viewTitle",
-            "name": "viewTitle",
-            "summary": "Stocke\u0020le\u0020titre\u0020de\u0020la\u0020vue.",
-            "url": "classes/app-php-model-Main.html#property_viewTitle"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024pageView",
-            "name": "pageView",
-            "summary": "Stocke\u0020la\u0020vue\u0020de\u0020la\u0020page.",
-            "url": "classes/app-php-model-Main.html#property_pageView"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024facebookShareUrl",
-            "name": "facebookShareUrl",
-            "summary": "Stocke\u0020l\u0027URL\u0020de\u0020partage\u0020sur\u0020Facebook.",
-            "url": "classes/app-php-model-Main.html#property_facebookShareUrl"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024linkedInShareUrl",
-            "name": "linkedInShareUrl",
-            "summary": "Stocke\u0020l\u0027URL\u0020de\u0020partage\u0020sur\u0020LinkedIn.",
-            "url": "classes/app-php-model-Main.html#property_linkedInShareUrl"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024headerMenuList",
-            "name": "headerMenuList",
-            "summary": "Stocke\u0020la\u0020liste\u0020des\u0020menus.",
-            "url": "classes/app-php-model-Main.html#property_headerMenuList"
-        },                {
-            "fqsen": "\\app\\php\\model\\Main\u003A\u003A\u0024headerMenuCurrent",
-            "name": "headerMenuCurrent",
-            "summary": "Stocke\u0020le\u0020menu\u0020courant.",
-            "url": "classes/app-php-model-Main.html#property_headerMenuCurrent"
         },                {
             "fqsen": "\\app\\php\\model\\Menu",
             "name": "Menu",
@@ -721,10 +576,10 @@ Search.appendIndex(
             "summary": "Stocke\u0020le\u0020titre\u0020de\u0020la\u0020vue.",
             "url": "classes/app-php-view-Main.html#property_viewTitle"
         },                {
-            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024pageView",
-            "name": "pageView",
-            "summary": "Stocke\u0020la\u0020vue\u0020de\u0020la\u0020page.",
-            "url": "classes/app-php-view-Main.html#property_pageView"
+            "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024viewCount",
+            "name": "viewCount",
+            "summary": "Stocke\u0020le\u0020nombre\u0020de\u0020vues\u0020de\u0020la\u0020page.",
+            "url": "classes/app-php-view-Main.html#property_viewCount"
         },                {
             "fqsen": "\\app\\php\\view\\Main\u003A\u003A\u0024facebookShareUrl",
             "name": "facebookShareUrl",
@@ -753,27 +608,312 @@ Search.appendIndex(
         },                {
             "fqsen": "\\app\\twig\\controller\\Main\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Construit\u0020le\u0020controleur\u0020de\u0020la\u0020vue\u0020principale\u0020du\u0020site.",
             "url": "classes/app-twig-controller-Main.html#method___construct"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetSiteName\u0028\u0029",
+            "name": "getSiteName",
+            "summary": "Recupere\u0020le\u0020nom\u0020du\u0020site.",
+            "url": "classes/app-twig-controller-Main.html#method_getSiteName"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetSiteStartYear\u0028\u0029",
+            "name": "getSiteStartYear",
+            "summary": "Recupere\u0020la\u0020date\u0020de\u0020debut\u0020du\u0020site.",
+            "url": "classes/app-twig-controller-Main.html#method_getSiteStartYear"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetCurrentYear\u0028\u0029",
+            "name": "getCurrentYear",
+            "summary": "Recupere\u0020l\u0027annee\u0020courante.",
+            "url": "classes/app-twig-controller-Main.html#method_getCurrentYear"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetSiteVision\u0028\u0029",
+            "name": "getSiteVision",
+            "summary": "Recupere\u0020la\u0020vision\u0020du\u0020site.",
+            "url": "classes/app-twig-controller-Main.html#method_getSiteVision"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetPageTitle\u0028\u0029",
+            "name": "getPageTitle",
+            "summary": "Recupere\u0020le\u0020titre\u0020de\u0020la\u0020page.",
+            "url": "classes/app-twig-controller-Main.html#method_getPageTitle"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetPageLanguage\u0028\u0029",
+            "name": "getPageLanguage",
+            "summary": "Recupere\u0020la\u0020langue\u0020de\u0020la\u0020page.",
+            "url": "classes/app-twig-controller-Main.html#method_getPageLanguage"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetPageEncoding\u0028\u0029",
+            "name": "getPageEncoding",
+            "summary": "Recupere\u0020l\u0027encodage\u0020de\u0020la\u0020page.",
+            "url": "classes/app-twig-controller-Main.html#method_getPageEncoding"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetPageLogoMimeType\u0028\u0029",
+            "name": "getPageLogoMimeType",
+            "summary": "Recupere\u0020le\u0020type\u0020MIME\u0020du\u0020logo\u0020de\u0020la\u0020page.",
+            "url": "classes/app-twig-controller-Main.html#method_getPageLogoMimeType"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetPageLogo\u0028\u0029",
+            "name": "getPageLogo",
+            "summary": "Recupere\u0020le\u0020logo\u0020de\u0020la\u0020page.",
+            "url": "classes/app-twig-controller-Main.html#method_getPageLogo"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetPageDescription\u0028\u0029",
+            "name": "getPageDescription",
+            "summary": "Recupere\u0020la\u0020description\u0020de\u0020la\u0020page.",
+            "url": "classes/app-twig-controller-Main.html#method_getPageDescription"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetPageUrl\u0028\u0029",
+            "name": "getPageUrl",
+            "summary": "Recupere\u0020l\u0027URL\u0020de\u0020la\u0020page.",
+            "url": "classes/app-twig-controller-Main.html#method_getPageUrl"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetHomePage\u0028\u0029",
+            "name": "getHomePage",
+            "summary": "Recupere\u0020l\u0027URL\u0020de\u0020la\u0020page\u0020d\u0027accueil.",
+            "url": "classes/app-twig-controller-Main.html#method_getHomePage"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetOpenGraphType\u0028\u0029",
+            "name": "getOpenGraphType",
+            "summary": "Recupere\u0020le\u0020type\u0020Open\u0020Graph\u0020de\u0020la\u0020page.",
+            "url": "classes/app-twig-controller-Main.html#method_getOpenGraphType"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetOpenGraphImage\u0028\u0029",
+            "name": "getOpenGraphImage",
+            "summary": "Recupere\u0020l\u0027URL\u0020de\u0020l\u0027image\u0020Open\u0020Graph\u0020de\u0020la\u0020page.",
+            "url": "classes/app-twig-controller-Main.html#method_getOpenGraphImage"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetOpenGraphImageMimeType\u0028\u0029",
+            "name": "getOpenGraphImageMimeType",
+            "summary": "Recupere\u0020le\u0020type\u0020MIME\u0020de\u0020l\u0027image\u0020Open\u0020Graph\u0020de\u0020la\u0020page.",
+            "url": "classes/app-twig-controller-Main.html#method_getOpenGraphImageMimeType"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetOpenGraphImageWidth\u0028\u0029",
+            "name": "getOpenGraphImageWidth",
+            "summary": "Recupere\u0020la\u0020largeur\u0020de\u0020l\u0027image\u0020Open\u0020Graph\u0020de\u0020la\u0020page.",
+            "url": "classes/app-twig-controller-Main.html#method_getOpenGraphImageWidth"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetOpenGraphImageHeight\u0028\u0029",
+            "name": "getOpenGraphImageHeight",
+            "summary": "Recupere\u0020la\u0020hauteur\u0020de\u0020l\u0027image\u0020Open\u0020Graph\u0020de\u0020la\u0020page.",
+            "url": "classes/app-twig-controller-Main.html#method_getOpenGraphImageHeight"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetOpenGraphLocale\u0028\u0029",
+            "name": "getOpenGraphLocale",
+            "summary": "Recupere\u0020la\u0020langue\u0020Open\u0020Graph\u0020de\u0020la\u0020page.",
+            "url": "classes/app-twig-controller-Main.html#method_getOpenGraphLocale"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetPageId\u0028\u0029",
+            "name": "getPageId",
+            "summary": "Recupere\u0020l\u0027ID\u0020de\u0020la\u0020page.",
+            "url": "classes/app-twig-controller-Main.html#method_getPageId"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetViewCount\u0028\u0029",
+            "name": "getViewCount",
+            "summary": "Recupere\u0020le\u0020nombre\u0020de\u0020vues\u0020de\u0020la\u0020page.",
+            "url": "classes/app-twig-controller-Main.html#method_getViewCount"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetFacebookShareUrl\u0028\u0029",
+            "name": "getFacebookShareUrl",
+            "summary": "Recupere\u0020l\u0027URL\u0020de\u0020partage\u0020de\u0020la\u0020page\u0020sur\u0020Facebook.",
+            "url": "classes/app-twig-controller-Main.html#method_getFacebookShareUrl"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetLinkedInShareUrl\u0028\u0029",
+            "name": "getLinkedInShareUrl",
+            "summary": "Recupere\u0020l\u0027URL\u0020de\u0020partage\u0020de\u0020la\u0020page\u0020sur\u0020Twitter.",
+            "url": "classes/app-twig-controller-Main.html#method_getLinkedInShareUrl"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AloadHeaderMenuList\u0028\u0029",
+            "name": "loadHeaderMenuList",
+            "summary": "Charge\u0020la\u0020liste\u0020des\u0020menus\u0020de\u0020l\u0027en\u002Dt\u00EAte.",
+            "url": "classes/app-twig-controller-Main.html#method_loadHeaderMenuList"
         },                {
             "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetTemplateDir\u0028\u0029",
             "name": "getTemplateDir",
-            "summary": "",
+            "summary": "Retourne\u0020le\u0020r\u00E9pertoire\u0020des\u0020templates.",
             "url": "classes/app-twig-controller-Main.html#method_getTemplateDir"
         },                {
             "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetTemplateFile\u0028\u0029",
             "name": "getTemplateFile",
-            "summary": "",
+            "summary": "Retourne\u0020le\u0020chemin\u0020du\u0020template\u0020twig.",
             "url": "classes/app-twig-controller-Main.html#method_getTemplateFile"
         },                {
-            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetTemplateController\u0028\u0029",
-            "name": "getTemplateController",
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetMainTemplateController\u0028\u0029",
+            "name": "getMainTemplateController",
+            "summary": "Retourne\u0020le\u0020controleur\u0020de\u0020template\u0020twig\u0020de\u0020la\u0020page\u0020principale.",
+            "url": "classes/app-twig-controller-Main.html#method_getMainTemplateController"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Main\u003A\u003AgetPageTemplateController\u0028\u0029",
+            "name": "getPageTemplateController",
             "summary": "",
-            "url": "classes/app-twig-controller-Main.html#method_getTemplateController"
+            "url": "classes/app-twig-controller-Main.html#method_getPageTemplateController"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Page",
+            "name": "Page",
+            "summary": "Cree\u0020le\u0020controleur\u0020des\u0020pages\u0020du\u0020site.",
+            "url": "classes/app-twig-controller-Page.html"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Page\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Construit\u0020le\u0020controleur\u0020des\u0020pages\u0020du\u0020site.",
+            "url": "classes/app-twig-controller-Page.html#method___construct"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Page\u003A\u003AgetPageId\u0028\u0029",
+            "name": "getPageId",
+            "summary": "Recupere\u0020l\u0027identifiant\u0020de\u0020la\u0020page\u0020du\u0020site.",
+            "url": "classes/app-twig-controller-Page.html#method_getPageId"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Page\u003A\u003APARAM_DEFAULT_PAGE_ID",
+            "name": "PARAM_DEFAULT_PAGE_ID",
+            "summary": "Stocke\u0020l\u0027identifiant\u0020de\u0020la\u0020page\u0020par\u0020defaut.",
+            "url": "classes/app-twig-controller-Page.html#constant_PARAM_DEFAULT_PAGE_ID"
+        },                {
+            "fqsen": "\\app\\twig\\controller\\Page\u003A\u003APARAM_PAGE_ID_KEY",
+            "name": "PARAM_PAGE_ID_KEY",
+            "summary": "Stocke\u0020la\u0020cl\u00E9\u0020de\u0020l\u0027identifiant\u0020de\u0020la\u0020page\u0020dans\u0020les\u0020param\u00E8tres\u0020de\u0020la\u0020requete.",
+            "url": "classes/app-twig-controller-Page.html#constant_PARAM_PAGE_ID_KEY"
+        },                {
+            "fqsen": "\\app\\twig\\factory\\Template",
+            "name": "Template",
+            "summary": "Cree\u0020la\u0020factory\u0020des\u0020controleurs\u0020de\u0020templates\u0020des\u0020pages\u0020twig.",
+            "url": "classes/app-twig-factory-Template.html"
+        },                {
+            "fqsen": "\\app\\twig\\factory\\Template\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Construit\u0020la\u0020factory\u0020des\u0020controleurs\u0020de\u0020templates\u0020des\u0020pages\u0020twig.",
+            "url": "classes/app-twig-factory-Template.html#method___construct"
+        },                {
+            "fqsen": "\\app\\twig\\factory\\Template\u003A\u003AInstance\u0028\u0029",
+            "name": "Instance",
+            "summary": "Recupere\u0020l\u0027instance\u0020de\u0020la\u0020factory\u0020des\u0020controleurs\u0020de\u0020templates\u0020des\u0020pages\u0020twig.",
+            "url": "classes/app-twig-factory-Template.html#method_Instance"
+        },                {
+            "fqsen": "\\app\\twig\\factory\\Template\u003A\u003AgetTemplate\u0028\u0029",
+            "name": "getTemplate",
+            "summary": "Recupere\u0020le\u0020controleur\u0020de\u0020template\u0020de\u0020la\u0020page\u0020du\u0020site.",
+            "url": "classes/app-twig-factory-Template.html#method_getTemplate"
+        },                {
+            "fqsen": "\\app\\twig\\factory\\Template\u003A\u003A\u0024s_instance",
+            "name": "s_instance",
+            "summary": "Stocke\u0020l\u0027instance\u0020de\u0020la\u0020factory\u0020des\u0020controleurs\u0020de\u0020templates\u0020des\u0020pages\u0020twig.",
+            "url": "classes/app-twig-factory-Template.html#property_s_instance"
+        },                {
+            "fqsen": "\\app\\twig\\factory\\Template\u003A\u003A\u0024templateList",
+            "name": "templateList",
+            "summary": "Stocke\u0020la\u0020liste\u0020des\u0020controleurs\u0020de\u0020templates\u0020des\u0020pages\u0020twig.",
+            "url": "classes/app-twig-factory-Template.html#property_templateList"
+        },                {
+            "fqsen": "\\app\\twig\\model\\Menu",
+            "name": "Menu",
+            "summary": "Cree\u0020le\u0020modele\u0020du\u0020menu\u0020du\u0020site.",
+            "url": "classes/app-twig-model-Menu.html"
+        },                {
+            "fqsen": "\\app\\twig\\model\\Menu\u003A\u003AisEqual\u0028\u0029",
+            "name": "isEqual",
+            "summary": "V\u00E9rifie\u0020si\u0020le\u0020menu\u0020du\u0020site\u0020est\u0020\u00E9gal\u0020\u00E0\u0020un\u0020autre\u0020menu\u0020du\u0020site.",
+            "url": "classes/app-twig-model-Menu.html#method_isEqual"
+        },                {
+            "fqsen": "\\app\\twig\\model\\Menu\u003A\u003AisEmpty\u0028\u0029",
+            "name": "isEmpty",
+            "summary": "V\u00E9rifie\u0020si\u0020le\u0020menu\u0020du\u0020site\u0020est\u0020vide.",
+            "url": "classes/app-twig-model-Menu.html#method_isEmpty"
+        },                {
+            "fqsen": "\\app\\twig\\model\\Menu\u003A\u003A\u0024index",
+            "name": "index",
+            "summary": "Stocke\u0020l\u0027index\u0020du\u0020menu\u0020du\u0020site.",
+            "url": "classes/app-twig-model-Menu.html#property_index"
+        },                {
+            "fqsen": "\\app\\twig\\model\\Menu\u003A\u003A\u0024parentIndex",
+            "name": "parentIndex",
+            "summary": "Stocke\u0020l\u0027index\u0020du\u0020menu\u0020parent\u0020du\u0020site.",
+            "url": "classes/app-twig-model-Menu.html#property_parentIndex"
+        },                {
+            "fqsen": "\\app\\twig\\model\\Menu\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "Stocke\u0020le\u0020nom\u0020du\u0020menu\u0020du\u0020site.",
+            "url": "classes/app-twig-model-Menu.html#property_name"
+        },                {
+            "fqsen": "\\app\\twig\\model\\Menu\u003A\u003A\u0024label",
+            "name": "label",
+            "summary": "Stocke\u0020le\u0020libelle\u0020du\u0020menu\u0020du\u0020site.",
+            "url": "classes/app-twig-model-Menu.html#property_label"
+        },                {
+            "fqsen": "\\app\\twig\\model\\Menu\u003A\u003A\u0024title",
+            "name": "title",
+            "summary": "Stocke\u0020le\u0020titre\u0020du\u0020menu\u0020du\u0020site.",
+            "url": "classes/app-twig-model-Menu.html#property_title"
+        },                {
+            "fqsen": "\\app\\twig\\model\\Menu\u003A\u003A\u0024link",
+            "name": "link",
+            "summary": "Stocke\u0020le\u0020lien\u0020du\u0020menu\u0020du\u0020site.",
+            "url": "classes/app-twig-model-Menu.html#property_link"
+        },                {
+            "fqsen": "\\app\\twig\\model\\Menu\u003A\u003A\u0024isActive",
+            "name": "isActive",
+            "summary": "Stocke\u0020l\u0027etat\u0020du\u0020menu\u0020du\u0020site.",
+            "url": "classes/app-twig-model-Menu.html#property_isActive"
+        },                {
+            "fqsen": "\\app\\twig\\model\\MenuList",
+            "name": "MenuList",
+            "summary": "Cree\u0020le\u0020modele\u0020de\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site.",
+            "url": "classes/app-twig-model-MenuList.html"
+        },                {
+            "fqsen": "\\app\\twig\\model\\MenuList\u003A\u003AaddMenuByItem\u0028\u0029",
+            "name": "addMenuByItem",
+            "summary": "Ajoute\u0020un\u0020menu\u0020\u00E0\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site.",
+            "url": "classes/app-twig-model-MenuList.html#method_addMenuByItem"
+        },                {
+            "fqsen": "\\app\\twig\\model\\MenuList\u003A\u003AaddMenuByParams\u0028\u0029",
+            "name": "addMenuByParams",
+            "summary": "Ajoute\u0020un\u0020menu\u0020\u00E0\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020par\u0020ses\u0020param\u00E8tres.",
+            "url": "classes/app-twig-model-MenuList.html#method_addMenuByParams"
+        },                {
+            "fqsen": "\\app\\twig\\model\\MenuList\u003A\u003AaddMenuByRoot\u0028\u0029",
+            "name": "addMenuByRoot",
+            "summary": "Ajoute\u0020un\u0020menu\u0020\u00E0\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020par\u0020ses\u0020param\u00E8tres\u0020et\u0020en\u0020tant\u0020que\u0020menu\u0020racine.",
+            "url": "classes/app-twig-model-MenuList.html#method_addMenuByRoot"
+        },                {
+            "fqsen": "\\app\\twig\\model\\MenuList\u003A\u003AaddMenuByParentMenu\u0028\u0029",
+            "name": "addMenuByParentMenu",
+            "summary": "Ajoute\u0020un\u0020menu\u0020\u00E0\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020par\u0020ses\u0020param\u00E8tres\u0020et\u0020en\u0020tant\u0020que\u0020menu\u0020enfant\u0020d\u0027un\u0020menu\u0020parent.",
+            "url": "classes/app-twig-model-MenuList.html#method_addMenuByParentMenu"
+        },                {
+            "fqsen": "\\app\\twig\\model\\MenuList\u003A\u003AgetMenuListByParentIndex\u0028\u0029",
+            "name": "getMenuListByParentIndex",
+            "summary": "Recupere\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020par\u0020l\u0027index\u0020de\u0020leur\u0020menu\u0020parent.",
+            "url": "classes/app-twig-model-MenuList.html#method_getMenuListByParentIndex"
+        },                {
+            "fqsen": "\\app\\twig\\model\\MenuList\u003A\u003AgetMenuByLink\u0028\u0029",
+            "name": "getMenuByLink",
+            "summary": "Recupere\u0020un\u0020menu\u0020de\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020par\u0020son\u0020lien.",
+            "url": "classes/app-twig-model-MenuList.html#method_getMenuByLink"
+        },                {
+            "fqsen": "\\app\\twig\\model\\MenuList\u003A\u003AgetMenuByPosition\u0028\u0029",
+            "name": "getMenuByPosition",
+            "summary": "Recupere\u0020un\u0020menu\u0020de\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020par\u0020sa\u0020position\u0020dans\u0020la\u0020liste.",
+            "url": "classes/app-twig-model-MenuList.html#method_getMenuByPosition"
+        },                {
+            "fqsen": "\\app\\twig\\model\\MenuList\u003A\u003AgetMenuList\u0028\u0029",
+            "name": "getMenuList",
+            "summary": "Recupere\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site.",
+            "url": "classes/app-twig-model-MenuList.html#method_getMenuList"
+        },                {
+            "fqsen": "\\app\\twig\\model\\MenuList\u003A\u003AisEmpty\u0028\u0029",
+            "name": "isEmpty",
+            "summary": "V\u00E9rifie\u0020si\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site\u0020est\u0020vide.",
+            "url": "classes/app-twig-model-MenuList.html#method_isEmpty"
+        },                {
+            "fqsen": "\\app\\twig\\model\\MenuList\u003A\u003Asize\u0028\u0029",
+            "name": "size",
+            "summary": "Recupere\u0020la\u0020taille\u0020de\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site.",
+            "url": "classes/app-twig-model-MenuList.html#method_size"
+        },                {
+            "fqsen": "\\app\\twig\\model\\MenuList\u003A\u003A\u0024menuList",
+            "name": "menuList",
+            "summary": "Stocke\u0020la\u0020liste\u0020des\u0020menus\u0020du\u0020site.",
+            "url": "classes/app-twig-model-MenuList.html#property_menuList"
         },                {
             "fqsen": "\\app\\twig\\template\\controller\\Main",
             "name": "Main",
-            "summary": "Cree\u0020le\u0020controleur\u0020de\u0020la\u0020vue\u0020principale\u0020du\u0020site.",
+            "summary": "Cree\u0020le\u0020controleur\u0020du\u0020template\u0020de\u0020la\u0020page\u0020principale.",
             "url": "classes/app-twig-template-controller-Main.html"
         },                {
             "fqsen": "\\app\\twig\\template\\controller\\Main\u003A\u003A__construct\u0028\u0029",
@@ -783,13 +923,58 @@ Search.appendIndex(
         },                {
             "fqsen": "\\app\\twig\\template\\controller\\Main\u003A\u003AgetTemplateData\u0028\u0029",
             "name": "getTemplateData",
-            "summary": "Retourne\u0020les\u0020donnees\u0020de\u0020template\u0020twig.",
+            "summary": "Retourne\u0020les\u0020donn\u00E9es\u0020du\u0020template\u0020twig.",
             "url": "classes/app-twig-template-controller-Main.html#method_getTemplateData"
         },                {
-            "fqsen": "\\app\\twig\\template\\controller\\Main\u003A\u003A\u0024model",
-            "name": "model",
-            "summary": "Stocke\u0020le\u0020modele\u0020de\u0020la\u0020vue\u0020principale\u0020du\u0020site.",
-            "url": "classes/app-twig-template-controller-Main.html#property_model"
+            "fqsen": "\\app\\twig\\template\\controller\\Main\u003A\u003A\u0024templateData",
+            "name": "templateData",
+            "summary": "Stocke\u0020les\u0020donn\u00E9es\u0020du\u0020template\u0020twig.",
+            "url": "classes/app-twig-template-controller-Main.html#property_templateData"
+        },                {
+            "fqsen": "\\app\\twig\\template\\page\\Admin",
+            "name": "Admin",
+            "summary": "Cree\u0020le\u0020controleur\u0020du\u0020template\u0020de\u0020la\u0020page\u0020d\u0027administration.",
+            "url": "classes/app-twig-template-page-Admin.html"
+        },                {
+            "fqsen": "\\app\\twig\\template\\page\\Admin\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Construit\u0020le\u0020controleur\u0020du\u0020template\u0020de\u0020la\u0020page\u0020d\u0027administration.",
+            "url": "classes/app-twig-template-page-Admin.html#method___construct"
+        },                {
+            "fqsen": "\\app\\twig\\template\\page\\Admin\u003A\u003AgetTemplateFile\u0028\u0029",
+            "name": "getTemplateFile",
+            "summary": "Retourne\u0020le\u0020chemin\u0020du\u0020template\u0020twig.",
+            "url": "classes/app-twig-template-page-Admin.html#method_getTemplateFile"
+        },                {
+            "fqsen": "\\app\\twig\\template\\page\\Connexion",
+            "name": "Connexion",
+            "summary": "Cree\u0020le\u0020controleur\u0020du\u0020template\u0020de\u0020la\u0020page\u0020de\u0020connexion.",
+            "url": "classes/app-twig-template-page-Connexion.html"
+        },                {
+            "fqsen": "\\app\\twig\\template\\page\\Connexion\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Construit\u0020le\u0020controleur\u0020du\u0020template\u0020de\u0020la\u0020page\u0020de\u0020connexion.",
+            "url": "classes/app-twig-template-page-Connexion.html#method___construct"
+        },                {
+            "fqsen": "\\app\\twig\\template\\page\\Connexion\u003A\u003AgetTemplateFile\u0028\u0029",
+            "name": "getTemplateFile",
+            "summary": "Retourne\u0020le\u0020chemin\u0020du\u0020template\u0020twig.",
+            "url": "classes/app-twig-template-page-Connexion.html#method_getTemplateFile"
+        },                {
+            "fqsen": "\\app\\twig\\template\\page\\Page",
+            "name": "Page",
+            "summary": "Cree\u0020le\u0020controleur\u0020de\u0020template\u0020des\u0020pages.",
+            "url": "classes/app-twig-template-page-Page.html"
+        },                {
+            "fqsen": "\\app\\twig\\template\\page\\Page\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/app-twig-template-page-Page.html#method___construct"
+        },                {
+            "fqsen": "\\app\\twig\\template\\page\\Page\u003A\u003AgetTemplateFile\u0028\u0029",
+            "name": "getTemplateFile",
+            "summary": "",
+            "url": "classes/app-twig-template-page-Page.html#method_getTemplateFile"
         },                {
             "fqsen": "\\app\\twig\\view\\Main",
             "name": "Main",
@@ -838,8 +1023,13 @@ Search.appendIndex(
         },                {
             "fqsen": "\\twig\\controller\\Template\u003A\u003AaddExtension\u0028\u0029",
             "name": "addExtension",
-            "summary": "",
+            "summary": "Ajoute\u0020une\u0020extension\u0020twig.",
             "url": "classes/twig-controller-Template.html#method_addExtension"
+        },                {
+            "fqsen": "\\twig\\controller\\Template\u003A\u003AgetTemplateFile\u0028\u0029",
+            "name": "getTemplateFile",
+            "summary": "Retourne\u0020le\u0020chemin\u0020du\u0020template\u0020twig.",
+            "url": "classes/twig-controller-Template.html#method_getTemplateFile"
         },                {
             "fqsen": "\\twig\\controller\\Template\u003A\u003A\u0024templateDir",
             "name": "templateDir",
@@ -868,22 +1058,22 @@ Search.appendIndex(
         },                {
             "fqsen": "\\twig\\module\\Template\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Construit\u0020le\u0020module\u0020de\u0020template\u0020twig.",
             "url": "classes/twig-module-Template.html#method___construct"
         },                {
             "fqsen": "\\twig\\module\\Template\u003A\u003Arender\u0028\u0029",
             "name": "render",
-            "summary": "",
+            "summary": "Realise\u0020le\u0020rendu\u0020du\u0020template\u0020twig.",
             "url": "classes/twig-module-Template.html#method_render"
         },                {
             "fqsen": "\\twig\\module\\Template\u003A\u003A\u0024twig",
             "name": "twig",
-            "summary": "",
+            "summary": "Stocke\u0020l\u0027environnement\u0020de\u0020twig.",
             "url": "classes/twig-module-Template.html#property_twig"
         },                {
             "fqsen": "\\twig\\module\\Template\u003A\u003A\u0024controller",
             "name": "controller",
-            "summary": "",
+            "summary": "Stocke\u0020le\u0020controller\u0020de\u0020template.",
             "url": "classes/twig-module-Template.html#property_controller"
         },                {
             "fqsen": "\\",
@@ -936,6 +1126,16 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/app-twig.html"
         },                {
+            "fqsen": "\\app\\twig\\factory",
+            "name": "factory",
+            "summary": "",
+            "url": "namespaces/app-twig-factory.html"
+        },                {
+            "fqsen": "\\app\\twig\\model",
+            "name": "model",
+            "summary": "",
+            "url": "namespaces/app-twig-model.html"
+        },                {
             "fqsen": "\\app\\twig\\template\\controller",
             "name": "controller",
             "summary": "",
@@ -945,6 +1145,11 @@ Search.appendIndex(
             "name": "template",
             "summary": "",
             "url": "namespaces/app-twig-template.html"
+        },                {
+            "fqsen": "\\app\\twig\\template\\page",
+            "name": "page",
+            "summary": "",
+            "url": "namespaces/app-twig-template-page.html"
         },                {
             "fqsen": "\\app\\twig\\view",
             "name": "view",

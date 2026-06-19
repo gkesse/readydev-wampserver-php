@@ -49,7 +49,7 @@
             <span class="Menu5">{{ main.siteName }}</span>
         </a>
         {{ _self.runHeaderMenu(menuList, currentMenu, 0) }}
-        <div class="Bars1" onclick="call_server('app', 'open_menu_bars', this)">
+        <div class="Bars1" onclick="callBackend('app', 'open_menu_bars', this)" data-is-opened="false">
             <i class="fa fa-bars"></i>
         </div>
     </header>
@@ -75,7 +75,7 @@
                 {% endif %}
             {% else %}
                 {% if menuI.parentIndex == 0 %}
-                    <div class='Menu6'><a class='Menu2{{ activeClass }}' href='{{ menuI.link }}' onclick='return call_server("app", "open_menu_group", this)'><div class='Menu14'>{{ menuI.label }}</div><i class='Menu13 fa fa-caret-down'></i></a>
+                    <div class='Menu6'><a class='Menu2{{ activeClass }}' href='{{ menuI.link }}' onclick='return callBackend("app", "open_menu_group", this)'><div class='Menu14'>{{ menuI.label }}</div><i class='Menu13 fa fa-caret-down'></i></a>
                 {% else %}
                     <div class='Menu9'><div class='Menu12'><div class='Menu8'>{{ menuI.label }} <i class='Menu15 fa fa-caret-down'></i></div></div>
                 {% endif %}
@@ -114,7 +114,7 @@
                 {% endif %}
             {% else %}
                 {% if menuI.parentIndex == 0 %}
-                    <div class='Menu6'><a class='Menu2{{ activeClass }}' href='{{ menuI.link }}' onclick='return call_server("app", "open_menu_group", this)'><div class='Menu14'>{{ menuI.label }}</div><i class='Menu13 fa fa-caret-down'></i></a>
+                    <div class='Menu6'><a class='Menu2{{ activeClass }}' href='{{ menuI.link }}' onclick='return callBackend("app", "open_menu_group", this)'><div class='Menu14'>{{ menuI.label }}</div><i class='Menu13 fa fa-caret-down'></i></a>
                 {% else %}
                     <div class='Menu9'><div class='Menu12'><div class='Menu8'>{{ menuI.label }} <i class='Menu15 fa fa-caret-down'></i></div></div>
                 {% endif %}
@@ -191,6 +191,16 @@
 {% endmacro %}
 
 {% macro runScriptJs() %}
-    <script src="/public/js/app/view/Main.js"></script>
+    <script src="/public/js/app/controller/MainWindow.js"></script>
+    <script src="/public/js/app/controller/MenuAction.js"></script>
+    <script src="/public/js/app/controller/MenuHeader.js"></script>
+
+    <script src="/public/js/app/model/BackendInfo.js"></script>
+    <script src="/public/js/app/backend/Backend.js"></script>
+    <script src="/public/js/app/backend/App.js"></script>
+    <script src="/public/js/app/factory/Backend.js"></script>
+    <script src="/public/js/app/controller/Backend.js"></script>
+
+    <script src="/public/js/app/controller/Main.js"></script>
     <script src="/public/js/scripts.js"></script>
 {% endmacro %}
