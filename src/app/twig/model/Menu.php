@@ -17,37 +17,37 @@ class Menu
      * Stocke l'index du menu du site.
      * @var int
      */
-    public int $index = -1;
+    public int $m_index = -1;
     /**
      * Stocke l'index du menu parent du site.
      * @var int
      */
-    public int $parentIndex = -1;
+    public int $m_parentIndex = -1;
     /**
      * Stocke le nom du menu du site.
      * @var string
      */
-    public string $name = "";
+    public string $m_name = "";
     /**
      * Stocke le libelle du menu du site.
      * @var string
      */
-    public string $label = "";
+    public string $m_label = "";
     /**
      * Stocke le titre du menu du site.
      * @var string
      */
-    public string $title = "";
+    public string $m_title = "";
     /**
      * Stocke le lien du menu du site.
      * @var string
      */
-    public string $link = "";
+    public string $m_link = "";
     /**
      * Stocke l'etat du menu du site.
      * @var bool
      */
-    public bool $isActive = false;
+    public bool $m_isActive = false;
 
     /**
      * Vérifie si le menu du site est égal à un autre menu du site.
@@ -58,13 +58,13 @@ class Menu
     public function isEqual(Menu $p_in_menu): bool
     {
         $isEqual = true;
-        $isEqual &= ($this->index == $p_in_menu->index);
-        $isEqual &= ($this->parentIndex == $p_in_menu->parentIndex);
-        $isEqual &= ($this->name == $p_in_menu->name);
-        $isEqual &= ($this->label == $p_in_menu->label);
-        $isEqual &= ($this->title == $p_in_menu->title);
-        $isEqual &= ($this->link == $p_in_menu->link);
-        $isEqual &= ($this->isActive == $p_in_menu->isActive);
+        $isEqual &= ($this->m_index == $p_in_menu->m_index);
+        $isEqual &= ($this->m_parentIndex == $p_in_menu->m_parentIndex);
+        $isEqual &= ($this->m_name == $p_in_menu->m_name);
+        $isEqual &= ($this->m_label == $p_in_menu->m_label);
+        $isEqual &= ($this->m_title == $p_in_menu->m_title);
+        $isEqual &= ($this->m_link == $p_in_menu->m_link);
+        $isEqual &= ($this->m_isActive == $p_in_menu->m_isActive);
         return ($isEqual == true);
     }
 

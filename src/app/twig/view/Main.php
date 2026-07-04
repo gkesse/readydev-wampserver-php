@@ -19,13 +19,13 @@ class Main
      * Stocke le module de template twig.
      * @var \twig\module\Template
      */
-    private \twig\module\Template $templateModule;
+    private \twig\module\Template $m_templateModule;
 
     /**
      * Stocke le fichier de template twig.
      * @var string
      */
-    private string $templateFile;
+    private string $m_templateFile;
 
     /**
      * Construit la page de la vue principale du site.
@@ -35,8 +35,8 @@ class Main
     {
         $mainController = new \app\twig\controller\Main();
         $mainTemplateController = $mainController->getMainTemplateController();
-        $this->templateModule = new \twig\module\Template($mainTemplateController);
-        $this->templateFile = $mainController->getTemplateFile();
+        $this->m_templateModule = new \twig\module\Template($mainTemplateController);
+        $this->m_templateFile = $mainController->getTemplateFile();
     }
 
     /**
@@ -45,6 +45,6 @@ class Main
      */
     public function run(): void
     {
-        echo $this->templateModule->render($this->templateFile);
+        echo $this->m_templateModule->render($this->m_templateFile);
     }
 }

@@ -1,9 +1,9 @@
 "use strict";
 
 var app = app || {};
-app.controller = app.controller || {};
+app.menu = app.menu || {};
 
-app.controller.MenuAction = class MenuAction {
+app.menu.Action = class Action {
     constructor() {}
 
     run() {
@@ -12,18 +12,18 @@ app.controller.MenuAction = class MenuAction {
     }
 
     runMenuBlock() {
-        var buttons = document.querySelectorAll(".Block18");
-        for (var i = 0; i < buttons.length; i++) {
-            var button = buttons[i];
+        const buttons = document.querySelectorAll(".Block18");
+        for (let i = 0; i < buttons.length; ++i) {
+            const button = buttons[i];
             button.addEventListener("click", function (e) {
-                var content = this.nextElementSibling;
+                let content = this.nextElementSibling;
                 if (!content) return;
                 content.classList.toggle("Show");
 
-                var contents = document.querySelectorAll(".Block22");
-                for (var i = 0; i < contents.length; i++) {
-                    var content = contents[i];
-                    var line = content.parentNode.firstElementChild;
+                const contents = document.querySelectorAll(".Block22");
+                for (let i = 0; i < contents.length; ++i) {
+                    const content = contents[i];
+                    const line = content.parentNode.firstElementChild;
                     line.classList.remove("Active");
                     content.classList.remove("Show");
                 }
@@ -33,31 +33,31 @@ app.controller.MenuAction = class MenuAction {
             });
         }
 
-        var lines = document.querySelectorAll(".Block20");
-        for (var i = 0; i < lines.length; i++) {
-            var line = lines[i];
+        let lines = document.querySelectorAll(".Block20");
+        for (let i = 0; i < lines.length; ++i) {
+            const line = lines[i];
             line.addEventListener("click", function (e) {
-                var lines = document.querySelectorAll(".Block20");
-                for (var i = 0; i < lines.length; i++) {
-                    var line = lines[i];
-                    var content = line.nextElementSibling;
+                lines = document.querySelectorAll(".Block20");
+                for (let i = 0; i < lines.length; ++i) {
+                    const line = lines[i];
+                    const content = line.nextElementSibling;
                     if (!content) continue;
-                    var child = content.firstElementChild;
+                    const child = content.firstElementChild;
                     if (!child) continue;
                     if (line == this) continue;
                     content.classList.remove("Show");
                     line.classList.remove("Active");
                 }
 
-                var content = null;
-                var child = null;
-                var isContent = false;
+                let content = null;
+                let child = null;
+                let isContent = false;
 
                 content = this.nextElementSibling;
                 if (content) child = content.firstElementChild;
                 if (content) isContent = content.matches(".Block22");
 
-                var parentNode = this;
+                let parentNode = this;
 
                 if (!content || !child || !isContent) {
                     while (true) {
@@ -73,11 +73,11 @@ app.controller.MenuAction = class MenuAction {
                 this.classList.toggle("Active");
 
                 while (true) {
-                    var parentNode = parentNode.parentNode;
+                    parentNode = parentNode.parentNode;
                     if (parentNode.matches(".Block19")) break;
                     if (parentNode.matches(".Block21")) continue;
-                    var content = parentNode;
-                    var line = content.previousElementSibling;
+                    const content = parentNode;
+                    const line = content.previousElementSibling;
                     line.classList.toggle("Active");
                     content.classList.toggle("Show");
                 }
@@ -88,20 +88,20 @@ app.controller.MenuAction = class MenuAction {
         }
 
         document.addEventListener("click", function (e) {
-            var isHidden = true;
+            let isHidden = true;
             isHidden &&= !e.target.matches(".Block18");
             isHidden &&= !e.target.matches(".Block20");
             isHidden &&= !e.target.matches(".Block25");
 
             if (isHidden) {
-                var contents = document.getElementsByClassName("Block19");
-                for (var i = 0; i < contents.length; i++) {
-                    var content = contents[i];
+                let contents = document.querySelectorAll(".Block19");
+                for (let i = 0; i < contents.length; ++i) {
+                    const content = contents[i];
                     content.classList.remove("Show");
                 }
-                var contents = document.getElementsByClassName("Block22");
-                for (var i = 0; i < contents.length; i++) {
-                    var content = contents[i];
+                contents = document.querySelectorAll(".Block22");
+                for (let i = 0; i < contents.length; ++i) {
+                    const content = contents[i];
                     content.classList.remove("Show");
                 }
             }
@@ -109,18 +109,18 @@ app.controller.MenuAction = class MenuAction {
     }
 
     runMenuBar() {
-        var buttons = document.getElementsByClassName("Block29");
-        for (var i = 0; i < buttons.length; i++) {
-            var button = buttons[i];
+        const buttons = document.querySelectorAll(".Block29");
+        for (let i = 0; i < buttons.length; ++i) {
+            const button = buttons[i];
             button.addEventListener("click", function (e) {
-                var content = this.nextElementSibling;
+                const content = this.nextElementSibling;
                 if (!content) return;
                 content.classList.toggle("Show");
 
-                var contents = document.getElementsByClassName("Block30");
-                for (var i = 0; i < contents.length; i++) {
-                    var content = contents[i];
-                    var line = content.parentNode.firstElementChild;
+                const contents = document.querySelectorAll(".Block30");
+                for (let i = 0; i < contents.length; ++i) {
+                    const content = contents[i];
+                    const line = content.parentNode.firstElementChild;
                     line.classList.remove("Active");
                     content.classList.remove("Show");
                 }
@@ -130,31 +130,31 @@ app.controller.MenuAction = class MenuAction {
             });
         }
 
-        var lines = document.getElementsByClassName("Block28");
-        for (var i = 0; i < lines.length; i++) {
-            var line = lines[i];
+        const lines = document.querySelectorAll(".Block28");
+        for (let i = 0; i < lines.length; ++i) {
+            const line = lines[i];
             line.addEventListener("click", function (e) {
-                var lines = document.getElementsByClassName("Block28");
-                for (var i = 0; i < lines.length; i++) {
-                    var line = lines[i];
-                    var content = line.nextElementSibling;
+                const lines = document.querySelectorAll(".Block28");
+                for (let i = 0; i < lines.length; ++i) {
+                    const line = lines[i];
+                    const content = line.nextElementSibling;
                     if (!content) continue;
-                    var child = content.firstElementChild;
+                    const child = content.firstElementChild;
                     if (!child) continue;
                     if (line == this) continue;
                     content.classList.remove("Show");
                     line.classList.remove("Active");
                 }
 
-                var content = null;
-                var child = null;
-                var isContent = false;
+                let content = null;
+                let child = null;
+                let isContent = false;
 
                 content = this.nextElementSibling;
                 if (content) child = content.firstElementChild;
                 if (content) isContent = content.matches(".Block30");
 
-                var parentNode = this;
+                let parentNode = this;
 
                 if (!content || !child || !isContent) {
                     while (true) {
@@ -170,11 +170,11 @@ app.controller.MenuAction = class MenuAction {
                 this.classList.toggle("Active");
 
                 while (true) {
-                    var parentNode = parentNode.parentNode;
+                    parentNode = parentNode.parentNode;
                     if (parentNode.matches(".Block27")) break;
                     if (parentNode.matches(".Block31")) continue;
-                    var content = parentNode;
-                    var line = content.previousElementSibling;
+                    const content = parentNode;
+                    const line = content.previousElementSibling;
                     line.classList.toggle("Active");
                     content.classList.toggle("Show");
                 }
@@ -185,20 +185,20 @@ app.controller.MenuAction = class MenuAction {
         }
 
         document.addEventListener("click", function (e) {
-            var isHidden = true;
+            let isHidden = true;
             isHidden &&= !e.target.matches(".Block29");
             isHidden &&= !e.target.matches(".Block28");
             isHidden &&= !e.target.matches(".Block25");
 
             if (isHidden) {
-                var contents = document.getElementsByClassName("Block27");
-                for (var i = 0; i < contents.length; i++) {
-                    var content = contents[i];
+                let contents = document.querySelectorAll(".Block27");
+                for (let i = 0; i < contents.length; ++i) {
+                    const content = contents[i];
                     content.classList.remove("Show");
                 }
-                var contents = document.getElementsByClassName("Block30");
-                for (var i = 0; i < contents.length; i++) {
-                    var content = contents[i];
+                contents = document.querySelectorAll(".Block30");
+                for (let i = 0; i < contents.length; ++i) {
+                    const content = contents[i];
                     content.classList.remove("Show");
                 }
             }

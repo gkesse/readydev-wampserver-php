@@ -1,15 +1,16 @@
-{% import 'macro/admin.macro.twig' as macros %}
+{% import 'macro/admin.editor.macro.twig' as macroEditor %}
 
 <div class='Block15'>
     <div class='Block1'>
         <div class='Block2'>
-            {{ macros.runEditorTitle(page) }}
+            {{ macroEditor.runTitle(page.getEditor()) }}
             <div class='Block5'>
-                <input type='hidden' id='EditorDefaultTab' value='2'/>
-                {{ macros.runEditorTab(page) }}
-                {{ macros.runEditorHome(page) }}
-                {{ macros.runEditorPage(page) }}
-                {{ macros.runEditorCode(page) }}
+                <input type='hidden' id='EditorDefaultTab' value='1'/>
+                {{ macroEditor.runHeader(page.getEditor()) }}
+                {{ macroEditor.runHome(page.getEditor()) }}
+                {{ macroEditor.runPage(page.getEditor()) }}
+                {{ macroEditor.runEdition(page.getEditor()) }}
+                {{ macroEditor.runCode(page.getEditor()) }}
             </div>
         </div>
     </div>

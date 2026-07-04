@@ -14,15 +14,15 @@ namespace app\twig\factory;
 class Template
 {
     /**
-     * Stocke l'instance de la factory des controleurs de templates des pages twig.
+     * Stocke l'm_instance de la factory des controleurs de templates des pages twig.
      * @var Template
      */
-    private static ?Template $s_instance = null;
+    private static ?Template $m_instance = null;
     /**
      * Stocke la liste des controleurs de templates des pages twig.
      * @var array
      */
-    private array $templateList = [];
+    private array $m_templateList = [];
 
     /**
      * Construit la factory des controleurs de templates des pages twig.
@@ -30,23 +30,23 @@ class Template
      */
     private function __construct()
     {
-        $this->templateList = [
+        $this->m_templateList = [
             "/home/admin" => new \app\twig\template\page\Admin(),
             "/home/connexion" => new \app\twig\template\page\Connexion(),
         ];
     }
 
     /**
-     * Recupere l'instance de la factory des controleurs de templates des pages twig.
-     * Permet de recuperer l'instance de la factory des controleurs de templates des pages twig.
-     * @return Template Indique l'instance de la factory des controleurs de templates des pages twig.
+     * Recupere l'm_instance de la factory des controleurs de templates des pages twig.
+     * Permet de recuperer l'm_instance de la factory des controleurs de templates des pages twig.
+     * @return Template Indique l'm_instance de la factory des controleurs de templates des pages twig.
      */
     public static function Instance(): Template
     {
-        if (self::$s_instance === null) {
-            self::$s_instance = new self();
+        if (self::$m_instance === null) {
+            self::$m_instance = new self();
         }
-        return self::$s_instance;
+        return self::$m_instance;
     }
 
     /**
@@ -57,8 +57,8 @@ class Template
      */
     public function getTemplate(string $p_in_page_id): \app\twig\template\page\Page
     {
-        if (\array_key_exists($p_in_page_id, $this->templateList)) {
-            return $this->templateList[$p_in_page_id];
+        if (\array_key_exists($p_in_page_id, $this->m_templateList)) {
+            return $this->m_templateList[$p_in_page_id];
         }
         return new \app\twig\template\page\Page();
     }

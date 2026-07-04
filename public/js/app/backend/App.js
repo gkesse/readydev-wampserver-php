@@ -4,16 +4,16 @@ var app = app || {};
 app.backend = app.backend || {};
 
 app.backend.App = class App extends app.backend.Backend {
-    #methodMap = {};
+    #m_methodMap = {};
 
     constructor() {
         super();
-        this.#methodMap["open_menu_bars"] = this.runOpenMenuBars;
-        this.#methodMap["open_menu_group"] = this.runOpenMenuGroup;
+        this.#m_methodMap["open_menu_bars"] = this.runOpenMenuBars;
+        this.#m_methodMap["open_menu_group"] = this.runOpenMenuGroup;
     }
 
     run(p_in_module, p_in_method, p_in_obj, p_in_data) {
-        const method = this.#methodMap[p_in_method] || this.runUnknown;
+        const method = this.#m_methodMap[p_in_method] || this.runUnknown;
         method.call(this, p_in_module, p_in_method, p_in_obj, p_in_data);
     }
 

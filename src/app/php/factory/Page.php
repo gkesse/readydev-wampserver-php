@@ -17,12 +17,12 @@ class Page
      * Stocke l'instance de la factory du contenu de la page du site.
      * @var Page
      */
-    private static ?Page $s_instance = null;
+    private static ?Page $m_instance = null;
     /**
      * Stocke la liste des pages du site.
      * @var array
      */
-    private array $pageList = [];
+    private array $m_pageList = [];
 
     /**
      * Construit la factory du contenu de la page du site.
@@ -30,7 +30,7 @@ class Page
      */
     private function __construct()
     {
-        $this->pageList = [
+        $this->m_pageList = [
             "/home/admin" => new \app\php\page\Admin(),
             "/home/connexion" => new \app\php\page\Connexion()
         ];
@@ -43,10 +43,10 @@ class Page
      */
     public static function Instance(): Page
     {
-        if (self::$s_instance === null) {
-            self::$s_instance = new self();
+        if (self::$m_instance === null) {
+            self::$m_instance = new self();
         }
-        return self::$s_instance;
+        return self::$m_instance;
     }
 
     /**
@@ -57,8 +57,8 @@ class Page
      */
     public function getPage(string $p_in_page_id): \app\php\page\Page
     {
-        if (\array_key_exists($p_in_page_id, $this->pageList)) {
-            return $this->pageList[$p_in_page_id];
+        if (\array_key_exists($p_in_page_id, $this->m_pageList)) {
+            return $this->m_pageList[$p_in_page_id];
         }
         return new \app\php\page\Page();
     }

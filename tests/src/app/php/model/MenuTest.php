@@ -2,52 +2,68 @@
 
 declare(strict_types=1);
 
+namespace app\php\model;
+
 use PHPUnit\Framework\TestCase;
 
 final class MenuTest extends TestCase
 {
-    public function test_Lecture_Ecriture(): void
+    public function test_general(): void
     {
-        // si on a unmenu vide
+        // cree un menu vide
         $menu01 = new \app\php\model\Menu();
 
-        // on doit avoir un menu vide
+        // teste un menu vide
         $this->assertSame($menu01->isEmpty(), true);
 
-        // si on cree un menu avec des donnees
-        $menu02 = new \app\php\model\Menu();
-        $menu02->index = 1;
-        $menu02->parentIndex = 0;
-        $menu02->name = "MENU_NAME";
-        $menu02->label = "MENU_LABEL";
-        $menu02->title = "MENU_TITLE";
-        $menu02->link = "MENU_LINK";
-        $menu02->isActive = true;
+        // teste les attributs d'un menu vide
+        $this->assertSame($menu01->m_index, -1);
+        $this->assertSame($menu01->m_parentIndex, -1);
+        $this->assertSame($menu01->m_name, "");
+        $this->assertSame($menu01->m_label, "");
+        $this->assertSame($menu01->m_title, "");
+        $this->assertSame($menu01->m_link, "");
+        $this->assertSame($menu01->m_isActive, false);
 
-        // on doit avoir un menu non vide
+        // cree un menu avec des donnees
+        $menu02 = new \app\php\model\Menu();
+        $menu02->m_index = 1;
+        $menu02->m_parentIndex = 0;
+        $menu02->m_name = "MENU_NAME";
+        $menu02->m_label = "MENU_LABEL";
+        $menu02->m_title = "MENU_TITLE";
+        $menu02->m_link = "MENU_LINK";
+        $menu02->m_isActive = true;
+
+        // teste un menu avec des donnees
         $this->assertSame($menu02->isEmpty(), false);
 
-        // si on compare un menu a lui meme
-        // on doit avoir des menus egaux
-        $this->assertSame($menu02->index, 1);
+        // teste les attributs d'un menu avec des donnees
+        $this->assertSame($menu02->m_index, 1);
+        $this->assertSame($menu02->m_parentIndex, 0);
+        $this->assertSame($menu02->m_name, "MENU_NAME");
+        $this->assertSame($menu02->m_label, "MENU_LABEL");
+        $this->assertSame($menu02->m_title, "MENU_TITLE");
+        $this->assertSame($menu02->m_link, "MENU_LINK");
+        $this->assertSame($menu02->m_isActive, true);
 
-        // si on cree un menu avec des donnees identiques
+        // cree un menu avec des donnees
         $menu03 = new \app\php\model\Menu();
-        $menu03->index = 1;
-        $menu03->parentIndex = 0;
-        $menu03->name = "MENU_NAME";
-        $menu03->label = "MENU_LABEL";
-        $menu03->title = "MENU_TITLE";
-        $menu03->link = "MENU_LINK";
-        $menu03->isActive = true;
+        $menu03->m_index = 1;
+        $menu03->m_parentIndex = 0;
+        $menu03->m_name = "MENU_NAME";
+        $menu03->m_label = "MENU_LABEL";
+        $menu03->m_title = "MENU_TITLE";
+        $menu03->m_link = "MENU_LINK";
+        $menu03->m_isActive = true;
 
-        // on doit avoir des menus egaux
+        // teste des menus egaux
         $this->assertSame($menu03->isEqual($menu02), true);
 
-        // si on modifie le lien d'un menu
-        $menu03->link = "MENU_LINK_DIFFERENT";
+        // modifie le lien du menu
+        $menu03->m_link = "MENU_LINK_DIFFERENT";
 
-        // on doit avoir des menus differents
+        // teste des menus differents
         $this->assertSame($menu03->isEqual($menu02), false);
     }
 }

@@ -1,0 +1,140 @@
+{% macro runTitle(editor) %}
+    <h1 class='Block3' id='editeur_page_html'>
+        <a class='Block4' href='#'>{{ editor.getTitle() }}</a>
+    </h1>
+{% endmacro %}
+
+{% macro runHeader(editor) %}
+    <div class='Block6' id='EditorTab'>
+        {{ _self.showMenu(editor.getHeaderMenu(), 0) }}
+    </div>
+{% endmacro %}
+
+{% macro runHome(editor) %}
+    <div class='Block9 EditorTabCtn' id='EditorTab0'>
+        <h2 class='Block10'>ReadyHTML | Accueil</h2>
+        <div class='Block11'>
+            <div class='Block12'>
+                {{ editor.getHomeDescription()|raw }}
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro runPage(editor) %}
+    <div class='Block9 EditorTabCtn' id='EditorTab1'>
+        <div class='Block16'>
+            <h2 class='Block10'>ReadyHTML | Page</h2>
+            <div class='Block17'>
+                <div class='Block18'>Menu</div>
+                <div class='Block19'>
+                    {{ _self.showAction(editor.getPageMenu(), 0) }}
+                </div>
+            </div>
+        </div>
+        <div class='Block13'>
+            <div class='Block12'>
+                <div class='Block14'>
+                    {{ _self.runPageForm(editor) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro runPageMenu(editor) %}
+{% endmacro %}
+
+{% macro runPageForm(editor) %}
+{% endmacro %}
+
+{% macro runEdition(editor) %}
+    <div class='Block9 EditorTabCtn' id='EditorTab2'>
+        <div class='Block16'>
+            <h2 class='Block10'>ReadyHTML | Edition</h2>
+            <div class='Block17'>
+                <div class='Block18'>Menu</div>
+                {{ _self.runEditionMenu(editor) }}
+            </div>
+        </div>
+        <div class='Block13'>
+            <div class='Block12'>
+                <div class='Block14'>
+                    {{ _self.runEditionForm(editor) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro runEditionMenu(editor) %}
+{% endmacro %}
+
+{% macro runEditionForm(editor) %}
+{% endmacro %}
+
+{% macro runCode(editor) %}
+    <div class='Block9 EditorTabCtn' id='EditorTab2'>
+        <div class='Block16'>
+            <h2 class='Block10'>ReadyHTML | Code</h2>
+            <div class='Block17'>
+                <div class='Block18'>Menu</div>
+                {{ _self.runCodeMenu(editor) }}
+            </div>
+        </div>
+        <div class='Block13'>
+            <div class='Block12'>
+                <div class='Block14'>
+                    {{ _self.runCodeForm(editor) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro runCodeMenu(editor) %}
+{% endmacro %}
+
+{% macro runCodeForm(editor) %}
+{% endmacro %}
+
+{% macro showMenu(menuList, parentIndex) %}
+    {% set menuListI = menuList.getMenuListByParentIndex(parentIndex) %}
+    {% for menuI in menuListI.getMenuList() %}
+        {% set menuListJ = menuList.getMenuListByParentIndex(menuI.index) %}
+        {% if parentIndex == 0 %}
+            <div class='Block26'>
+                <button class='Block29'>{{ menuI.title }}</button>
+                <div class='Block27'>
+                    {{ _self.showMenu(menuList, menuI.index) }}
+                </div>
+            </div>
+        {% elseif menuListJ.isEmpty() == false %}
+            <div class='Block31'>
+                <div class='Block28'>{{ menuI.title }} <i class='Block25 fa fa-caret-down'></i></div>
+                <div class='Block30'>
+                    {{ _self.showMenu(menuList, menuI.index) }}
+                </div>
+            </div>
+        {% else %}
+            <div class='Block32' onclick='callBackend("{{ menuI.module }}", "{{ menuI.method }}", this, "{{ menuI.data }}")'>{{ menuI.title }}</div>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{% macro showAction(menuList, parentIndex) %}
+    {% set menuListI = menuList.getMenuListByParentIndex(parentIndex) %}
+    {% for menuI in menuListI.getMenuList() %}
+        {% set menuListJ = menuList.getMenuListByParentIndex(menuI.index) %}
+        {% if menuListJ.isEmpty() == true %}
+            <div class='Block20' onclick='callBackend("{{ menuI.module }}", "{{ menuI.method }}", this, "{{ menuI.data }}")'>{{ menuI.title }}</div>
+        {% else %}
+            <div class='Block21'>
+                <div class='Block20'>{{ menuI.title }} <i class='Block25 fa fa-caret-down'></i></div>
+                <div class='Block22'>
+                    {{ _self.showAction(menuList, menuI.index) }}
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}

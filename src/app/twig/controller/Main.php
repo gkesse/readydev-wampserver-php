@@ -56,10 +56,11 @@ class Main
      */
     public function getSiteVision()
     {
-        $outputText = "";
-        $outputText .= \sprintf("Plateforme de Développement Continu<br/>\n");
-        $outputText .= \sprintf("Produit par <b>Gérard KESSE</b><br/>\n");
-        $outputText .= \sprintf("Polytech'Montpellier<br/>");
+        $outputText = <<<_EOF_
+        Plateforme de Développement Continu<br/>
+        Produit par <b>Gérard KESSE</b><br/>
+        Polytech'Montpellier<br/>
+        _EOF_;
         return $outputText;
     }
 
@@ -72,7 +73,7 @@ class Main
     public function getPageTitle(string $p_in_title = ""): string
     {
         if ($p_in_title != "") {
-            $p_in_title = " | " . $p_in_title;
+            $p_in_title = (string)" | " . $p_in_title;
         }
         $titleText = $this->getSiteName() . $p_in_title;
         return $titleText;
@@ -125,11 +126,12 @@ class Main
      */
     public function getPageDescription(): string
     {
-        $outputText = "";
-        $outputText .= \sprintf("Avec ReadyDEV, apprenez en pratiquant grâce à des cours\n");
-        $outputText .= \sprintf("et tutoriels adaptés aux sciences de l'Ingénieur.\n");
-        $outputText .= \sprintf("ReadyDEV est une Plateforme de Développement en Continu.\n");
-        $outputText .= \sprintf("Produit par Gérard KESSE.");
+        $outputText = <<<_EOF_
+        Avec ReadyDEV, apprenez en pratiquant grâce à des cours
+        et tutoriels adaptés aux sciences de l'Ingénieur.
+        ReadyDEV est une Plateforme de Développement en Continu.
+        Produit par Gérard KESSE.
+        _EOF_;
         return $outputText;
     }
 

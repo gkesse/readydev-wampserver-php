@@ -17,7 +17,7 @@ class MenuActionList
      * Stocke la liste des menus des actions.
      * @var array
      */
-    private array $menuList = [];
+    private array $m_menuList = [];
 
     /**
      * Ajoute un menu à la liste des menus des actions.
@@ -26,7 +26,7 @@ class MenuActionList
      */
     private function addMenuByItem(MenuAction $menu): void
     {
-        $this->menuList[] = $menu;
+        $this->m_menuList[] = $menu;
     }
 
     /**
@@ -43,14 +43,14 @@ class MenuActionList
     private function addMenuByParams(int $p_in_parent_index, string $p_in_module, string $p_in_method, string $p_in_title, bool $p_in_isActive, string $p_in_data = ""): MenuAction
     {
         $menu = new MenuAction();
-        $menu->index = $this->size() + 1;
-        $menu->parentIndex = $p_in_parent_index;
-        $menu->module = $p_in_module;
-        $menu->method = $p_in_method;
-        $menu->title = $p_in_title;
-        $menu->isActive = $p_in_isActive;
-        $menu->data = $p_in_data;
-        $this->menuList[] = $menu;
+        $menu->m_index = $this->size() + 1;
+        $menu->m_parentIndex = $p_in_parent_index;
+        $menu->m_module = $p_in_module;
+        $menu->m_method = $p_in_method;
+        $menu->m_title = $p_in_title;
+        $menu->m_isActive = $p_in_isActive;
+        $menu->m_data = $p_in_data;
+        $this->m_menuList[] = $menu;
         return $menu;
     }
 
@@ -82,7 +82,7 @@ class MenuActionList
      */
     public function addMenuByParentMenu(MenuAction $p_in_parent_menu, string $p_in_module, string $p_in_method, string $p_in_title, bool $p_in_isActive, string $p_in_data = ""): MenuAction
     {
-        return $this->addMenuByParams($p_in_parent_menu->index, $p_in_module, $p_in_method, $p_in_title, $p_in_isActive, $p_in_data);
+        return $this->addMenuByParams($p_in_parent_menu->m_index, $p_in_module, $p_in_method, $p_in_title, $p_in_isActive, $p_in_data);
     }
 
     /**
@@ -94,8 +94,8 @@ class MenuActionList
     public function getMenuListByParentIndex(int $p_in_parent_index): MenuActionList
     {
         $outputMenuList = new MenuActionList();
-        foreach ($this->menuList as $menu) {
-            if ($menu->parentIndex == $p_in_parent_index) {
+        foreach ($this->m_menuList as $menu) {
+            if ($menu->m_parentIndex == $p_in_parent_index) {
                 $outputMenuList->addMenuByItem($menu);
             }
         }
@@ -112,8 +112,8 @@ class MenuActionList
     public function getMenuByModuleMethod(string $p_in_module, string $p_in_method): MenuAction
     {
         $outputMenu = new MenuAction();
-        foreach ($this->menuList as $menu) {
-            if ($menu->module == $p_in_module && $menu->method == $p_in_method) {
+        foreach ($this->m_menuList as $menu) {
+            if ($menu->m_module == $p_in_module && $menu->m_method == $p_in_method) {
                 $outputMenu = $menu;
                 break;
             }
@@ -129,7 +129,7 @@ class MenuActionList
      */
     public function getMenuByPosition(int $p_in_position): MenuAction
     {
-        return $this->menuList[$p_in_position] ?? new MenuAction();
+        return $this->m_menuList[$p_in_position] ?? new MenuAction();
     }
 
     /**
@@ -139,7 +139,7 @@ class MenuActionList
      */
     public function getMenuList(): array
     {
-        return $this->menuList;
+        return $this->m_menuList;
     }
 
     /**
@@ -149,7 +149,7 @@ class MenuActionList
      */
     public function isEmpty(): bool
     {
-        return (\count($this->menuList) == 0);
+        return (\count($this->m_menuList) == 0);
     }
 
     /**
@@ -159,6 +159,6 @@ class MenuActionList
      */
     public function size(): int
     {
-        return \count($this->menuList);
+        return \count($this->m_menuList);
     }
 }

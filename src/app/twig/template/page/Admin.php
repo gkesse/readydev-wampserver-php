@@ -32,27 +32,8 @@ class Admin extends Page
         return 'page/admin.page.twig';
     }
 
-    public function getEditorTitle(): string
+    public function getEditor(): \app\twig\template\admin\Editor
     {
-        return "Editeur de page HTML";
-    }
-
-    public function getModuleMenuActionList(): \app\twig\model\MenuActionList
-    {
-        $menuList = new \app\twig\model\MenuActionList();
-
-        $menu1 = $menuList->addMenuByRoot("", "", "Modules", false);
-
-        $menu2 = $menuList->addMenuByParentMenu($menu1, "", "", "Editeur HTML", false);
-        $menuList->addMenuByParentMenu($menu2, "editor", "open_editor_tab", "Accueil", true, "EditorTab0");
-        $menuList->addMenuByParentMenu($menu2, "editor", "open_editor_tab", "Page", true, "EditorTab1");
-        $menuList->addMenuByParentMenu($menu2, "editor", "open_editor_tab", "Edition", true, "EditorTab2");
-        $menuList->addMenuByParentMenu($menu2, "editor", "open_editor_tab", "Code", true, "EditorTab3");
-
-        $menu2 = $menuList->addMenuByParentMenu($menu1, "", "", "Sitemap", false);
-        $menuList->addMenuByParentMenu($menu2, "sitemap", "generate_sitemap", "Générer", true);
-        $menuList->addMenuByParentMenu($menu2, "sitemap", "visualize_sitemap", "Visualiser", true);
-
-        return $menuList;
+        return new \app\twig\template\admin\Editor();
     }
 }

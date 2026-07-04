@@ -17,7 +17,7 @@ class MenuList
      * Stocke la liste des menus du site.
      * @var array
      */
-    private array $menuList = [];
+    private array $m_menuList = [];
 
     /**
      * Ajoute un menu à la liste des menus du site.
@@ -26,7 +26,7 @@ class MenuList
      */
     private function addMenuByItem(Menu $menu): void
     {
-        $this->menuList[] = $menu;
+        $this->m_menuList[] = $menu;
     }
 
     /**
@@ -43,14 +43,14 @@ class MenuList
     private function addMenuByParams(int $p_in_parent_index, string $p_in_name, string $p_in_label, string $p_in_title, string $p_in_link, bool $p_in_is_active): Menu
     {
         $menu = new Menu();
-        $menu->index = $this->size() + 1;
-        $menu->parentIndex = $p_in_parent_index;
-        $menu->name = $p_in_name;
-        $menu->label = $p_in_label;
-        $menu->title = $p_in_title;
-        $menu->link = $p_in_link;
-        $menu->isActive = $p_in_is_active;
-        $this->menuList[] = $menu;
+        $menu->m_index = $this->size() + 1;
+        $menu->m_parentIndex = $p_in_parent_index;
+        $menu->m_name = $p_in_name;
+        $menu->m_label = $p_in_label;
+        $menu->m_title = $p_in_title;
+        $menu->m_link = $p_in_link;
+        $menu->m_isActive = $p_in_is_active;
+        $this->m_menuList[] = $menu;
         return $menu;
     }
 
@@ -82,7 +82,7 @@ class MenuList
      */
     public function addMenuByParentMenu(Menu $p_in_parent_menu, string $p_in_name, string $p_in_label, string $p_in_title, string $p_in_link, bool $p_in_is_active): Menu
     {
-        return $this->addMenuByParams($p_in_parent_menu->index, $p_in_name, $p_in_label, $p_in_title, $p_in_link, $p_in_is_active);
+        return $this->addMenuByParams($p_in_parent_menu->m_index, $p_in_name, $p_in_label, $p_in_title, $p_in_link, $p_in_is_active);
     }
 
     /**
@@ -94,8 +94,8 @@ class MenuList
     public function getMenuListByParentIndex(int $p_in_parent_index): MenuList
     {
         $outputMenuList = new MenuList();
-        foreach ($this->menuList as $menu) {
-            if ($menu->parentIndex == $p_in_parent_index) {
+        foreach ($this->m_menuList as $menu) {
+            if ($menu->m_parentIndex == $p_in_parent_index) {
                 $outputMenuList->addMenuByItem($menu);
             }
         }
@@ -111,8 +111,8 @@ class MenuList
     public function getMenuByLink(string $p_in_link): Menu
     {
         $outputMenu = new Menu();
-        foreach ($this->menuList as $menu) {
-            if ($menu->link == $p_in_link) {
+        foreach ($this->m_menuList as $menu) {
+            if ($menu->m_link == $p_in_link) {
                 $outputMenu = $menu;
                 break;
             }
@@ -128,7 +128,7 @@ class MenuList
      */
     public function getMenuByPosition(int $p_in_position): Menu
     {
-        return $this->menuList[$p_in_position] ?? new Menu();
+        return $this->m_menuList[$p_in_position] ?? new Menu();
     }
 
     /**
@@ -138,7 +138,7 @@ class MenuList
      */
     public function getMenuList(): array
     {
-        return $this->menuList;
+        return $this->m_menuList;
     }
 
     /**
@@ -148,7 +148,7 @@ class MenuList
      */
     public function isEmpty(): bool
     {
-        return (\count($this->menuList) == 0);
+        return (\count($this->m_menuList) == 0);
     }
 
     /**
@@ -158,6 +158,6 @@ class MenuList
      */
     public function size(): int
     {
-        return \count($this->menuList);
+        return \count($this->m_menuList);
     }
 }

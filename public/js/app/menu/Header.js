@@ -1,9 +1,9 @@
 "use strict";
 
 var app = app || {};
-app.controller = app.controller || {};
+app.menu = app.menu || {};
 
-app.controller.MenuHeader = class MenuHeader {
+app.menu.Header = class Header {
     constructor() {}
 
     run() {

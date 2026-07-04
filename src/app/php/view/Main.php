@@ -14,145 +14,35 @@ namespace app\php\view;
 class Main
 {
     /**
-     * Stocke le nom du site.
-     * @var string
+     * Stocke les données du site.
+     * @var \app\php\view\main\model\Site
      */
-    private string $siteName;
+    private \app\php\view\main\model\Site $m_site;
     /**
-     * Stocke l'année de début du site.
-     * @var string
+     * Stocke les données de la page.
+     * @var \app\php\view\main\model\Page
      */
-    private string $siteStartYear;
+    private \app\php\view\main\model\Page $m_page;
     /**
-     * Stocke l'année courante.
-     * @var string
+     * Stocke les données d'Open Graph.
+     * @var \app\php\view\main\model\OpenGraph
      */
-    private string $currentYear;
+    private \app\php\view\main\model\OpenGraph $m_openGraph;
     /**
-     * Stocke la vision du site.
-     * @var string
+     * Stocke les données du partage sur les réseaux sociaux.
+     * @var \app\php\view\main\model\Share
      */
-    private string $siteVision;
-    /**
-     * Stocke le titre de la page.
-     * @var string
-     */
-    private string $pageTitle;
-    /**
-     * Stocke la langue de la page.
-     * @var string
-     */
-    private string $pageLanguage;
-    /**
-     * Stocke l'encodage de la page.
-     * @var string
-     */
-    private string $pageEncoding;
-    /**
-     * Stocke le logo de la page.
-     * @var string
-     */
-    private string $pageLogo;
-    /**
-     * Stocke le type MIME du logo de la page.
-     * @var string
-     */
-    private string $pageLogoMimeType;
-    /**
-     * Stocke la description de la page.
-     * @var string
-     */
-    private string $pageDescription;
-    /**
-     * Stocke le type d'Open Graph.
-     * @var string
-     */
-    private string $openGraphType;
-    /**
-     * Stocke l'image d'Open Graph.
-     * @var string
-     */
-    private string $openGraphImage;
-    /**
-     * Stocke le type MIME de l'image d'Open Graph.
-     * @var string
-     */
-    private string $openGraphImageMimeType;
-    /**
-     * Stocke la largeur de l'image d'Open Graph.
-     * @var int
-     */
-    private int $openGraphImageWidth;
-    /**
-     * Stocke la hauteur de l'image d'Open Graph.
-     * @var int
-     */
-    private int $openGraphImageHeight;
-    /**
-     * Stocke la langue d'Open Graph.
-     * @var string
-     */
-    private string $openGraphLocale;
-    /**
-     * Stocke l'URL d'Open Graph.
-     * @var string
-     */
-    private string $openGraphUrl;
-    /**
-     * Stocke le titre d'Open Graph.
-     * @var string
-     */
-    private string $openGraphTitle;
-    /**
-     * Stocke le nom du site d'Open Graph.
-     * @var string
-     */
-    private string $openGraphSiteName;
-    /**
-     * Stocke la description d'Open Graph.
-     * @var string
-     */
-    private string $openGraphDescription;
-    /**
-     * Stocke la page d'accueil.
-     * @var string
-     */
-    private string $homePage;
-    /**
-     * Stocke l'ID de la page.
-     * @var string
-     */
-    private string $pageId;
-    /**
-     * Stocke le titre de la vue.
-     * @var string
-     */
-    private string $viewTitle;
-    /**
-     * Stocke le nombre de vues de la page.
-     * @var int
-     */
-    private int $viewCount;
-    /**
-     * Stocke l'URL de partage sur Facebook.
-     * @var string
-     */
-    private string $facebookShareUrl;
-    /**
-     * Stocke l'URL de partage sur LinkedIn.
-     * @var string
-     */
-    private string $linkedInShareUrl;
+    private \app\php\view\main\model\Share $m_share;
     /**
      * Stocke la liste des menus.
      * @var \app\php\model\MenuList
      */
-    private \app\php\model\MenuList $headerMenuList;
+    private \app\php\model\MenuList $m_headerMenuList;
     /**
      * Stocke le menu courant.
      * @var \app\php\model\Menu
      */
-    private \app\php\model\Menu $headerMenuCurrent;
+    private \app\php\model\Menu $m_headerMenuCurrent;
 
     /**
      * Construit la page principale du site.
@@ -162,39 +52,43 @@ class Main
     {
         $controller = new \app\php\controller\Main();
 
-        $this->siteName = $controller->getSiteName();
-        $this->siteStartYear = $controller->getSiteStartYear();
-        $this->currentYear = $controller->getCurrentYear();
-        $this->siteVision = $controller->getSiteVision();
+        $this->m_site = new \app\php\view\main\model\Site();
+        $this->m_site->m_siteName = $controller->getSiteName();
+        $this->m_site->m_siteStartYear = $controller->getSiteStartYear();
+        $this->m_site->m_currentYear = $controller->getCurrentYear();
+        $this->m_site->m_siteVision = $controller->getSiteVision();
 
-        $this->pageTitle = $controller->getPageTitle();
-        $this->pageLanguage = $controller->getPageLanguage();
-        $this->pageEncoding = $controller->getPageEncoding();
-        $this->pageLogo = $controller->getPageLogo();
-        $this->pageLogoMimeType = $controller->getPageLogoMimeType();
-        $this->pageDescription = $controller->getPageDescription();
+        $this->m_page = new \app\php\view\main\model\Page();
+        $this->m_page->m_title = $controller->getPageTitle();
+        $this->m_page->m_language = $controller->getPageLanguage();
+        $this->m_page->m_encoding = $controller->getPageEncoding();
+        $this->m_page->m_logo = $controller->getPageLogo();
+        $this->m_page->m_logoMimeType = $controller->getPageLogoMimeType();
+        $this->m_page->m_description = $controller->getPageDescription();
+        $this->m_page->m_home = $controller->getHomePage();
+        $this->m_page->m_id = $controller->getPageId();
 
-        $this->openGraphType = $controller->getOpenGraphType();
-        $this->openGraphImage = $controller->getOpenGraphImage();
-        $this->openGraphImageMimeType = $controller->getOpenGraphImageMimeType();
-        $this->openGraphImageWidth = $controller->getOpenGraphImageWidth();
-        $this->openGraphImageHeight = $controller->getOpenGraphImageHeight();
-        $this->openGraphLocale = $controller->getOpenGraphLocale();
-        $this->openGraphUrl = $controller->getPageUrl();
-        $this->openGraphTitle = $controller->getPageTitle();
-        $this->openGraphSiteName = $controller->getSiteName();
-        $this->openGraphDescription = $controller->getPageDescription();
+        $this->m_openGraph = new \app\php\view\main\model\OpenGraph();
+        $this->m_openGraph->m_type = $controller->getOpenGraphType();
+        $this->m_openGraph->m_image = $controller->getOpenGraphImage();
+        $this->m_openGraph->m_imageMimeType = $controller->getOpenGraphImageMimeType();
+        $this->m_openGraph->m_imageWidth = $controller->getOpenGraphImageWidth();
+        $this->m_openGraph->m_imageHeight = $controller->getOpenGraphImageHeight();
+        $this->m_openGraph->m_locale = $controller->getOpenGraphLocale();
+        $this->m_openGraph->m_url = $controller->getPageUrl();
+        $this->m_openGraph->m_title = $controller->getPageTitle();
+        $this->m_openGraph->m_siteName = $controller->getSiteName();
+        $this->m_openGraph->m_description = $controller->getPageDescription();
 
-        $this->homePage = $controller->getHomePage();
-        $this->pageId = $controller->getPageId();
+        $this->m_headerMenuList = $controller->loadHeaderMenuList();
+        $this->m_headerMenuCurrent = $this->m_headerMenuList->getMenuByLink($this->m_page->m_id);
 
-        $this->headerMenuList = $controller->loadHeaderMenuList();
-        $this->headerMenuCurrent = $this->headerMenuList->getMenuByLink($this->pageId);
+        $this->m_page->m_viewTitle = $this->m_headerMenuCurrent->m_title;
+        $this->m_page->m_viewCount = $controller->getViewCount();
 
-        $this->viewTitle = $this->headerMenuCurrent->title;
-        $this->viewCount = $controller->getViewCount();
-        $this->facebookShareUrl = $controller->getFacebookShareUrl();
-        $this->linkedInShareUrl = $controller->getLinkedInShareUrl();
+        $this->m_share = new \app\php\view\main\model\Share();
+        $this->m_share->m_facebookUrl = $controller->getFacebookShareUrl();
+        $this->m_share->m_linkedInUrl = $controller->getLinkedInShareUrl();
     }
 
     /**
@@ -206,7 +100,7 @@ class Main
     {
         $outputText = "";
         $outputText .= \sprintf("<!DOCTYPE html>\n");
-        $outputText .= \sprintf("<html lang='%s'>\n", $this->pageLanguage);
+        $outputText .= \sprintf("<html lang='%s'>\n", $this->m_page->m_language);
         $outputText .= \sprintf("<head>\n");
         $this->runSiteInfos($outputText);
         $this->runOpenGraph($outputText);
@@ -234,10 +128,10 @@ class Main
      */
     private function runSiteInfos(string &$p_out_text): void
     {
-        $p_out_text .= \sprintf("<title>%s</title>\n", $this->pageTitle);
-        $p_out_text .= \sprintf("<meta charset='%s'/>\n", $this->pageEncoding);
-        $p_out_text .= \sprintf("<link rel='shortcut icon' type='%s' href='%s'/>\n", $this->pageLogoMimeType, $this->pageLogo);
-        $p_out_text .= \sprintf("<meta name='description' content=\"%s\"/>\n", $this->pageDescription);
+        $p_out_text .= \sprintf("<title>%s</title>\n", $this->m_page->m_title);
+        $p_out_text .= \sprintf("<meta charset='%s'/>\n", $this->m_page->m_encoding);
+        $p_out_text .= \sprintf("<link rel='shortcut icon' type='%s' href='%s'/>\n", $this->m_page->m_logoMimeType, $this->m_page->m_logo);
+        $p_out_text .= \sprintf("<meta name='description' content=\"%s\"/>\n", $this->m_page->m_description);
     }
 
     /**
@@ -248,17 +142,17 @@ class Main
      */
     private function runOpenGraph(string &$p_out_text): void
     {
-        $p_out_text .= \sprintf("<meta property='og:type' content=\"%s\"/>\n", $this->openGraphType);
-        $p_out_text .= \sprintf("<meta property='og:image' content=\"%s\"/>\n", $this->openGraphImage);
-        $p_out_text .= \sprintf("<meta property='og:image:secure_url' content=\"%s\"/>\n", $this->openGraphImage);
-        $p_out_text .= \sprintf("<meta property='og:image:type' content=\"%s\"/>\n", $this->openGraphImageMimeType);
-        $p_out_text .= \sprintf("<meta property='og:image:width' content=\"%d\"/>\n", $this->openGraphImageWidth);
-        $p_out_text .= \sprintf("<meta property='og:image:height' content=\"%d\"/>\n", $this->openGraphImageHeight);
-        $p_out_text .= \sprintf("<meta property='og:locale' content=\"%s\"/>\n", $this->openGraphLocale);
-        $p_out_text .= \sprintf("<meta property='og:url' content=\"%s\"/>\n", $this->openGraphUrl);
-        $p_out_text .= \sprintf("<meta property='og:title' content=\"%s\"/>\n", $this->openGraphTitle);
-        $p_out_text .= \sprintf("<meta property='og:site_name' content=\"%s\"/>\n", $this->openGraphSiteName);
-        $p_out_text .= \sprintf("<meta property='og:description' content=\"%s\"/>\n", $this->openGraphDescription);
+        $p_out_text .= \sprintf("<meta property='og:type' content=\"%s\"/>\n", $this->m_openGraph->m_type);
+        $p_out_text .= \sprintf("<meta property='og:image' content=\"%s\"/>\n", $this->m_openGraph->m_image);
+        $p_out_text .= \sprintf("<meta property='og:image:secure_url' content=\"%s\"/>\n", $this->m_openGraph->m_image);
+        $p_out_text .= \sprintf("<meta property='og:image:type' content=\"%s\"/>\n", $this->m_openGraph->m_imageMimeType);
+        $p_out_text .= \sprintf("<meta property='og:image:width' content=\"%d\"/>\n", $this->m_openGraph->m_imageWidth);
+        $p_out_text .= \sprintf("<meta property='og:image:height' content=\"%d\"/>\n", $this->m_openGraph->m_imageHeight);
+        $p_out_text .= \sprintf("<meta property='og:locale' content=\"%s\"/>\n", $this->m_openGraph->m_locale);
+        $p_out_text .= \sprintf("<meta property='og:url' content=\"%s\"/>\n", $this->m_openGraph->m_url);
+        $p_out_text .= \sprintf("<meta property='og:title' content=\"%s\"/>\n", $this->m_openGraph->m_title);
+        $p_out_text .= \sprintf("<meta property='og:site_name' content=\"%s\"/>\n", $this->m_openGraph->m_siteName);
+        $p_out_text .= \sprintf("<meta property='og:description' content=\"%s\"/>\n", $this->m_openGraph->m_description);
     }
 
     /**
@@ -317,12 +211,12 @@ class Main
     private function runHeader(string &$p_out_text): void
     {
         $p_out_text .= \sprintf("<header class='Menu1' id='HeaderMenu'>\n");
-        $p_out_text .= \sprintf("<a class='Menu3' href='%s'>\n", $this->homePage);
-        $p_out_text .= \sprintf("<img class='Menu4' src='%s' alt='logo.png'/>\n", $this->pageLogo);
-        $p_out_text .= \sprintf("<span class='Menu5'>%s</span>\n", $this->siteName);
+        $p_out_text .= \sprintf("<a class='Menu3' href='%s'>\n", $this->m_page->m_home);
+        $p_out_text .= \sprintf("<img class='Menu4' src='%s' alt='logo.png'/>\n", $this->m_page->m_logo);
+        $p_out_text .= \sprintf("<span class='Menu5'>%s</span>\n", $this->m_site->m_siteName);
         $p_out_text .= \sprintf("</a>\n");
-        $this->runHeaderMenu(0, $this->headerMenuCurrent, $p_out_text);
-        $p_out_text .= \sprintf("<div class='Bars1' onclick='callBackend(\"app\", \"open_menu_bars\", this)'><i class='fa fa-bars'></i></div>\n");
+        $this->runHeaderMenu(0, $this->m_headerMenuCurrent, $p_out_text);
+        $p_out_text .= \sprintf("<div class='Bars1' onclick='callBackend(\"app\", \"open_menu_bars\", this)' data-is-opened='false'><i class='fa fa-bars'></i></div>\n");
         $p_out_text .= \sprintf("</header>\n");
     }
 
@@ -336,47 +230,47 @@ class Main
      */
     private function runHeaderMenu(int $p_in_parent_index, $p_in_current_menu, string &$p_out_text): void
     {
-        $menuListI = $this->headerMenuList->getMenuListByParentIndex($p_in_parent_index);
+        $menuListI = $this->m_headerMenuList->getMenuListByParentIndex($p_in_parent_index);
         $menuK = new \app\php\model\Menu();
 
         for ($i = 0; $i < $menuListI->size(); $i++) {
             $menuI = $menuListI->getMenuByPosition($i);
 
-            if ($menuI->isActive) {
-                $menuListJ = $this->headerMenuList->getMenuListByParentIndex($menuI->index);
+            if ($menuI->m_isActive) {
+                $menuListJ = $this->m_headerMenuList->getMenuListByParentIndex($menuI->m_index);
 
                 $activeClass = "";
 
                 $isActive = false;
-                $isActive |= $menuI->isEqual($this->headerMenuCurrent);
-                $isActive |= (($menuI->name == $this->headerMenuCurrent->name) && ($menuI->parentIndex == 0));
+                $isActive |= $menuI->isEqual($this->m_headerMenuCurrent);
+                $isActive |= (($menuI->m_name == $this->m_headerMenuCurrent->m_name) && ($menuI->m_parentIndex == 0));
 
                 if ($isActive) $activeClass = " Active";
 
                 if ($menuListJ->isEmpty()) {
-                    if (!$menuI->parentIndex) {
-                        $p_out_text .= \sprintf("<a class='Menu2%s' href='%s'><div class='Menu14'>%s</div></a>\n", $activeClass, $menuI->link, $menuI->label);
+                    if (!$menuI->m_parentIndex) {
+                        $p_out_text .= \sprintf("<a class='Menu2%s' href='%s'><div class='Menu14'>%s</div></a>\n", $activeClass, $menuI->m_link, $menuI->m_label);
                     } else {
-                        $p_out_text .= \sprintf("<a class='Menu10' href='%s'><div class='Menu8%s'>%s</div></a>\n", $menuI->link, $activeClass, $menuI->label);
+                        $p_out_text .= \sprintf("<a class='Menu10' href='%s'><div class='Menu8%s'>%s</div></a>\n", $menuI->m_link, $activeClass, $menuI->m_label);
                     }
                 } else {
-                    if (!$menuI->parentIndex) {
+                    if (!$menuI->m_parentIndex) {
                         $p_out_text .= \sprintf("<div class='Menu6'>\n");
-                        $p_out_text .= \sprintf("<a class='Menu2%s' href='%s' onclick='return callBackend(\"app\", \"open_menu_group\", this)'><div class='Menu14'>%s</div><i class='Menu13 fa fa-caret-down'></i></a>\n", $activeClass, $menuI->link, $menuI->label);
+                        $p_out_text .= \sprintf("<a class='Menu2%s' href='%s' onclick='return callBackend(\"app\", \"open_menu_group\", this)'><div class='Menu14'>%s</div><i class='Menu13 fa fa-caret-down'></i></a>\n", $activeClass, $menuI->m_link, $menuI->m_label);
                         $menuK = $menuI;
                     } else {
                         $p_out_text .= \sprintf("<div class='Menu9'>\n");
-                        $p_out_text .= \sprintf("<div class='Menu12'><div class='Menu8'>%s <i class='Menu15 fa fa-caret-down'></i></div></div>\n", $menuI->label);
+                        $p_out_text .= \sprintf("<div class='Menu12'><div class='Menu8'>%s <i class='Menu15 fa fa-caret-down'></i></div></div>\n", $menuI->m_label);
                     }
 
-                    if (!$menuI->parentIndex) {
+                    if (!$menuI->m_parentIndex) {
                         $p_out_text .= \sprintf("<div class='Menu7'>\n");
-                        $p_out_text .= \sprintf("<a class='Menu16' href='%s'><div class='Menu8'>%s</div></a>\n", $menuK->link, $menuK->label);
+                        $p_out_text .= \sprintf("<a class='Menu16' href='%s'><div class='Menu8'>%s</div></a>\n", $menuK->m_link, $menuK->m_label);
                     } else {
                         $p_out_text .= \sprintf("<div class='Menu11'>\n");
                     }
 
-                    $this->runHeaderSubMenu($menuI->index, $this->headerMenuCurrent, $p_out_text);
+                    $this->runHeaderSubMenu($menuI->m_index, $this->m_headerMenuCurrent, $p_out_text);
                     $p_out_text .= \sprintf("</div>\n");
                     $p_out_text .= \sprintf("</div>\n");
                 }
@@ -394,47 +288,47 @@ class Main
      */
     private function runHeaderSubMenu(int $p_in_parent_index, \app\php\model\Menu $p_in_current_menu, string &$p_out_text): void
     {
-        $menuListI = $this->headerMenuList->getMenuListByParentIndex($p_in_parent_index);
+        $menuListI = $this->m_headerMenuList->getMenuListByParentIndex($p_in_parent_index);
         $menuK = new \app\php\model\Menu();
 
         for ($i = 0; $i < $menuListI->size(); $i++) {
             $menuI = $menuListI->getMenuByPosition($i);
 
-            if ($menuI->isActive) {
-                $menuListJ = $this->headerMenuList->getMenuListByParentIndex($menuI->index);
+            if ($menuI->m_isActive) {
+                $menuListJ = $this->m_headerMenuList->getMenuListByParentIndex($menuI->m_index);
 
                 $activeClass = "";
 
                 $isActive = false;
                 $isActive |= $menuI->isEqual($p_in_current_menu);
-                $isActive |= (($menuI->name == $p_in_current_menu->name) && ($menuI->parentIndex == 0));
+                $isActive |= (($menuI->m_name == $p_in_current_menu->m_name) && ($menuI->m_parentIndex == 0));
 
                 if ($isActive) $activeClass = " Active";
 
                 if ($menuListJ->isEmpty()) {
-                    if (!$menuI->parentIndex) {
-                        $p_out_text .= \sprintf("<a class='Menu2%s' href='%s'><div class='Menu14'>%s</div></a>\n", $activeClass, $menuI->link, $menuI->label);
+                    if (!$menuI->m_parentIndex) {
+                        $p_out_text .= \sprintf("<a class='Menu2%s' href='%s'><div class='Menu14'>%s</div></a>\n", $activeClass, $menuI->m_link, $menuI->m_label);
                     } else {
-                        $p_out_text .= \sprintf("<a class='Menu10' href='%s'><div class='Menu8%s'>%s</div></a>\n", $menuI->link, $activeClass, $menuI->label);
+                        $p_out_text .= \sprintf("<a class='Menu10' href='%s'><div class='Menu8%s'>%s</div></a>\n", $menuI->m_link, $activeClass, $menuI->m_label);
                     }
                 } else {
-                    if (!$menuI->parentIndex) {
+                    if (!$menuI->m_parentIndex) {
                         $p_out_text .= \sprintf("<div class='Menu6'>\n");
-                        $p_out_text .= \sprintf("<a class='Menu2%s' href='%s' onclick='return callBackend(\"app\", \"open_menu_group\", this)'><div class='Menu14'>%s</div><i class='Menu13 fa fa-caret-down'></i></a>\n", $activeClass, $menuI->link, $menuI->label);
+                        $p_out_text .= \sprintf("<a class='Menu2%s' href='%s' onclick='return callBackend(\"app\", \"open_menu_group\", this)'><div class='Menu14'>%s</div><i class='Menu13 fa fa-caret-down'></i></a>\n", $activeClass, $menuI->m_link, $menuI->m_label);
                         $menuK = $menuI;
                     } else {
                         $p_out_text .= \sprintf("<div class='Menu9'>\n");
-                        $p_out_text .= \sprintf("<div class='Menu12'><div class='Menu8'>%s <i class='Menu15 fa fa-caret-down'></i></div></div>\n", $menuI->label);
+                        $p_out_text .= \sprintf("<div class='Menu12'><div class='Menu8'>%s <i class='Menu15 fa fa-caret-down'></i></div></div>\n", $menuI->m_label);
                     }
 
-                    if (!$menuI->parentIndex) {
+                    if (!$menuI->m_parentIndex) {
                         $p_out_text .= \sprintf("<div class='Menu7'>\n");
-                        $p_out_text .= \sprintf("<a class='Menu16' href='%s'><div class='Menu8'>%s</div></a>\n", $menuK->link, $menuK->label);
+                        $p_out_text .= \sprintf("<a class='Menu16' href='%s'><div class='Menu8'>%s</div></a>\n", $menuK->m_link, $menuK->m_label);
                     } else {
                         $p_out_text .= \sprintf("<div class='Menu11'>\n");
                     }
 
-                    $this->runHeaderSubMenu($menuI->index, $p_in_current_menu, $p_out_text);
+                    $this->runHeaderSubMenu($menuI->m_index, $p_in_current_menu, $p_out_text);
                     $p_out_text .= \sprintf("</div>\n");
                     $p_out_text .= \sprintf("</div>\n");
                 }
@@ -452,7 +346,7 @@ class Main
     {
         $p_out_text .= \sprintf("<div class='View1'>\n");
         // title
-        $p_out_text .= \sprintf("<h1 class='View2'>%s</h1>\n", $this->viewTitle);
+        $p_out_text .= \sprintf("<h1 class='View2'>%s</h1>\n", $this->m_page->m_viewTitle);
         //
         $p_out_text .= \sprintf("<div class='View3'>\n");
         $p_out_text .= \sprintf("<div>\n");
@@ -460,14 +354,14 @@ class Main
         // label
         $p_out_text .= \sprintf("<div class='View6'><i class='fa fa-eye'></i> Vues</div>\n");
         // vues
-        $p_out_text .= \sprintf("<div class='View7'>%d</div>\n", $this->viewCount);
+        $p_out_text .= \sprintf("<div class='View7'>%d</div>\n", $this->m_page->m_viewCount);
         //
         $p_out_text .= \sprintf("</div>\n");
         $p_out_text .= \sprintf("</div>\n");
         $p_out_text .= \sprintf("<div>\n");
         // network
-        $p_out_text .= \sprintf("<a href=\"%s\" target='_blank'><i class='View5 Facebook fa fa-facebook'></i></a>\n", $this->facebookShareUrl);
-        $p_out_text .= \sprintf("<a href=\"%s\" target='_blank'><i class='View5 Linkedin fa fa-linkedin'></i></a>\n", $this->linkedInShareUrl);
+        $p_out_text .= \sprintf("<a href=\"%s\" target='_blank'><i class='View5 Facebook fa fa-facebook'></i></a>\n", $this->m_share->m_facebookUrl);
+        $p_out_text .= \sprintf("<a href=\"%s\" target='_blank'><i class='View5 Linkedin fa fa-linkedin'></i></a>\n", $this->m_share->m_linkedInUrl);
         //
         $p_out_text .= \sprintf("</div>\n");
         $p_out_text .= \sprintf("</div>\n");
@@ -483,7 +377,7 @@ class Main
     private function runPage(string &$p_out_text): void
     {
         $pageFactory = \app\php\factory\Page::Instance();
-        $page = $pageFactory->getPage($this->pageId);
+        $page = $pageFactory->getPage($this->m_page->m_id);
         $page->run($p_out_text);
     }
 
@@ -551,8 +445,8 @@ class Main
     {
         $p_out_text .= \sprintf("<div>\n");
         $p_out_text .= \sprintf("<i class='fa fa-copyright'></i>\n");
-        $p_out_text .= \sprintf("<span>%s - %s | %s</span>\n", $this->siteStartYear, $this->currentYear, $this->siteName);
-        $p_out_text .= \sprintf("<div>%s</div>\n", $this->siteVision);
+        $p_out_text .= \sprintf("<span>%s - %s | %s</span>\n", $this->m_site->m_siteStartYear, $this->m_site->m_currentYear, $this->m_site->m_siteName);
+        $p_out_text .= \sprintf("<div>%s</div>\n", $this->m_site->m_siteVision);
         $p_out_text .= \sprintf("</div>\n");
     }
 
@@ -564,7 +458,22 @@ class Main
      */
     private function runScriptJs(string &$p_out_text): void
     {
-        $p_out_text .= \sprintf("<script src='/public/js/app/view/Main.js'></script>\n");
+        $p_out_text .= \sprintf("<script src='/public/js/app/controller/MainWindow.js'></script>\n");
+        $p_out_text .= \sprintf("<script src='/public/js/app/menu/Header.js'></script>\n");
+
+        $p_out_text .= \sprintf("<script src='/public/js/app/menu/Action.js'></script>\n");
+        $p_out_text .= \sprintf("<script src='/public/js/app/controller/Menu.js'></script>\n");
+
+        $p_out_text .= \sprintf("<script src='/public/js/app/admin/Editor.js'></script>\n");
+        $p_out_text .= \sprintf("<script src='/public/js/app/controller/Admin.js'></script>\n");
+
+        $p_out_text .= \sprintf("<script src='/public/js/app/backend/Backend.js'></script>\n");
+        $p_out_text .= \sprintf("<script src='/public/js/app/backend/App.js'></script>\n");
+        $p_out_text .= \sprintf("<script src='/public/js/app/factory/Backend.js'></script>\n");
+        $p_out_text .= \sprintf("<script src='/public/js/app/model/BackendInfo.js'></script>\n");
+        $p_out_text .= \sprintf("<script src='/public/js/app/controller/Backend.js'></script>\n");
+
+        $p_out_text .= \sprintf("<script src='/public/js/app/controller/Main.js'></script>\n");
         $p_out_text .= \sprintf("<script src='/public/js/scripts.js'></script>\n");
     }
 }

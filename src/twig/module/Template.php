@@ -17,12 +17,12 @@ class Template
      * Stocke l'environnement de twig.
      * @var \Twig\Environment
      */
-    private \Twig\Environment $twig;
+    private \Twig\Environment $m_twigEnvironment;
     /**
      * Stocke le controller de template.
      * @var \twig\controller\Template
      */
-    private \twig\controller\Template $controller;
+    private \twig\controller\Template $m_controller;
 
     /**
      * Construit le module de template twig.
@@ -31,21 +31,23 @@ class Template
      */
     public function __construct(\twig\controller\Template $p_in_controller)
     {
-        $this->controller = $p_in_controller;
+        $this->m_controller = $p_in_controller;
 
-        $loader = new \Twig\Loader\FilesystemLoader($this->controller->getTemplateDir());
+        $loader = new \Twig\Loader\FilesystemLoader($this->m_controller->getTemplateDir());
         $debug = new \app\php\controller\Debug();
 
-        $this->twig = new \Twig\Environment($loader, [
+        $this->m_twigEnvironment = new \Twig\Environment($loader, [
             'cache' => false,
             'debug' => $debug->isDebug()
         ]);
 
         if ($debug->isDebug()) {
-            $this->twig->addExtension(new \Twig\Extension\DebugExtension());
+            $this->m_twigEnvironment->addExtension(new \Twig\Extension\DebugExtension());
         }
 
-        $this->controller->addExtension($this->twig);
+        $this->m_controller->addGlobal($this->m_twigEnvironment);
+        $this->m_controller->addRuntimeLoader($this->m_twigEnvironment);
+        $this->m_controller->addExtension($this->m_twigEnvironment);
     }
 
     /**
@@ -56,6 +58,6 @@ class Template
      */
     public function render(string $p_in_view): string
     {
-        return $this->twig->render((string)$p_in_view, $this->controller->getTemplateData());
+        return $this->m_twigEnvironment->render((string)$p_in_view, $this->m_controller->getTemplateData());
     }
 }

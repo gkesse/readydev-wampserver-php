@@ -2,27 +2,28 @@
 
 declare(strict_types=1);
 
+namespace twig\controller;
+
 use PHPUnit\Framework\TestCase;
 
-final class TemplateControllerTest extends TestCase
+final class TemplateTest extends TestCase
 {
-    public function test_Lecture_Ecriture(): void
+    public function test_general(): void
     {
-        // si on cree le controller de template
-        // si on définit le repertoire de template
+        // cree un controleur de template twig
         $controller = new \twig\controller\Template(__DIR__);
-        // on doit avoir cette egalite avec le repertoire de template
+        // teste le répertoire de template twig
         $this->assertSame($controller->getTemplateDir(), __DIR__);
-        // on doit avoir cette egalite avec les donnees de template
+        // teste les donnees de template twig
         $this->assertSame($controller->getTemplateData(), []);
 
-        // si on cree un mock du controller de template
+        // cree un mock du controller de template twig
         $controller2 = $this->createMock(\twig\controller\Template::class);
-        // si on définit les donnees de template
+        // définit les donnees de template twig
         $controller2->expects($this->once())
             ->method('getTemplateData')
             ->willReturn(['name' => 'ReadyDEV']);
-        // on doit avoir cette egalite avec les donnees de template
+        // teste les donnees de template twig
         $this->assertSame($controller2->getTemplateData(), ['name' => 'ReadyDEV']);
     }
 }

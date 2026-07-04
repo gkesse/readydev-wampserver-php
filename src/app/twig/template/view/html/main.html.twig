@@ -1,4 +1,4 @@
-{% import 'macro/main.macro.twig' as macros %}
+{% import 'macro/main.macro.twig' as macroMain %}
 
 {% set pageId = main.getPageId() %}
 {% set menuList = main.loadHeaderMenuList() %}
@@ -7,33 +7,33 @@
 <!DOCTYPE html>
 <html lang="{{ model.pageLanguage }}">
     <head>
-        {{ macros.runSiteInfo(main) }}
-        {{ macros.runOpenGraph(main) }}
-        {{ macros.runGoogleFonts() }}
-        {{ macros.runFontAwesome() }}
-        {{ macros.runStyleCss() }}
+        {{ macroMain.runSiteInfo(main) }}
+        {{ macroMain.runOpenGraph(main) }}
+        {{ macroMain.runGoogleFonts() }}
+        {{ macroMain.runFontAwesome() }}
+        {{ macroMain.runStyleCss() }}
     </head>
     <body>
         <div class="Html1">
-            {{ macros.runBackground() }}
+            {{ macroMain.runBackground() }}
             <div class="Html2 HtmlPage">
-                {{ macros.runHeader(main, menuList, currentMenu) }}
-                {{ macros.runView(main, currentMenu) }}
-                {{ macros.runPage(page) }}
+                {{ macroMain.runHeader(main, menuList, currentMenu) }}
+                {{ macroMain.runView(main, currentMenu) }}
+                {{ macroMain.runPage(page) }}
             </div>
             <footer class="Footer1">
-                {{ macros.runFooterTitle() }}
+                {{ macroMain.runFooterTitle() }}
                 <div>
-                    {{ macros.runFooterFacebook() }}
-                    {{ macros.runFooterSkype() }}
-                    {{ macros.runFooterLinkedIn() }}
-                    {{ macros.runFooterGithub() }}
+                    {{ macroMain.runFooterFacebook() }}
+                    {{ macroMain.runFooterSkype() }}
+                    {{ macroMain.runFooterLinkedIn() }}
+                    {{ macroMain.runFooterGithub() }}
                 </div>
                 <div>
-                    {{ macros.runFooterCopyright(main) }}
+                    {{ macroMain.runFooterCopyright(main) }}
                 </div>
             </footer>
         </div>
-        {{ macros.runScriptJs() }}
+        {{ macroMain.runScriptJs() }}
     </body>
 </html>

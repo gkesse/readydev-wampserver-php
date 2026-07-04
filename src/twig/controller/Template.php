@@ -17,7 +17,7 @@ class Template
      * Stocke le repertoire des templates twig.
      * @var string
      */
-    private string $templateDir;
+    private string $m_templateDir;
 
     /**
      * Construit le controleur de template twig.
@@ -26,7 +26,7 @@ class Template
      */
     public function __construct(string $p_in_template_dir)
     {
-        $this->templateDir = $p_in_template_dir;
+        $this->m_templateDir = $p_in_template_dir;
     }
 
     /**
@@ -36,7 +36,7 @@ class Template
      */
     public function getTemplateDir(): string
     {
-        return $this->templateDir;
+        return $this->m_templateDir;
     }
 
     /**
@@ -52,9 +52,23 @@ class Template
     /**
      * Ajoute une extension twig.
      * Permet d'ajouter une extension twig.
-     * @param \Twig\Environment $twig Indique le module de template twig.
+     * @param \Twig\Environment $p_in_twig_environment Indique l'environnement de template twig.
      */
-    public function addExtension(\Twig\Environment $twig): void {}
+    public function addExtension(\Twig\Environment $p_in_twig_environment): void {}
+
+    /**
+     * Ajoute un chargeur de runtime twig.
+     * Permet d'ajouter un chargeur de runtime twig.
+     * @param \Twig\Environment $p_in_twig_environment Indique l'environnement de template twig.
+     */
+    public function addRuntimeLoader(\Twig\Environment $p_in_twig_environment): void {}
+
+    /**
+     * Ajoute une variable globale twig.
+     * Permet d'ajouter une variable globale twig.
+     * @param \Twig\Environment $p_in_twig_environment Indique l'environnement de template twig.
+     */
+    public function addGlobal(\Twig\Environment $p_in_twig_environment): void {}
 
     /**
      * Retourne le chemin du template twig.

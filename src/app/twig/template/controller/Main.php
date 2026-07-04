@@ -17,7 +17,7 @@ class Main extends \twig\controller\Template
      * Stocke les données du template twig.
      * @var array
      */
-    private array $templateData;
+    private array $m_templateData;
 
     /**
      * Construit le controleur de la vue principale du site.
@@ -31,7 +31,7 @@ class Main extends \twig\controller\Template
         $mainController = new \app\twig\controller\Main();
         $pageTemplateController = $mainController->getPageTemplateController();
 
-        $this->templateData = [
+        $this->m_templateData = [
             'main' => $mainController,
             'page' => $pageTemplateController
         ];
@@ -44,6 +44,6 @@ class Main extends \twig\controller\Template
      */
     public function getTemplateData(): array
     {
-        return $this->templateData;
+        return $this->m_templateData;
     }
 }
