@@ -1,0 +1,40 @@
+{% macro showMenu(menuList, parentIndex) %}
+    {% set menuListI = menuList.getMenuListByParentIndex(parentIndex) %}
+    {% for menuI in menuListI.getMenuList() %}
+        {% set menuListJ = menuList.getMenuListByParentIndex(menuI.m_index) %}
+        {% if parentIndex == 0 %}
+            <div class='Block26'>
+                <button class='Block29'>{{ menuI.m_title }}</button>
+                <div class='Block27'>
+                    {{ _self.showMenu(menuList, menuI.m_index) }}
+                </div>
+            </div>
+        {% elseif menuListJ.isEmpty() == false %}
+            <div class='Block31'>
+                <div class='Block28'>{{ menuI.m_title }} <i class='Block25 fa fa-caret-down'></i></div>
+                <div class='Block30'>
+                    {{ _self.showMenu(menuList, menuI.m_index) }}
+                </div>
+            </div>
+        {% else %}
+            <div class='Block32' onclick='callBackend("{{ menuI.m_module }}", "{{ menuI.m_method }}", this, "{{ menuI.m_data }}")'>{{ menuI.m_title }}</div>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{% macro showAction(menuList, parentIndex) %}
+    {% set menuListI = menuList.getMenuListByParentIndex(parentIndex) %}
+    {% for menuI in menuListI.getMenuList() %}
+        {% set menuListJ = menuList.getMenuListByParentIndex(menuI.m_index) %}
+        {% if menuListJ.isEmpty() == true %}
+            <div class='Block20' onclick='callBackend("{{ menuI.m_module }}", "{{ menuI.m_method }}", this, "{{ menuI.m_data }}")'>{{ menuI.m_title }}</div>
+        {% else %}
+            <div class='Block21'>
+                <div class='Block20'>{{ menuI.m_title }} <i class='Block25 fa fa-caret-down'></i></div>
+                <div class='Block22'>
+                    {{ _self.showAction(menuList, menuI.m_index) }}
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
