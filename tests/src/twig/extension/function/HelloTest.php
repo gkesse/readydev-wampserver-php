@@ -55,6 +55,6 @@ final class HelloTest extends TestCase
         $output = $template->render("test.extension.twig");
 
         // teste l'utilisation de l'extension de template twig
-        $this->assertSame("<p>Bonjour, ReadyDEV</p>", $output);
+        $this->assertSame($output, "<p>Bonjour, ReadyDEV</p>");
     }
 }

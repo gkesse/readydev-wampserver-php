@@ -1,0 +1,4 @@
+{% macro sayHello(name) %}
+    {% import "test.tools.macro.twig" as macroTools %}
+    <p>Bonjour, {{ macroTools.toUpper(name) }}</p>
+{% endmacro %}

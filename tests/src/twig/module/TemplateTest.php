@@ -37,6 +37,6 @@ final class TemplateTest extends TestCase
         // récupère le rendu du template twig
         $output02 = $template02->render("test.module.twig");
         // teste le rendu du template twig
-        $this->assertSame("<p>Bonjour, ReadyDEV</p>", $output02);
+        $this->assertSame($output02, "<p>Bonjour, ReadyDEV</p>");
     }
 }
