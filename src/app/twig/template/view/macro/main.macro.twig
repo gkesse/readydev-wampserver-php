@@ -58,34 +58,34 @@
 {% macro runHeaderMenu(menuList, currentMenu, parentIndex) %}
     {% set menuListI = menuList.getMenuListByParentIndex(parentIndex) %}
     {% for menuI in menuListI.getMenuList() %}
-        {% if menuI.isActive %}
-            {% set menuListJ = menuList.getMenuListByParentIndex(menuI.index) %}
+        {% if menuI.m_isActive %}
+            {% set menuListJ = menuList.getMenuListByParentIndex(menuI.m_index) %}
             {% set activeClass = '' %}
             {% set isActive = false %}
             {% set isActive = (isActive or menuI.isEqual(currentMenu)) %}
-            {% set isActive = (isActive or ((menuI.name == currentMenu.name) and (menuI.parentIndex ==0))) %}
+            {% set isActive = (isActive or ((menuI.m_name == currentMenu.m_name) and (menuI.m_parentIndex ==0))) %}
             {% if isActive %}
                 {% set activeClass = ' Active' %}
             {% endif %}
             {% if menuListJ.isEmpty() %}
-                {% if menuI.parentIndex == 0 %}
-                    <a class='Menu2{{ activeClass }}' href='{{ menuI.link }}'><div class='Menu14'>{{ menuI.label }}</div></a>
+                {% if menuI.m_parentIndex == 0 %}
+                    <a class='Menu2{{ activeClass }}' href='{{ menuI.m_link }}'><div class='Menu14'>{{ menuI.m_label }}</div></a>
                 {% else %}
-                    <a class='Menu10' href='{{ menuI.link }}'><div class='Menu8{{ activeClass }}'>{{ menuI.label }}</div></a>
+                    <a class='Menu10' href='{{ menuI.m_link }}'><div class='Menu8{{ activeClass }}'>{{ menuI.m_label }}</div></a>
                 {% endif %}
             {% else %}
-                {% if menuI.parentIndex == 0 %}
-                    <div class='Menu6'><a class='Menu2{{ activeClass }}' href='{{ menuI.link }}' onclick='return callBackend("app", "open_menu_group", this)'><div class='Menu14'>{{ menuI.label }}</div><i class='Menu13 fa fa-caret-down'></i></a>
+                {% if menuI.m_parentIndex == 0 %}
+                    <div class='Menu6'><a class='Menu2{{ activeClass }}' href='{{ menuI.m_link }}' onclick='return callBackend("app", "open_menu_group", this)'><div class='Menu14'>{{ menuI.m_label }}</div><i class='Menu13 fa fa-caret-down'></i></a>
                 {% else %}
-                    <div class='Menu9'><div class='Menu12'><div class='Menu8'>{{ menuI.label }} <i class='Menu15 fa fa-caret-down'></i></div></div>
+                    <div class='Menu9'><div class='Menu12'><div class='Menu8'>{{ menuI.m_label }} <i class='Menu15 fa fa-caret-down'></i></div></div>
                 {% endif %}
 
-                {% if menuI.parentIndex == 0 %}
-                    <div class='Menu7'><a class='Menu16' href='{{ menuI.link }}'><div class='Menu8'>{{ menuI.label }}</div></a>
+                {% if menuI.m_parentIndex == 0 %}
+                    <div class='Menu7'><a class='Menu16' href='{{ menuI.m_link }}'><div class='Menu8'>{{ menuI.m_label }}</div></a>
                 {% else %}
                     <div class='Menu11'>
                     {% endif %}
-                    {{ _self.runHeaderSubMenu(menuList, currentMenu, menuI.index) }}
+                    {{ _self.runHeaderSubMenu(menuList, currentMenu, menuI.m_index) }}
                 </div>
                 </div>
             {% endif %}
@@ -96,35 +96,34 @@
 {% macro runHeaderSubMenu(menuList, currentMenu, parentIndex) %}
     {% set menuListI = menuList.getMenuListByParentIndex(parentIndex) %}
     {% for menuI in menuListI.getMenuList() %}
-        {% if menuI.isActive %}
-            {% set menuListJ = menuList.getMenuListByParentIndex(menuI.index) %}
+        {% if menuI.m_isActive %}
+            {% set menuListJ = menuList.getMenuListByParentIndex(menuI.m_index) %}
             {% set activeClass = '' %}
             {% set isActive = false %}
             {% set isActive = (isActive or menuI.isEqual(currentMenu)) %}
-            {% set isActive = (isActive or ((menuI.name == currentMenu.name) and (menuI.parentIndex ==0))) %}
+            {% set isActive = (isActive or ((menuI.m_name == currentMenu.m_name) and (menuI.m_parentIndex ==0))) %}
             {% if isActive %}
                 {% set activeClass = ' Active' %}
             {% endif %}
-
             {% if menuListJ.isEmpty() %}
-                {% if menuI.parentIndex == 0 %}
-                    <a class='Menu2{{ activeClass }}' href='{{ menuI.link }}'><div class='Menu14'>{{ menuI.label }}</div></a>
+                {% if menuI.m_parentIndex == 0 %}
+                    <a class='Menu2{{ activeClass }}' href='{{ menuI.m_link }}'><div class='Menu14'>{{ menuI.m_label }}</div></a>
                 {% else %}
-                    <a class='Menu10' href='{{ menuI.link }}'><div class='Menu8{{ activeClass }}'>{{ menuI.label }}</div></a>
+                    <a class='Menu10' href='{{ menuI.m_link }}'><div class='Menu8{{ activeClass }}'>{{ menuI.m_label }}</div></a>
                 {% endif %}
             {% else %}
-                {% if menuI.parentIndex == 0 %}
-                    <div class='Menu6'><a class='Menu2{{ activeClass }}' href='{{ menuI.link }}' onclick='return callBackend("app", "open_menu_group", this)'><div class='Menu14'>{{ menuI.label }}</div><i class='Menu13 fa fa-caret-down'></i></a>
+                {% if menuI.m_parentIndex == 0 %}
+                    <div class='Menu6'><a class='Menu2{{ activeClass }}' href='{{ menuI.m_link }}' onclick='return callBackend("app", "open_menu_group", this)'><div class='Menu14'>{{ menuI.m_label }}</div><i class='Menu13 fa fa-caret-down'></i></a>
                 {% else %}
-                    <div class='Menu9'><div class='Menu12'><div class='Menu8'>{{ menuI.label }} <i class='Menu15 fa fa-caret-down'></i></div></div>
+                    <div class='Menu9'><div class='Menu12'><div class='Menu8'>{{ menuI.m_label }} <i class='Menu15 fa fa-caret-down'></i></div></div>
                 {% endif %}
 
-                {% if menuI.parentIndex == 0 %}
-                    <div class='Menu7'><a class='Menu16' href='{{ menuI.link }}'><div class='Menu8'>{{ menuI.label }}</div></a>
+                {% if menuI.m_parentIndex == 0 %}
+                    <div class='Menu7'><a class='Menu16' href='{{ menuI.m_link }}'><div class='Menu8'>{{ menuI.m_label }}</div></a>
                 {% else %}
                     <div class='Menu11'>
                     {% endif %}
-                    {{ _self.runHeaderSubMenu(menuList, currentMenu, menuI.index) }}
+                    {{ _self.runHeaderSubMenu(menuList, currentMenu, menuI.m_index) }}
                 </div>
                 </div>
             {% endif %}
@@ -134,7 +133,7 @@
 
 {% macro runView(main, currentMenu) %}
     <div class="View1">
-        <h1 class="View2">{{ currentMenu.title }}</h1>
+        <h1 class="View2">{{ currentMenu.m_title }}</h1>
         <div class="View3">
             <div>
                 <div class="View4">
@@ -191,6 +190,7 @@
 {% endmacro %}
 
 {% macro runScriptJs() %}
+    <script src="/public/js/app/controller/Tools.js"></script>
     <script src="/public/js/app/controller/MainWindow.js"></script>
 
     <script src="/public/js/app/menu/Action.js"></script>

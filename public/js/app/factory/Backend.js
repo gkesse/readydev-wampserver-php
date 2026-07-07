@@ -5,10 +5,11 @@ app.factory = app.factory || {};
 
 app.factory.Backend = class Backend {
     static m_instance = null;
-    #m_moduleMap = {};
+    m_moduleMap = {};
 
     constructor() {
-        this.#m_moduleMap["app"] = () => new app.backend.App();
+        this.m_moduleMap["app"] = () =>
+            oTools.strictInstance(new app.backend.App());
     }
 
     static Instance() {
@@ -19,11 +20,11 @@ app.factory.Backend = class Backend {
     }
 
     create(p_in_module) {
-        const module = this.#m_moduleMap[p_in_module] || this.createUnknown;
+        const module = this.m_moduleMap[p_in_module] || this.createUnknown;
         return module.call(this);
     }
 
     createUnknown() {
-        return new app.backend.Backend();
+        return oTools.strictInstance(new app.backend.Backend());
     }
 };

@@ -7,7 +7,7 @@ app.controller.Admin = class Admin {
     constructor() {}
 
     run() {
-        const editor = new app.admin.Editor();
+        const editor = oTools.strictInstance(new app.admin.Editor());
         editor.run();
     }
 };
