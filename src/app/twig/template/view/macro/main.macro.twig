@@ -8,15 +8,15 @@
 {% macro runOpenGraph(main) %}
     <meta property="og:type" content="{{ main.getOpenGraphType() }}" />
     <meta property="og:image" content="{{ main.getOpenGraphImage() }}" />
-    <meta property="og:image:secure_url" content="{{ main.getOpenGraphImageSecureUrl() }}"/>
-    <meta property="og:image:type" content="{{ main.getOpenGraphImageType() }}"/>
+    <meta property="og:image:secure_url" content="{{ main.getOpenGraphImage() }}"/>
+    <meta property="og:image:type" content="{{ main.getOpenGraphImageMimeType() }}"/>
     <meta property="og:image:width" content="{{ main.getOpenGraphImageWidth() }}"/>
     <meta property="og:image:height" content="{{ main.getOpenGraphImageHeight() }}"/>
     <meta property="og:locale" content="{{ main.getOpenGraphLocale() }}" />
-    <meta property="og:url" content="{{ main.getOpenGraphUrl() }}" />
-    <meta property="og:title" content="{{ main.getOpenGraphTitle() }}" />
-    <meta property="og:site_name" content="{{ main.getOpenGraphSiteName() }}" />
-    <meta property="og:description" content="{{ main.getOpenGraphDescription() }}"/>
+    <meta property="og:url" content="{{ main.getPageUrl() }}" />
+    <meta property="og:title" content="{{ main.getPageTitle() }}" />
+    <meta property="og:site_name" content="{{ main.getSiteName() }}" />
+    <meta property="og:description" content="{{ main.getPageDescription() }}"/>
 {% endmacro %}
 
 {% macro runGoogleFonts() %}

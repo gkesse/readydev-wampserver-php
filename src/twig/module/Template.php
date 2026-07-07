@@ -38,7 +38,8 @@ class Template
 
         $this->m_twigEnvironment = new \Twig\Environment($loader, [
             'cache' => false,
-            'debug' => $debug->isDebug()
+            'debug' => $debug->isDebug(),
+            'strict_variables' => $debug->isDebug()
         ]);
 
         if ($debug->isDebug()) {
