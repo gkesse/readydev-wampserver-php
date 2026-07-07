@@ -7,9 +7,9 @@ app.controller.Main = class Main {
     constructor() {}
 
     run() {
-        const menu = oTools.strictInstance(new app.controller.Menu());
+        const menu = oStrictInstance.create(new app.controller.Menu());
         menu.run();
-        const admin = oTools.strictInstance(new app.controller.Admin());
+        const admin = oStrictInstance.create(new app.controller.Admin());
         admin.run();
     }
 };

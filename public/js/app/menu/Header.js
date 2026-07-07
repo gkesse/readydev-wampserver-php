@@ -51,10 +51,7 @@ app.menu.Header = class Header {
         for (let i = 0; i < menus.length; i++) {
             const menu = menus[i];
             menu.addEventListener("mouseleave", function (e) {
-                const mainWindow = oTools.strictInstance(
-                    new app.controller.MainWindow(),
-                );
-                if (mainWindow.getWidth() <= mainWindow.getWidthRWD()) return;
+                if (oViewPort.getWidth() <= oViewPort.getWidthRWD()) return;
                 const lines = this.querySelectorAll(".Menu12");
                 for (let i = 0; i < lines.length; i++) {
                     const line = lines[i];

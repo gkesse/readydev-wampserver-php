@@ -6,7 +6,6 @@ app.backend = app.backend || {};
 app.backend.App = class App extends app.backend.Backend {
     constructor() {
         super();
-        this.m_methodMap = {};
         this.m_methodMap["open_menu_bars"] = this.runOpenMenuBars;
         this.m_methodMap["open_menu_group"] = this.runOpenMenuGroup;
     }
@@ -48,10 +47,7 @@ app.backend.App = class App extends app.backend.Backend {
     }
 
     runOpenMenuGroup(p_in_module, p_in_method, p_in_obj, p_in_data) {
-        const mainWindow = oTools.strictInstance(
-            new app.controller.MainWindow(),
-        );
-        if (mainWindow.getWidth() <= mainWindow.getWidthRWD()) {
+        if (oViewPort.getWidth() <= oViewPort.getWidthRWD()) {
             this.m_backendInfo.m_isOpenLink = false;
             const href = p_in_obj.getAttribute("href");
             const title = p_in_obj.firstElementChild.innerHTML;

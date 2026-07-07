@@ -7,9 +7,9 @@ app.controller.Menu = class Menu {
     constructor() {}
 
     run() {
-        const header = oTools.strictInstance(new app.menu.Header());
+        const header = oStrictInstance.create(new app.menu.Header());
         header.run();
-        const action = oTools.strictInstance(new app.menu.Action());
+        const action = oStrictInstance.create(new app.menu.Action());
         action.run();
     }
 };

@@ -190,8 +190,11 @@
 {% endmacro %}
 
 {% macro runScriptJs() %}
-    <script src="/public/js/app/controller/Tools.js"></script>
-    <script src="/public/js/app/controller/MainWindow.js"></script>
+    <script src="/libs/jquery/jquery-4.0.0.min.js"></script>
+
+    <script src="/public/js/app/tools/StrictInstance.js"></script>
+    <script src="/public/js/app/tools/ViewPort.js"></script>
+    <script src="/public/js/app/tools/JQuery.js"></script>
 
     <script src="/public/js/app/menu/Action.js"></script>
     <script src="/public/js/app/menu/Header.js"></script>
@@ -203,6 +206,8 @@
     <script src="/public/js/app/model/BackendInfo.js"></script>
     <script src="/public/js/app/backend/Backend.js"></script>
     <script src="/public/js/app/backend/App.js"></script>
+    <script src="/public/js/app/backend/Editor.js"></script>
+    <script src="/public/js/app/backend/Sitemap.js"></script>
     <script src="/public/js/app/factory/Backend.js"></script>
     <script src="/public/js/app/controller/Backend.js"></script>
 

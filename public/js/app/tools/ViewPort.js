@@ -1,10 +1,19 @@
 "use strict";
 
 var app = app || {};
-app.controller = app.controller || {};
+app.tools = app.tools || {};
 
-app.controller.MainWindow = class MainWindow {
+app.tools.ViewPort = class ViewPort {
+    static #m_instance = null;
+
     constructor() {}
+
+    static Instance() {
+        if (this.#m_instance == null) {
+            this.#m_instance = oStrictInstance.create(new app.tools.ViewPort());
+        }
+        return this.#m_instance;
+    }
 
     getWidth() {
         var width =
@@ -26,3 +35,5 @@ app.controller.MainWindow = class MainWindow {
         return 960;
     }
 };
+
+const oViewPort = app.tools.ViewPort.Instance();

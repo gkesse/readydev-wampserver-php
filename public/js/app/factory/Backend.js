@@ -9,7 +9,11 @@ app.factory.Backend = class Backend {
 
     constructor() {
         this.m_moduleMap["app"] = () =>
-            oTools.strictInstance(new app.backend.App());
+            oStrictInstance.create(new app.backend.App());
+        this.m_moduleMap["editor"] = () =>
+            oStrictInstance.create(new app.backend.Editor());
+        this.m_moduleMap["sitemap"] = () =>
+            oStrictInstance.create(new app.backend.Sitemap());
     }
 
     static Instance() {
@@ -25,6 +29,6 @@ app.factory.Backend = class Backend {
     }
 
     createUnknown() {
-        return oTools.strictInstance(new app.backend.Backend());
+        return oStrictInstance.create(new app.backend.Backend());
     }
 };
